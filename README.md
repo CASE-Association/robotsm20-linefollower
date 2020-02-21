@@ -10,8 +10,8 @@ Project repository for the line follower to compete with in Robot SM 2020.
   - Isak Åslund
   - Oskar Johansson
 ## Structure 
-  - Software
-    - All code running on the MCU 
-  - Hardware
-    - Schematics for PCB
-    - Production files for PCB 
+  - software (Code for STM32 MCU)
+  - hardware
+    - cad (3D models and stls)
+    - pcb (schematics, board layout and production files)
+  - img
