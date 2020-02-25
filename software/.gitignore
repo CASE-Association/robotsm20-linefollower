@@ -6,6 +6,8 @@
 .pio
 .vscode/
 
+# stm32pio converter
+stm32pio.ini
 
 # Mac
 *.DS_Store
