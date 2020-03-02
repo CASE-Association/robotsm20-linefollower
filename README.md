@@ -2,7 +2,7 @@
 Project repository for the line follower **Blitz V2** to compete in Robot SM 2020. Last years robot was [Blitz V1](https://github.com/caselabbet/robotsm19-linefollower).
 
 ## Goals 
-- Utilize more advanced motor control algorithm.
+- Utilize more advanced control algorithm.
     - Acceleration control
         - Speed trajectory planner
     - Speed control
@@ -13,7 +13,7 @@ Project repository for the line follower **Blitz V2** to compete in Robot SM 202
     - MPC - Model Predictive Conrol (*optional)*
 - Map race track + Path planner (*optional*)
 - Beat last years result and take 1st place. (*not optional*) 
-- Improve and add harware
+- Added hardware and improvements
     - Use of suction/exhuast fans
     - Single PCB
     - Bluetooth communication
@@ -36,13 +36,13 @@ robotsm20-linefollower
 
 
 ## Development enviroment
-The microcontroller configuration for peripherals suh as ADC, GPIO, TIM, Clock etc. is set up via [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) (GUI) and is then ported to a PlatformIO project with the [stm32pio](https://github.com/ussserrr/stm32pio) command. The software is developed in the [VS Code](https://code.visualstudio.com/) IDE with the <b>PlatformIO</b> plugin.
+The microcontroller configuration for peripherals such as ADC, GPIO, TIM, Clock etc. is set up via [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) (GUI) and is then ported to a PlatformIO project with the [stm32pio](https://github.com/ussserrr/stm32pio) command. The software is developed in the [VS Code](https://code.visualstudio.com/) IDE with the [PlatformIO](https://platformio.org/) plugin.
 
 This makes it possible to generate base code for initialization of peripherals with the powerful configurator <b>STM32CubeMX</b> but also use the great </b>PlatformIO + VS code</b> ecosystem to manage compiling, uploading, debugging and scripting tasks.
 
 
 ## Installation
-In order to update configuration in <b>STM32CubeMX</b> and update <b>PlatformIO</b> project you need to set up your development enviroment.
+In order to update configuration in <b>STM32CubeMX</b> and then update <b>PlatformIO</b> project you need to set up your development enviroment:
  - Create a `boards` directory in your platformio home folder:
     - Unix: `~/.platformio/`
     - Windows: `%HOMEPATH%\.platformio`
