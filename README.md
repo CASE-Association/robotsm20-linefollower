@@ -98,7 +98,7 @@ board = stm32f405rg
 </details>
 <details><summary>Windows example</summary>
 
-```
+``` ini
 [app]
 java_cmd = java
 platformio_cmd = platformio
