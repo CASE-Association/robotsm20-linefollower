@@ -98,7 +98,25 @@ board = stm32f405rg
 </details>
 <details><summary>Windows example</summary>
 
-**NOT ADDED YET**
+```
+[app]
+java_cmd = java
+platformio_cmd = platformio
+cubemx_cmd = C:/Program Files/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX.exe
+
+[project]
+cubemx_script_content = config load C:\Users\Isak\Documents\GitHub\robotsm20-linefollower\software\software.ioc
+	generate code C:\Users\Isak\Documents\GitHub\robotsm20-linefollower
+	exit
+platformio_ini_patch_content = [platformio]
+	include_dir = Inc
+	src_dir = Src
+	
+ioc_file = C:\Users\Isak\Documents\GitHub\robotsm20-linefollower\software\software.ioc
+board = stm32f405rg
+
+
+```
 
 </details>
 
