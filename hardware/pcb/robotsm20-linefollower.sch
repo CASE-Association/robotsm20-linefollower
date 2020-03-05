@@ -9422,6 +9422,388 @@ Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http
 </deviceset>
 </devicesets>
 </library>
+<library name="CASE-Switches" urn="urn:adsk.eagle:library:7770839">
+<packages>
+<package name="TSM2JSMA" urn="urn:adsk.eagle:footprint:17798452/1" library_version="11">
+<description>Switch Tactile OFF (ON) SPST Round Button Gull Wing 0.05A 12VDC 1.57N SMD Loose Piece</description>
+<wire x1="3.15" y1="-3.15" x2="-3.15" y2="-3.15" width="0.15" layer="51"/>
+<wire x1="-3.15" y1="-3.15" x2="-3.15" y2="3.15" width="0.15" layer="51"/>
+<wire x1="-3.15" y1="3.15" x2="3.15" y2="3.15" width="0.15" layer="51"/>
+<wire x1="3.15" y1="3.15" x2="3.15" y2="-3.15" width="0.15" layer="51"/>
+<wire x1="-3.15" y1="-1.175" x2="-3.15" y2="1.175" width="0.15" layer="21"/>
+<wire x1="3.15" y1="3.15" x2="-3.15" y2="3.15" width="0.15" layer="21"/>
+<wire x1="3.15" y1="-1.175" x2="3.15" y2="1.175" width="0.15" layer="21"/>
+<wire x1="3.15" y1="-3.15" x2="-3.15" y2="-3.15" width="0.15" layer="21"/>
+<wire x1="5.7" y1="-3.25" x2="-5.7" y2="-3.25" width="0.1" layer="39"/>
+<wire x1="-5.7" y1="-3.25" x2="-5.7" y2="3.25" width="0.1" layer="39"/>
+<wire x1="-5.7" y1="3.25" x2="5.7" y2="3.25" width="0.1" layer="39"/>
+<wire x1="5.7" y1="3.25" x2="5.7" y2="-3.25" width="0.1" layer="39"/>
+<text x="-2.8" y="3.77" size="1" layer="25">&gt;NAME</text>
+<circle x="-2.01" y="2.43" radius="0.25" width="0" layer="21"/>
+<smd name="1" x="-4.55" y="2.25" dx="1.4" dy="2.1" layer="1" rot="R90"/>
+<smd name="3" x="-4.55" y="-2.25" dx="1.4" dy="2.1" layer="1" rot="R90"/>
+<smd name="2" x="4.55" y="2.25" dx="1.4" dy="2.1" layer="1" rot="R90"/>
+<smd name="4" x="4.55" y="-2.25" dx="1.4" dy="2.1" layer="1" rot="R90"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="TSM2JSMA" urn="urn:adsk.eagle:package:17798453/2" type="model" library_version="11">
+<description>Switch Tactile OFF (ON) SPST Round Button Gull Wing 0.05A 12VDC 1.57N SMD Loose Piece</description>
+<packageinstances>
+<packageinstance name="TSM2JSMA"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="TSM2JSMA" urn="urn:adsk.eagle:symbol:17798451/1" library_version="11">
+<description>Switch Tactile OFF (ON) SPST Round Button Gull Wing 0.05A 12VDC 1.57N SMD Loose Piece</description>
+<wire x1="8.89" y1="-1.27" x2="6.096" y2="-2.794" width="0.1524" layer="94"/>
+<wire x1="5.334" y1="-2.54" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="9.906" y1="-2.54" x2="12.7" y2="-2.54" width="0.1524" layer="94"/>
+<circle x="5.842" y="-2.54" radius="0.3592" width="0.254" layer="94"/>
+<circle x="12.7" y="0" radius="0.3592" width="0.254" layer="94"/>
+<circle x="9.398" y="-2.54" radius="0.3592" width="0.254" layer="94"/>
+<circle x="12.7" y="-5.08" radius="0.3592" width="0.254" layer="94"/>
+<circle x="2.54" y="0" radius="0.3592" width="0.254" layer="94"/>
+<circle x="2.54" y="-5.08" radius="0.3592" width="0.254" layer="94"/>
+<pin name="4" x="12.7" y="0" visible="pad" length="short" rot="R270"/>
+<pin name="1" x="2.54" y="0" visible="pad" length="short" rot="R270"/>
+<pin name="3" x="12.7" y="-5.08" visible="pad" length="short" rot="R90"/>
+<pin name="2" x="2.54" y="-5.08" visible="pad" length="short" rot="R90"/>
+<text x="3.81" y="1.27" size="1.27" layer="95" ratio="10">&gt;NAME</text>
+<text x="3.81" y="-7.62" size="1.27" layer="95" ratio="10">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TSM2JSMA" urn="urn:adsk.eagle:component:17798454/2" library_version="11">
+<description>&lt;b&gt;FSM2JSMA Tactile SPST switches&lt;/b&gt;&lt;hr /&gt;
+&lt;br /&gt;
+&lt;i&gt;Description: &lt;/i&gt;C&amp;K JS202011CQN (Vertical) and AQN (Angled) Slide DPDT switches in DIP package.
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;i&gt;Links: &lt;/i&gt;
+&lt;a href="https://datasheet.octopart.com/FSM2JSMA-TE-Connectivity-datasheet-10294628.pdf"&gt;Datasheet&lt;/a&gt; &lt;a href="https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&amp;DocId=Customer+Drawing%7F2-1437565-7%7FV%7Fpdf%7FEnglish%7FENG_CD_2-1437565-7_V.pdf%7F2-1437565-7"&gt;Dimensions&lt;/a&gt;
+
+&lt;br \&gt;
+&lt;br \&gt;
+&lt;br \&gt;
+
+&lt;img src="https://sigma.octopart.com/23412330/image/Alcoswitch-FSM2JSMA.jpg"/&gt;</description>
+<gates>
+<gate name="G$1" symbol="TSM2JSMA" x="-7.62" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="TSM2JSMA">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:17798453/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="CASE-RCL">
+<packages>
+<package name="R0603" urn="urn:adsk.eagle:footprint:5332301/1">
+<description>&lt;b&gt;Chip RESISTOR 0603 (1608 Metric)&lt;/b&gt;</description>
+<wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
+<wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.1524" layer="51"/>
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
+<rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="R0603" urn="urn:adsk.eagle:package:5332309/4" type="model">
+<description>&lt;b&gt;Chip RESISTOR 0603 (1608 Metric)&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="R0603"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="R-EU" urn="urn:adsk.eagle:symbol:5332294/1">
+<wire x1="-2.54" y1="-0.889" x2="2.54" y2="-0.889" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0.889" x2="-2.54" y2="0.889" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-0.889" x2="2.54" y2="0.889" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-0.889" x2="-2.54" y2="0.889" width="0.254" layer="94"/>
+<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="R0603" urn="urn:adsk.eagle:component:5332325/3" locally_modified="yes" prefix="R" uservalue="yes">
+<description>&lt;b&gt;&lt;b&gt;Standard Chip RESISTOR 0603 (1608 Metric)&lt;/b&gt;
+&lt;/b&gt;&lt;hr /&gt;
+&lt;br /&gt;
+&lt;i&gt;Description: &lt;/i&gt; Standard Chip RESISTOR 0603 (1608 Metric)
+
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;</description>
+<gates>
+<gate name="G$1" symbol="R-EU" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="R0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5332309/4"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="CASE-Pinhead">
+<description>&lt;b&gt;Pin Header Connectors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="2X03" urn="urn:adsk.eagle:footprint:22348/1">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-3.81" y1="-1.905" x2="-3.175" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-2.54" x2="-1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-1.905" x2="-0.635" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-2.54" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="-1.905" x2="-3.81" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="1.905" x2="-3.175" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="2.54" x2="-1.905" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="2.54" x2="-1.27" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="1.905" x2="-0.635" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="2.54" x2="0.635" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="2.54" x2="1.27" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="1.905" x2="-1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="1.905" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-2.54" x2="0.635" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="-2.54" x2="-1.905" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-1.905" x2="1.905" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-2.54" x2="3.81" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="1.905" x2="1.905" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="2.54" x2="3.175" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="2.54" x2="3.81" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="1.905" x2="3.81" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-2.54" x2="3.175" y2="-2.54" width="0.1524" layer="21"/>
+<pad name="1" x="-2.54" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="2" x="-2.54" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="3" x="0" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="4" x="0" y="1.27" drill="1.016" shape="octagon"/>
+<pad name="5" x="2.54" y="-1.27" drill="1.016" shape="octagon"/>
+<pad name="6" x="2.54" y="1.27" drill="1.016" shape="octagon"/>
+<text x="-3.81" y="3.175" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-4.445" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-2.794" y1="-1.524" x2="-2.286" y2="-1.016" layer="51"/>
+<rectangle x1="-2.794" y1="1.016" x2="-2.286" y2="1.524" layer="51"/>
+<rectangle x1="-0.254" y1="1.016" x2="0.254" y2="1.524" layer="51"/>
+<rectangle x1="-0.254" y1="-1.524" x2="0.254" y2="-1.016" layer="51"/>
+<rectangle x1="2.286" y1="1.016" x2="2.794" y2="1.524" layer="51"/>
+<rectangle x1="2.286" y1="-1.524" x2="2.794" y2="-1.016" layer="51"/>
+</package>
+<package name="2X03/90" urn="urn:adsk.eagle:footprint:22349/1">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-3.81" y1="-1.905" x2="-1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-1.905" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="6.985" x2="-2.54" y2="1.27" width="0.762" layer="21"/>
+<wire x1="-1.27" y1="-1.905" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-1.905" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="6.985" x2="0" y2="1.27" width="0.762" layer="21"/>
+<wire x1="1.27" y1="-1.905" x2="3.81" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-1.905" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="0.635" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="6.985" x2="2.54" y2="1.27" width="0.762" layer="21"/>
+<pad name="2" x="-2.54" y="-3.81" drill="1.016" shape="octagon"/>
+<pad name="4" x="0" y="-3.81" drill="1.016" shape="octagon"/>
+<pad name="6" x="2.54" y="-3.81" drill="1.016" shape="octagon"/>
+<pad name="1" x="-2.54" y="-6.35" drill="1.016" shape="octagon"/>
+<pad name="3" x="0" y="-6.35" drill="1.016" shape="octagon"/>
+<pad name="5" x="2.54" y="-6.35" drill="1.016" shape="octagon"/>
+<text x="-4.445" y="-3.81" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="5.715" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-2.921" y1="0.635" x2="-2.159" y2="1.143" layer="21"/>
+<rectangle x1="-0.381" y1="0.635" x2="0.381" y2="1.143" layer="21"/>
+<rectangle x1="2.159" y1="0.635" x2="2.921" y2="1.143" layer="21"/>
+<rectangle x1="-2.921" y1="-2.921" x2="-2.159" y2="-1.905" layer="21"/>
+<rectangle x1="-0.381" y1="-2.921" x2="0.381" y2="-1.905" layer="21"/>
+<rectangle x1="-2.921" y1="-5.461" x2="-2.159" y2="-4.699" layer="21"/>
+<rectangle x1="-2.921" y1="-4.699" x2="-2.159" y2="-2.921" layer="51"/>
+<rectangle x1="-0.381" y1="-4.699" x2="0.381" y2="-2.921" layer="51"/>
+<rectangle x1="-0.381" y1="-5.461" x2="0.381" y2="-4.699" layer="21"/>
+<rectangle x1="2.159" y1="-2.921" x2="2.921" y2="-1.905" layer="21"/>
+<rectangle x1="2.159" y1="-5.461" x2="2.921" y2="-4.699" layer="21"/>
+<rectangle x1="2.159" y1="-4.699" x2="2.921" y2="-2.921" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="2X03" urn="urn:adsk.eagle:package:22462/2" type="model">
+<description>PIN HEADER</description>
+<packageinstances>
+<packageinstance name="2X03"/>
+</packageinstances>
+</package3d>
+<package3d name="2X03/90" urn="urn:adsk.eagle:package:22464/2" type="model">
+<description>PIN HEADER</description>
+<packageinstances>
+<packageinstance name="2X03/90"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="PINH2X3" urn="urn:adsk.eagle:symbol:22347/1">
+<wire x1="-6.35" y1="-5.08" x2="8.89" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="8.89" y1="-5.08" x2="8.89" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="8.89" y1="5.08" x2="-6.35" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="5.08" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
+<text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="5.08" y="2.54" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+<pin name="3" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="4" x="5.08" y="0" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+<pin name="5" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="6" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PINHD-2X3" urn="urn:adsk.eagle:component:22532/3" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="A" symbol="PINH2X3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="2X03">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
+<connect gate="A" pin="4" pad="4"/>
+<connect gate="A" pin="5" pad="5"/>
+<connect gate="A" pin="6" pad="6"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22462/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="/90" package="2X03/90">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
+<connect gate="A" pin="4" pad="4"/>
+<connect gate="A" pin="5" pad="5"/>
+<connect gate="A" pin="6" pad="6"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22464/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="SparkFun-PowerSymbols">
+<description>&lt;h3&gt;SparkFun Power Symbols&lt;/h3&gt;
+This library contains power, ground, and voltage-supply symbols.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="3.3V">
+<description>&lt;h3&gt;3.3V Voltage Supply&lt;/h3&gt;</description>
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="3.3V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+</symbol>
+<symbol name="DGND">
+<description>&lt;h3&gt;Digital Ground Supply&lt;/h3&gt;</description>
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+<text x="0" y="-0.254" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="3.3V" prefix="SUPPLY">
+<description>&lt;h3&gt;3.3V Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Power supply symbol for a specifically-stated 3.3V source.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="3.3V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GND" prefix="GND">
+<description>&lt;h3&gt;Ground Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Generic signal ground supply symbol.&lt;/p&gt;</description>
+<gates>
+<gate name="1" symbol="DGND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9574,6 +9956,14 @@ Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="U$4" library="CASE-Switches" library_urn="urn:adsk.eagle:library:7770839" deviceset="TSM2JSMA" device="" package3d_urn="urn:adsk.eagle:package:17798453/2"/>
+<part name="C40" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1u"/>
+<part name="SUPPLY54" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="BOOT" library="CASE-Pinhead" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2" override_package3d_urn="urn:adsk.eagle:package:13090277/2" override_package_urn="urn:adsk.eagle:footprint:22348/1"/>
+<part name="SUPPLY55" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="GND36" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="R33" library="CASE-RCL" deviceset="R0603" device="" package3d_urn="urn:adsk.eagle:package:5332309/4" value="10k"/>
+<part name="R34" library="CASE-RCL" deviceset="R0603" device="" package3d_urn="urn:adsk.eagle:package:5332309/4" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -9595,14 +9985,21 @@ soldering correct resistors (0 Ω)</text>
 <wire x1="-27.94" y1="68.58" x2="22.86" y2="68.58" width="0.1524" layer="97"/>
 <wire x1="22.86" y1="68.58" x2="22.86" y2="86.36" width="0.1524" layer="97"/>
 <wire x1="22.86" y1="86.36" x2="-27.94" y2="86.36" width="0.1524" layer="97"/>
-<text x="-22.86" y="81.28" size="1.778" layer="97" align="top-left"> - Add Reset button
- - Add Boot mode selector header
- - Debug header (SWD)</text>
+<text x="-22.86" y="81.28" size="1.778" layer="97" align="top-left"> - Debug header (SWD)</text>
 <text x="-15.24" y="86.36" size="5.08" layer="97">TODO</text>
 <wire x1="-73.66" y1="43.18" x2="-81.28" y2="33.02" width="0.1524" layer="97"/>
 <wire x1="-81.28" y1="33.02" x2="-81.28" y2="35.56" width="0.1524" layer="97"/>
 <wire x1="-81.28" y1="33.02" x2="-78.74" y2="33.02" width="0.1524" layer="97"/>
 <wire x1="-81.28" y1="35.56" x2="-78.74" y2="33.02" width="0.1524" layer="97"/>
+<text x="-13.97" y="-67.31" size="2.54" layer="97">BOOT MODE</text>
+<text x="-24.13" y="-110.49" size="1.016" layer="97">BOOT0=0 BOOT1=x - main flash memory (your uploaded code)
+BOOT0=1 BOOT1=0 - System momory (internal serial USART1 boot loader) 
+BOOT0=1 BOOT1=1 - Embedded SRAM
+Applies after reboot</text>
+<wire x1="-27.94" y1="-101.6" x2="27.94" y2="-101.6" width="0.1524" layer="97"/>
+<wire x1="27.94" y1="-101.6" x2="27.94" y2="-114.3" width="0.1524" layer="97"/>
+<wire x1="27.94" y1="-114.3" x2="-27.94" y2="-114.3" width="0.1524" layer="97"/>
+<wire x1="-27.94" y1="-114.3" x2="-27.94" y2="-101.6" width="0.1524" layer="97"/>
 </plain>
 <instances>
 <instance part="FRAME3" gate="G$1" x="-200.66" y="-127" smashed="yes"/>
@@ -9703,6 +10100,35 @@ soldering correct resistors (0 Ω)</text>
 <attribute name="NAME" x="92.71" y="-62.0014" size="1.778" layer="95"/>
 <attribute name="VALUE" x="92.71" y="-66.802" size="1.778" layer="96"/>
 </instance>
+<instance part="U$4" gate="G$1" x="-106.68" y="-76.2" smashed="yes" rot="R270">
+<attribute name="NAME" x="-105.41" y="-80.01" size="1.27" layer="95" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="-114.3" y="-80.01" size="1.27" layer="95" ratio="10" rot="R270"/>
+</instance>
+<instance part="C40" gate="G$1" x="-96.52" y="-81.28" smashed="yes">
+<attribute name="NAME" x="-94.996" y="-80.899" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-94.996" y="-85.979" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY54" gate="GND" x="-109.22" y="-96.52" smashed="yes">
+<attribute name="VALUE" x="-111.125" y="-99.695" size="1.778" layer="96"/>
+</instance>
+<instance part="BOOT" gate="A" x="-5.08" y="-86.36" smashed="yes">
+<attribute name="NAME" x="-13.97" y="-80.645" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-11.43" y="-93.98" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY55" gate="G$1" x="-5.08" y="-73.66" smashed="yes">
+<attribute name="VALUE" x="-5.08" y="-70.866" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="GND36" gate="1" x="-5.08" y="-96.52" smashed="yes">
+<attribute name="VALUE" x="-5.08" y="-96.774" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="R33" gate="G$1" x="15.24" y="-86.36" smashed="yes" rot="R180">
+<attribute name="NAME" x="13.97" y="-84.8614" size="1.778" layer="95"/>
+<attribute name="VALUE" x="13.97" y="-89.662" size="1.778" layer="96"/>
+</instance>
+<instance part="R34" gate="G$1" x="-22.86" y="-86.36" smashed="yes" rot="R180">
+<attribute name="NAME" x="-24.13" y="-84.8614" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-24.13" y="-89.662" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9712,6 +10138,22 @@ soldering correct resistors (0 Ω)</text>
 <wire x1="-40.64" y1="22.86" x2="-63.5" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="U1" gate="STM32F405RG" pin="NRST"/>
 <label x="-60.96" y="22.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="2"/>
+<wire x1="-111.76" y1="-78.74" x2="-114.3" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="-78.74" x2="-114.3" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="-76.2" x2="-104.14" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="-76.2" x2="-104.14" y2="-78.74" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="1"/>
+<wire x1="-104.14" y1="-78.74" x2="-106.68" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="-76.2" x2="-96.52" y2="-76.2" width="0.1524" layer="91"/>
+<junction x="-104.14" y="-76.2"/>
+<pinref part="C40" gate="G$1" pin="1"/>
+<wire x1="-96.52" y1="-76.2" x2="-96.52" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="-76.2" x2="-93.98" y2="-76.2" width="0.1524" layer="91"/>
+<junction x="-96.52" y="-76.2"/>
+<label x="-93.98" y="-76.2" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$32" class="0">
@@ -9814,6 +10256,11 @@ soldering correct resistors (0 Ω)</text>
 <pinref part="U1" gate="STM32F405RG" pin="PB2"/>
 <label x="-60.96" y="-30.48" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R33" gate="G$1" pin="1"/>
+<wire x1="20.32" y1="-86.36" x2="22.86" y2="-86.36" width="0.1524" layer="91"/>
+<label x="22.86" y="-86.36" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="XLINE" class="0">
 <segment>
@@ -9861,6 +10308,11 @@ soldering correct resistors (0 Ω)</text>
 <wire x1="63.5" y1="27.94" x2="40.64" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="U1" gate="STM32F405RG" pin="BOOT0"/>
 <label x="43.18" y="27.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R34" gate="G$1" pin="2"/>
+<wire x1="-27.94" y1="-86.36" x2="-30.48" y2="-86.36" width="0.1524" layer="91"/>
+<label x="-30.48" y="-86.36" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$62" class="0">
@@ -10110,6 +10562,19 @@ soldering correct resistors (0 Ω)</text>
 <wire x1="40.64" y1="-2.54" x2="88.9" y2="-2.54" width="0.1524" layer="91"/>
 <junction x="88.9" y="-2.54"/>
 </segment>
+<segment>
+<pinref part="BOOT" gate="A" pin="1"/>
+<wire x1="-7.62" y1="-83.82" x2="-15.24" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="-83.82" x2="-15.24" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="-76.2" x2="-5.08" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-76.2" x2="-5.08" y2="-73.66" width="0.1524" layer="91"/>
+<pinref part="BOOT" gate="A" pin="2"/>
+<wire x1="0" y1="-83.82" x2="7.62" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="-83.82" x2="7.62" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="-76.2" x2="-5.08" y2="-76.2" width="0.1524" layer="91"/>
+<junction x="-5.08" y="-76.2"/>
+<pinref part="SUPPLY55" gate="G$1" pin="3.3V"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -10175,6 +10640,35 @@ soldering correct resistors (0 Ω)</text>
 <junction x="83.82" y="-17.78"/>
 <pinref part="SUPPLY52" gate="GND" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="3"/>
+<wire x1="-111.76" y1="-88.9" x2="-114.3" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="-88.9" x2="-114.3" y2="-91.44" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="-91.44" x2="-109.22" y2="-91.44" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="-91.44" x2="-104.14" y2="-91.44" width="0.1524" layer="91"/>
+<wire x1="-104.14" y1="-91.44" x2="-104.14" y2="-88.9" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="4"/>
+<wire x1="-104.14" y1="-88.9" x2="-106.68" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="-109.22" y1="-91.44" x2="-109.22" y2="-93.98" width="0.1524" layer="91"/>
+<junction x="-109.22" y="-91.44"/>
+<pinref part="C40" gate="G$1" pin="2"/>
+<wire x1="-96.52" y1="-86.36" x2="-96.52" y2="-91.44" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="-91.44" x2="-104.14" y2="-91.44" width="0.1524" layer="91"/>
+<junction x="-104.14" y="-91.44"/>
+<pinref part="SUPPLY54" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="BOOT" gate="A" pin="5"/>
+<wire x1="-7.62" y1="-88.9" x2="-15.24" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="-88.9" x2="-15.24" y2="-93.98" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="-93.98" x2="-5.08" y2="-93.98" width="0.1524" layer="91"/>
+<pinref part="GND36" gate="1" pin="GND"/>
+<pinref part="BOOT" gate="A" pin="6"/>
+<wire x1="0" y1="-88.9" x2="7.62" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="-88.9" x2="7.62" y2="-93.98" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="-93.98" x2="-5.08" y2="-93.98" width="0.1524" layer="91"/>
+<junction x="-5.08" y="-93.98"/>
+</segment>
 </net>
 <net name="RX_BT" class="0">
 <segment>
@@ -10214,6 +10708,20 @@ soldering correct resistors (0 Ω)</text>
 <segment>
 <pinref part="U1" gate="STM32F405RG" pin="PC0"/>
 <wire x1="-40.64" y1="20.32" x2="-63.5" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$26" class="0">
+<segment>
+<pinref part="BOOT" gate="A" pin="4"/>
+<wire x1="0" y1="-86.36" x2="10.16" y2="-86.36" width="0.1524" layer="91"/>
+<pinref part="R33" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$34" class="0">
+<segment>
+<pinref part="BOOT" gate="A" pin="3"/>
+<wire x1="-7.62" y1="-86.36" x2="-17.78" y2="-86.36" width="0.1524" layer="91"/>
+<pinref part="R34" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
@@ -11455,6 +11963,11 @@ packages will not be understood (or retained) with this version.
 <note version="9.5" severity="warning">
 Since Version 9.5, EAGLE supports persistent groups with
 schematics, and board files. Those persistent groups
+will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
 will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
