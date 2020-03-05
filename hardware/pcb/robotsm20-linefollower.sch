@@ -10030,6 +10030,7 @@ Variant with &lt;b&gt;I2C interface&lt;/b&gt;
 <schematic_group name="DEBUG"/>
 <schematic_group name="BOOT_MODE"/>
 <schematic_group name="RESET_BUTTON"/>
+<schematic_group name="OLED"/>
 </groups>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
@@ -10180,6 +10181,7 @@ Variant with &lt;b&gt;I2C interface&lt;/b&gt;
 <part name="FRAME4" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
 <part name="U$6" library="Displays" library_urn="urn:adsk.eagle:library:17801130" deviceset="DISPLAY-OLED-128X64-I2C" device="" package3d_urn="urn:adsk.eagle:package:17801164/1"/>
 <part name="SUPPLY57" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12203,12 +12205,15 @@ Ipeak:      28A </text>
 <attribute name="LAST_DATE_TIME" x="194.31" y="-106.68" size="2.286" layer="94"/>
 <attribute name="SHEET" x="207.645" y="-111.76" size="2.54" layer="94"/>
 </instance>
-<instance part="U$6" gate="G$1" x="-93.98" y="88.9" smashed="yes">
+<instance part="U$6" gate="G$1" x="-93.98" y="88.9" smashed="yes" grouprefs="OLED">
 <attribute name="NAME" x="-111.76" y="68.58" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-111.76" y="71.12" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY57" gate="GND" x="-106.68" y="114.3" smashed="yes">
+<instance part="SUPPLY57" gate="GND" x="-106.68" y="114.3" smashed="yes" grouprefs="OLED">
 <attribute name="VALUE" x="-108.585" y="111.125" size="1.778" layer="96"/>
+</instance>
+<instance part="P+7" gate="1" x="-96.52" y="127" smashed="yes" grouprefs="OLED">
+<attribute name="VALUE" x="-99.06" y="121.92" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -12217,32 +12222,33 @@ Ipeak:      28A </text>
 <net name="GND" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="GND"/>
-<wire x1="-99.06" y1="109.22" x2="-99.06" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-99.06" y1="119.38" x2="-106.68" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-106.68" y1="119.38" x2="-106.68" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="109.22" x2="-99.06" y2="119.38" width="0.1524" layer="91" grouprefs="OLED"/>
+<wire x1="-99.06" y1="119.38" x2="-106.68" y2="119.38" width="0.1524" layer="91" grouprefs="OLED"/>
+<wire x1="-106.68" y1="119.38" x2="-106.68" y2="116.84" width="0.1524" layer="91" grouprefs="OLED"/>
 <pinref part="SUPPLY57" gate="GND" pin="GND"/>
 </segment>
 </net>
-<net name="N$28" class="0">
+<net name="+5V" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="VCC"/>
-<wire x1="-96.52" y1="109.22" x2="-96.52" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="-96.52" y1="109.22" x2="-96.52" y2="124.46" width="0.1524" layer="91" grouprefs="OLED"/>
+<pinref part="P+7" gate="1" pin="+5V"/>
 </segment>
 </net>
 <net name="SCL" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="SCL"/>
-<wire x1="-93.98" y1="109.22" x2="-93.98" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="121.92" x2="-83.82" y2="121.92" width="0.1524" layer="91"/>
-<label x="-88.9" y="121.92" size="1.778" layer="95"/>
+<wire x1="-93.98" y1="109.22" x2="-93.98" y2="121.92" width="0.1524" layer="91" grouprefs="OLED"/>
+<wire x1="-93.98" y1="121.92" x2="-83.82" y2="121.92" width="0.1524" layer="91" grouprefs="OLED"/>
+<label x="-88.9" y="121.92" size="1.778" layer="95" grouprefs="OLED"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="SDA"/>
-<wire x1="-91.44" y1="109.22" x2="-91.44" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-91.44" y1="119.38" x2="-83.82" y2="119.38" width="0.1524" layer="91"/>
-<label x="-88.9" y="119.38" size="1.778" layer="95"/>
+<wire x1="-91.44" y1="109.22" x2="-91.44" y2="119.38" width="0.1524" layer="91" grouprefs="OLED"/>
+<wire x1="-91.44" y1="119.38" x2="-83.82" y2="119.38" width="0.1524" layer="91" grouprefs="OLED"/>
+<label x="-88.9" y="119.38" size="1.778" layer="95" grouprefs="OLED"/>
 </segment>
 </net>
 </nets>
