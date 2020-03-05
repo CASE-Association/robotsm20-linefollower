@@ -3,7 +3,7 @@
 <eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -9531,7 +9531,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http
 </package>
 </packages>
 <packages3d>
-<package3d name="R0603" urn="urn:adsk.eagle:package:5332309/4" type="model">
+<package3d name="R0603" urn="urn:adsk.eagle:package:5332309/1" type="box">
 <description>&lt;b&gt;Chip RESISTOR 0603 (1608 Metric)&lt;/b&gt;</description>
 <packageinstances>
 <packageinstance name="R0603"/>
@@ -9551,7 +9551,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="R0603" urn="urn:adsk.eagle:component:5332325/3" locally_modified="yes" prefix="R" uservalue="yes">
+<deviceset name="R0603" urn="urn:adsk.eagle:component:5332325/2" prefix="R" uservalue="yes">
 <description>&lt;b&gt;&lt;b&gt;Standard Chip RESISTOR 0603 (1608 Metric)&lt;/b&gt;
 &lt;/b&gt;&lt;hr /&gt;
 &lt;br /&gt;
@@ -9579,7 +9579,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5332309/4"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5332309/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -10172,8 +10172,8 @@ Variant with &lt;b&gt;I2C interface&lt;/b&gt;
 <part name="BOOT" library="CASE-Pinhead" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2" override_package3d_urn="urn:adsk.eagle:package:13090277/2" override_package_urn="urn:adsk.eagle:footprint:22348/1"/>
 <part name="SUPPLY55" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND36" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R33" library="CASE-RCL" deviceset="R0603" device="" package3d_urn="urn:adsk.eagle:package:5332309/4" value="10k"/>
-<part name="R34" library="CASE-RCL" deviceset="R0603" device="" package3d_urn="urn:adsk.eagle:package:5332309/4" value="10k"/>
+<part name="R33" library="CASE-RCL" deviceset="R0603" device="" package3d_urn="urn:adsk.eagle:package:5332309/1" value="10k"/>
+<part name="R34" library="CASE-RCL" deviceset="R0603" device="" package3d_urn="urn:adsk.eagle:package:5332309/1" value="10k"/>
 <part name="DEBUG_CONNECTOR" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="EH_B3B-EH" device="" package3d_urn="urn:adsk.eagle:package:5644951/1" value="JST-EH-03"/>
 <part name="SUPPLY53" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="UART_CONNECTOR" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="EH_B3B-EH" device="" package3d_urn="urn:adsk.eagle:package:5644951/1" value="JST-EH-03"/>
@@ -10182,6 +10182,14 @@ Variant with &lt;b&gt;I2C interface&lt;/b&gt;
 <part name="U$6" library="Displays" library_urn="urn:adsk.eagle:library:17801130" deviceset="DISPLAY-OLED-128X64-I2C" device="" package3d_urn="urn:adsk.eagle:package:17801164/1"/>
 <part name="SUPPLY57" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="C41" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="270pF"/>
+<part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
+<part name="SUPPLY58" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="19.4k"/>
+<part name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="SUPPLY59" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512W" package3d_urn="urn:adsk.eagle:package:23565/2" value="R001"/>
+<part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512W" package3d_urn="urn:adsk.eagle:package:23565/2" value="R001"/>
 </parts>
 <sheets>
 <sheet>
@@ -10987,14 +10995,14 @@ Applies after reboot</text>
 <description>&lt;h1&gt; Motor driver&lt;/h1&gt;
 &lt;p&gt;A schematic over the motor driver used for the DC motors.&lt;/p&gt;</description>
 <plain>
-<text x="-157.48" y="-45.72" size="1.778" layer="97" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">Bidirectional current sensing. 
+<text x="-5.08" y="-40.64" size="1.778" layer="97" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">Bidirectional current sensing. 
 The output will be Vref+-20xVsense.
 
 If input is -15 mVx20 = 0.3V and 
 Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
-<text x="40.64" y="33.02" size="1.778" layer="97" grouprefs="MOTOR-DRIVER">5V output! </text>
-<text x="40.64" y="73.66" size="1.778" layer="97" grouprefs="MOTOR-DRIVER">3-5 V input</text>
-<text x="7.62" y="63.5" size="1.778" layer="97" grouprefs="MOTOR-DRIVER">Check if pullup to 3v3 instead</text>
+<text x="15.24" y="60.96" size="1.778" layer="97" grouprefs="MOTOR-DRIVER">3-5 V input</text>
+<text x="35.56" y="96.52" size="1.778" layer="97" grouprefs="MOTOR-DRIVER">Vcc is 5V output</text>
+<text x="40.64" y="78.74" size="1.778" layer="97" grouprefs="MOTOR-DRIVER">3V3 Vref</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="-195.58" y="-106.68" smashed="yes">
@@ -11002,81 +11010,111 @@ Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
 <attribute name="LAST_DATE_TIME" x="148.59" y="-96.52" size="2.286" layer="94"/>
 <attribute name="SHEET" x="161.925" y="-101.6" size="2.54" layer="94"/>
 </instance>
-<instance part="U$5" gate="G$1" x="-134.62" y="-66.04" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
-<attribute name="NAME" x="-152.4" y="-50.8" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-152.4" y="-83.82" size="1.778" layer="96"/>
+<instance part="U$5" gate="G$1" x="17.78" y="-60.96" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
+<attribute name="NAME" x="0" y="-45.72" size="1.778" layer="95"/>
+<attribute name="VALUE" x="0" y="-78.74" size="1.778" layer="96"/>
 </instance>
-<instance part="R3" gate="G$1" x="-99.06" y="-66.04" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
-<attribute name="NAME" x="-102.87" y="-64.5414" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-102.87" y="-69.342" size="1.778" layer="96"/>
+<instance part="R3" gate="G$1" x="53.34" y="-60.96" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
+<attribute name="NAME" x="49.53" y="-59.4614" size="1.778" layer="95"/>
+<attribute name="VALUE" x="49.53" y="-64.262" size="1.778" layer="96"/>
 </instance>
-<instance part="R4" gate="G$1" x="-111.76" y="-76.2" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
-<attribute name="NAME" x="-115.57" y="-74.7014" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-115.57" y="-79.502" size="1.778" layer="96"/>
+<instance part="R4" gate="G$1" x="40.64" y="-71.12" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
+<attribute name="NAME" x="36.83" y="-69.6214" size="1.778" layer="95"/>
+<attribute name="VALUE" x="36.83" y="-74.422" size="1.778" layer="96"/>
 </instance>
-<instance part="C1" gate="G$1" x="-91.44" y="-71.12" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
-<attribute name="NAME" x="-89.916" y="-70.739" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-89.916" y="-75.819" size="1.778" layer="96"/>
+<instance part="C1" gate="G$1" x="60.96" y="-66.04" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
+<attribute name="NAME" x="62.484" y="-65.659" size="1.778" layer="95"/>
+<attribute name="VALUE" x="62.484" y="-70.739" size="1.778" layer="96"/>
 </instance>
-<instance part="C2" gate="G$1" x="-104.14" y="-81.28" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
-<attribute name="NAME" x="-102.616" y="-80.899" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-102.616" y="-85.979" size="1.778" layer="96"/>
+<instance part="C2" gate="G$1" x="48.26" y="-76.2" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
+<attribute name="NAME" x="49.784" y="-75.819" size="1.778" layer="95"/>
+<attribute name="VALUE" x="49.784" y="-80.899" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY1" gate="G$1" x="-104.14" y="-91.44" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
-<attribute name="VALUE" x="-106.807" y="-94.615" size="1.778" layer="96"/>
+<instance part="SUPPLY1" gate="G$1" x="48.26" y="-86.36" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
+<attribute name="VALUE" x="45.593" y="-89.535" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY2" gate="G$1" x="-91.44" y="-81.28" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
-<attribute name="VALUE" x="-94.107" y="-84.455" size="1.778" layer="96"/>
+<instance part="SUPPLY2" gate="G$1" x="60.96" y="-76.2" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
+<attribute name="VALUE" x="58.293" y="-79.375" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY3" gate="G$1" x="-91.44" y="-60.96" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
-<attribute name="VALUE" x="-94.107" y="-64.135" size="1.778" layer="96"/>
+<instance part="SUPPLY3" gate="G$1" x="60.96" y="-55.88" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
+<attribute name="VALUE" x="58.293" y="-59.055" size="1.778" layer="96"/>
 </instance>
-<instance part="C3" gate="G$1" x="-180.34" y="-60.96" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
-<attribute name="NAME" x="-178.816" y="-60.579" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-178.816" y="-65.659" size="1.778" layer="96"/>
+<instance part="C3" gate="G$1" x="-48.26" y="-55.88" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
+<attribute name="NAME" x="-46.736" y="-55.499" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-46.736" y="-60.579" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY4" gate="G$1" x="-180.34" y="-71.12" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
-<attribute name="VALUE" x="-183.007" y="-74.295" size="1.778" layer="96"/>
+<instance part="SUPPLY4" gate="G$1" x="-48.26" y="-66.04" smashed="yes" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR">
+<attribute name="VALUE" x="-50.927" y="-69.215" size="1.778" layer="96"/>
 </instance>
-<instance part="U$1" gate="G$1" x="76.2" y="55.88" smashed="yes" grouprefs="MOTOR-DRIVER"/>
-<instance part="SUPPLY5" gate="GND" x="76.2" y="12.7" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="VALUE" x="74.295" y="9.525" size="1.778" layer="96"/>
+<instance part="U$1" gate="G$1" x="50.8" y="43.18" smashed="yes" grouprefs="MOTOR-DRIVER"/>
+<instance part="SUPPLY5" gate="GND" x="50.8" y="0" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="VALUE" x="48.895" y="-3.175" size="1.778" layer="96"/>
 </instance>
-<instance part="R1" gate="G$1" x="22.86" y="48.26" smashed="yes" rot="R90" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="21.3614" y="44.45" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="26.162" y="44.45" size="1.778" layer="96" rot="R90"/>
+<instance part="R1" gate="G$1" x="-2.54" y="35.56" smashed="yes" rot="R90" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="-4.0386" y="31.75" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="0.762" y="31.75" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R2" gate="G$1" x="30.48" y="48.26" smashed="yes" rot="R90" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="28.9814" y="44.45" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="33.782" y="44.45" size="1.778" layer="96" rot="R90"/>
+<instance part="R2" gate="G$1" x="5.08" y="35.56" smashed="yes" rot="R90" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="3.5814" y="31.75" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="8.382" y="31.75" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SUPPLY6" gate="G$1" x="22.86" y="55.88" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="VALUE" x="22.86" y="58.674" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY6" gate="G$1" x="-2.54" y="43.18" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="VALUE" x="-2.54" y="45.974" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="SUPPLY7" gate="G$1" x="30.48" y="55.88" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="VALUE" x="30.48" y="58.674" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY7" gate="G$1" x="5.08" y="43.18" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="VALUE" x="5.08" y="45.974" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="C4" gate="G$1" x="96.52" y="93.98" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="99.695" y="99.06" size="1.778" layer="95"/>
-<attribute name="VALUE" x="97.155" y="90.805" size="1.778" layer="96"/>
+<instance part="C4" gate="G$1" x="71.12" y="81.28" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="74.295" y="86.36" size="1.778" layer="95"/>
+<attribute name="VALUE" x="71.755" y="78.105" size="1.778" layer="96"/>
 </instance>
-<instance part="C5" gate="G$1" x="106.68" y="93.98" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="109.855" y="99.06" size="1.778" layer="95"/>
-<attribute name="VALUE" x="107.315" y="90.805" size="1.778" layer="96"/>
+<instance part="C5" gate="G$1" x="81.28" y="81.28" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="84.455" y="86.36" size="1.778" layer="95"/>
+<attribute name="VALUE" x="81.915" y="78.105" size="1.778" layer="96"/>
 </instance>
-<instance part="C6" gate="G$1" x="116.84" y="96.52" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="118.364" y="96.901" size="1.778" layer="95"/>
-<attribute name="VALUE" x="118.364" y="91.821" size="1.778" layer="96"/>
+<instance part="C6" gate="G$1" x="91.44" y="83.82" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="92.964" y="84.201" size="1.778" layer="95"/>
+<attribute name="VALUE" x="92.964" y="79.121" size="1.778" layer="96"/>
 </instance>
-<instance part="C7" gate="G$1" x="124.46" y="96.52" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="125.984" y="96.901" size="1.778" layer="95"/>
-<attribute name="VALUE" x="125.984" y="91.821" size="1.778" layer="96"/>
+<instance part="C7" gate="G$1" x="99.06" y="83.82" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="100.584" y="84.201" size="1.778" layer="95"/>
+<attribute name="VALUE" x="100.584" y="79.121" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY8" gate="GND" x="124.46" y="83.82" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="VALUE" x="122.555" y="80.645" size="1.778" layer="96"/>
+<instance part="SUPPLY8" gate="GND" x="99.06" y="71.12" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="VALUE" x="97.155" y="67.945" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY9" gate="G$1" x="124.46" y="104.14" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="VALUE" x="124.46" y="106.934" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY9" gate="G$1" x="99.06" y="91.44" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="VALUE" x="99.06" y="94.234" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="C41" gate="G$1" x="2.54" y="91.44" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="4.064" y="91.821" size="1.778" layer="95"/>
+<attribute name="VALUE" x="4.064" y="86.741" size="1.778" layer="96"/>
+</instance>
+<instance part="R21" gate="G$1" x="15.24" y="88.9" smashed="yes" rot="R90" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="13.7414" y="85.09" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="18.542" y="85.09" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SUPPLY58" gate="GND" x="2.54" y="81.28" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="VALUE" x="0.635" y="78.105" size="1.778" layer="96"/>
+</instance>
+<instance part="R22" gate="G$1" x="33.02" y="88.9" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="29.21" y="90.3986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="29.21" y="85.598" size="1.778" layer="96"/>
+</instance>
+<instance part="R23" gate="G$1" x="45.72" y="88.9" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="41.91" y="90.3986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="41.91" y="85.598" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY59" gate="GND" x="25.4" y="83.82" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="VALUE" x="23.495" y="80.645" size="1.778" layer="96"/>
+</instance>
+<instance part="R24" gate="G$1" x="93.98" y="33.02" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="90.17" y="34.5186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="90.17" y="29.718" size="1.778" layer="96"/>
+</instance>
+<instance part="R25" gate="G$1" x="93.98" y="48.26" smashed="yes" grouprefs="MOTOR-DRIVER">
+<attribute name="NAME" x="90.17" y="49.7586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="90.17" y="44.958" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -11086,248 +11124,352 @@ Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
 <segment>
 <pinref part="C2" gate="G$1" pin="2"/>
 <pinref part="SUPPLY1" gate="G$1" pin="AGND"/>
-<wire x1="-104.14" y1="-88.9" x2="-104.14" y2="-86.36" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="48.26" y1="-83.82" x2="48.26" y2="-81.28" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="SUPPLY2" gate="G$1" pin="AGND"/>
-<wire x1="-91.44" y1="-78.74" x2="-91.44" y2="-76.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="60.96" y1="-73.66" x2="60.96" y2="-71.12" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 <segment>
 <pinref part="U$5" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY3" gate="G$1" pin="AGND"/>
-<wire x1="-119.38" y1="-55.88" x2="-91.44" y2="-55.88" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<wire x1="-91.44" y1="-55.88" x2="-91.44" y2="-58.42" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="33.02" y1="-50.8" x2="60.96" y2="-50.8" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="60.96" y1="-50.8" x2="60.96" y2="-53.34" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="SUPPLY4" gate="G$1" pin="AGND"/>
-<wire x1="-180.34" y1="-66.04" x2="-180.34" y2="-68.58" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="-48.26" y1="-60.96" x2="-48.26" y2="-63.5" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="OUT2"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="-119.38" y1="-76.2" x2="-116.84" y2="-76.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="33.02" y1="-71.12" x2="35.56" y2="-71.12" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="OUT1"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="-119.38" y1="-66.04" x2="-104.14" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="33.02" y1="-60.96" x2="48.26" y2="-60.96" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 </net>
 <net name="CURA" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="-93.98" y1="-66.04" x2="-91.44" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<label x="-86.36" y="-66.04" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="58.42" y1="-60.96" x2="60.96" y2="-60.96" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<label x="66.04" y="-60.96" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="-91.44" y1="-66.04" x2="-83.82" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<wire x1="-91.44" y1="-66.04" x2="-91.44" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="-91.44" y="-66.04"/>
+<wire x1="60.96" y1="-60.96" x2="68.58" y2="-60.96" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="60.96" y1="-60.96" x2="60.96" y2="-63.5" width="0.1524" layer="91"/>
+<junction x="60.96" y="-60.96"/>
 </segment>
 </net>
 <net name="CURB" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="-106.68" y1="-76.2" x2="-104.14" y2="-76.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<wire x1="-104.14" y1="-76.2" x2="-104.14" y2="-78.74" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<wire x1="-104.14" y1="-76.2" x2="-99.06" y2="-76.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<junction x="-104.14" y="-76.2" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<label x="-101.6" y="-76.2" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="45.72" y1="-71.12" x2="48.26" y2="-71.12" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="48.26" y1="-71.12" x2="48.26" y2="-73.66" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="48.26" y1="-71.12" x2="53.34" y2="-71.12" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<junction x="48.26" y="-71.12" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<label x="50.8" y="-71.12" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 </net>
 <net name="VREF" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="REF1"/>
-<wire x1="-119.38" y1="-60.96" x2="-116.84" y2="-60.96" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<label x="-116.84" y="-60.96" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="33.02" y1="-55.88" x2="35.56" y2="-55.88" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<label x="35.56" y="-55.88" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 <segment>
 <pinref part="U$5" gate="G$1" pin="REF2"/>
-<wire x1="-119.38" y1="-71.12" x2="-116.84" y2="-71.12" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<label x="-116.84" y="-71.12" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="33.02" y1="-66.04" x2="35.56" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<label x="35.56" y="-66.04" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="VS"/>
 <pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="-157.48" y1="-55.88" x2="-180.34" y2="-55.88" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<wire x1="-180.34" y1="-55.88" x2="-180.34" y2="-58.42" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-</segment>
-</net>
-<net name="CUR-IN1-" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="IN1-"/>
-<label x="-167.64" y="-60.96" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<wire x1="-157.48" y1="-60.96" x2="-167.64" y2="-60.96" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-</segment>
-</net>
-<net name="CUR-IN1+" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="IN1+"/>
-<label x="-167.64" y="-66.04" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<wire x1="-157.48" y1="-66.04" x2="-167.64" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-</segment>
-</net>
-<net name="CUR-IN2+" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="IN2+"/>
-<label x="-167.64" y="-76.2" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<wire x1="-157.48" y1="-76.2" x2="-167.64" y2="-76.2" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-</segment>
-</net>
-<net name="CUR-IN2-" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="IN2-"/>
-<label x="-167.64" y="-71.12" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
-<wire x1="-157.48" y1="-71.12" x2="-167.64" y2="-71.12" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="-5.08" y1="-50.8" x2="-48.26" y2="-50.8" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="-48.26" y1="-50.8" x2="-48.26" y2="-53.34" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 </net>
 <net name="PWMA" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PWMA"/>
-<label x="40.64" y="71.12" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
-<wire x1="50.8" y1="71.12" x2="40.64" y2="71.12" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="15.24" y="58.42" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+<wire x1="25.4" y1="58.42" x2="15.24" y2="58.42" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
 <net name="PWMB" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PWMB"/>
-<label x="40.64" y="66.04" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
-<wire x1="50.8" y1="66.04" x2="40.64" y2="66.04" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="15.24" y="53.34" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+<wire x1="25.4" y1="53.34" x2="15.24" y2="53.34" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
 <net name="INA1" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="INA1"/>
-<label x="40.64" y="60.96" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
-<wire x1="50.8" y1="60.96" x2="40.64" y2="60.96" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="15.24" y="48.26" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+<wire x1="25.4" y1="48.26" x2="15.24" y2="48.26" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
 <net name="INA2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="INA2"/>
-<label x="40.64" y="55.88" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
-<wire x1="50.8" y1="55.88" x2="40.64" y2="55.88" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="15.24" y="43.18" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+<wire x1="25.4" y1="43.18" x2="15.24" y2="43.18" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
 <net name="INB1" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="INB1"/>
-<label x="40.64" y="50.8" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
-<wire x1="50.8" y1="50.8" x2="40.64" y2="50.8" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="15.24" y="38.1" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+<wire x1="25.4" y1="38.1" x2="15.24" y2="38.1" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
 <net name="INB2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="INB2"/>
-<label x="40.64" y="45.72" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
-<wire x1="50.8" y1="45.72" x2="40.64" y2="45.72" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="15.24" y="33.02" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+<wire x1="25.4" y1="33.02" x2="15.24" y2="33.02" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
-<net name="LO1,5V" class="0">
+<net name="LO1" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="LO1"/>
-<label x="12.7" y="40.64" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
-<wire x1="50.8" y1="40.64" x2="30.48" y2="40.64" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="-10.16" y="27.94" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+<wire x1="25.4" y1="27.94" x2="5.08" y2="27.94" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="30.48" y1="43.18" x2="30.48" y2="40.64" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<junction x="30.48" y="40.64" grouprefs="MOTOR-DRIVER"/>
-<wire x1="30.48" y1="40.64" x2="17.78" y2="40.64" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="5.08" y1="30.48" x2="5.08" y2="27.94" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="5.08" y="27.94" grouprefs="MOTOR-DRIVER"/>
+<wire x1="5.08" y1="27.94" x2="-7.62" y2="27.94" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
-<net name="LO2,5V" class="0">
+<net name="LO2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="LO2"/>
-<label x="12.7" y="35.56" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
-<wire x1="50.8" y1="35.56" x2="22.86" y2="35.56" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="-10.16" y="22.86" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+<wire x1="25.4" y1="22.86" x2="-2.54" y2="22.86" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="22.86" y1="35.56" x2="17.78" y2="35.56" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="22.86" y1="43.18" x2="22.86" y2="35.56" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<junction x="22.86" y="35.56" grouprefs="MOTOR-DRIVER"/>
+<wire x1="-2.54" y1="22.86" x2="-7.62" y2="22.86" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="-2.54" y1="30.48" x2="-2.54" y2="22.86" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="-2.54" y="22.86" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY5" gate="GND" pin="GND"/>
-<wire x1="76.2" y1="20.32" x2="76.2" y2="17.78" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="50.8" y1="7.62" x2="50.8" y2="5.08" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <pinref part="U$1" gate="G$1" pin="HBMODE"/>
-<wire x1="76.2" y1="17.78" x2="76.2" y2="15.24" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="71.12" y1="20.32" x2="71.12" y2="17.78" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="71.12" y1="17.78" x2="76.2" y2="17.78" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<junction x="76.2" y="17.78"/>
+<wire x1="50.8" y1="5.08" x2="50.8" y2="2.54" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="45.72" y1="7.62" x2="45.72" y2="5.08" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="45.72" y1="5.08" x2="50.8" y2="5.08" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="50.8" y="5.08" grouprefs="MOTOR-DRIVER"/>
+<pinref part="U$1" gate="G$1" pin="RSAGND"/>
+<wire x1="55.88" y1="7.62" x2="55.88" y2="5.08" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="55.88" y1="5.08" x2="50.8" y2="5.08" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<pinref part="U$1" gate="G$1" pin="RSBGND"/>
+<wire x1="60.96" y1="7.62" x2="60.96" y2="5.08" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="60.96" y1="5.08" x2="55.88" y2="5.08" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="55.88" y="5.08" grouprefs="MOTOR-DRIVER"/>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="96.52" y1="91.44" x2="96.52" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="96.52" y1="88.9" x2="106.68" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="71.12" y1="78.74" x2="71.12" y2="76.2" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="71.12" y1="76.2" x2="81.28" y2="76.2" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="106.68" y1="88.9" x2="116.84" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="116.84" y1="88.9" x2="124.46" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="124.46" y1="88.9" x2="124.46" y2="91.44" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="81.28" y1="76.2" x2="91.44" y2="76.2" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="91.44" y1="76.2" x2="99.06" y2="76.2" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="99.06" y1="76.2" x2="99.06" y2="78.74" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="116.84" y1="91.44" x2="116.84" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<junction x="116.84" y="88.9" grouprefs="MOTOR-DRIVER"/>
+<wire x1="91.44" y1="78.74" x2="91.44" y2="76.2" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="91.44" y="76.2" grouprefs="MOTOR-DRIVER"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="106.68" y1="91.44" x2="106.68" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<junction x="106.68" y="88.9" grouprefs="MOTOR-DRIVER"/>
+<wire x1="81.28" y1="78.74" x2="81.28" y2="76.2" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="81.28" y="76.2" grouprefs="MOTOR-DRIVER"/>
 <pinref part="SUPPLY8" gate="GND" pin="GND"/>
-<wire x1="124.46" y1="88.9" x2="124.46" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<junction x="124.46" y="88.9" grouprefs="MOTOR-DRIVER"/>
+<wire x1="99.06" y1="76.2" x2="99.06" y2="73.66" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="99.06" y="76.2" grouprefs="MOTOR-DRIVER"/>
+</segment>
+<segment>
+<pinref part="SUPPLY58" gate="GND" pin="GND"/>
+<pinref part="C41" gate="G$1" pin="2"/>
+<wire x1="2.54" y1="83.82" x2="2.54" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+</segment>
+<segment>
+<pinref part="SUPPLY59" gate="GND" pin="GND"/>
+<wire x1="25.4" y1="86.36" x2="25.4" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<pinref part="R22" gate="G$1" pin="1"/>
+<wire x1="27.94" y1="88.9" x2="25.4" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="VMB"/>
-<wire x1="88.9" y1="88.9" x2="88.9" y2="101.6" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="63.5" y1="76.2" x2="63.5" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
 <net name="12V" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="VMA"/>
-<wire x1="83.82" y1="88.9" x2="83.82" y2="101.6" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="83.82" y1="101.6" x2="96.52" y2="101.6" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="58.42" y1="76.2" x2="58.42" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="58.42" y1="88.9" x2="71.12" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="96.52" y1="101.6" x2="106.68" y2="101.6" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="106.68" y1="101.6" x2="116.84" y2="101.6" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="116.84" y1="101.6" x2="124.46" y2="101.6" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="124.46" y1="101.6" x2="124.46" y2="99.06" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="71.12" y1="88.9" x2="81.28" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="81.28" y1="88.9" x2="91.44" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="91.44" y1="88.9" x2="99.06" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="99.06" y1="88.9" x2="99.06" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="116.84" y1="101.6" x2="116.84" y2="99.06" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<junction x="116.84" y="101.6" grouprefs="MOTOR-DRIVER"/>
+<wire x1="91.44" y1="88.9" x2="91.44" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="91.44" y="88.9" grouprefs="MOTOR-DRIVER"/>
 <pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="106.68" y1="101.6" x2="106.68" y2="99.06" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<junction x="106.68" y="101.6" grouprefs="MOTOR-DRIVER"/>
+<wire x1="81.28" y1="88.9" x2="81.28" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="81.28" y="88.9" grouprefs="MOTOR-DRIVER"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="96.52" y1="101.6" x2="96.52" y2="99.06" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<junction x="96.52" y="101.6" grouprefs="MOTOR-DRIVER"/>
+<wire x1="71.12" y1="88.9" x2="71.12" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="71.12" y="88.9" grouprefs="MOTOR-DRIVER"/>
 <pinref part="SUPPLY9" gate="G$1" pin="12V"/>
-<wire x1="124.46" y1="104.14" x2="124.46" y2="101.6" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<junction x="124.46" y="101.6" grouprefs="MOTOR-DRIVER"/>
+<wire x1="99.06" y1="91.44" x2="99.06" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="99.06" y="88.9" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
 <segment>
 <pinref part="SUPPLY6" gate="G$1" pin="3.3V"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="22.86" y1="55.88" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="43.18" x2="-2.54" y2="40.64" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 <segment>
 <pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="30.48" y1="55.88" x2="30.48" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="43.18" x2="5.08" y2="40.64" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<junction x="-91.44" y="-66.04" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<junction x="60.96" y="-60.96" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+</segment>
+</net>
+<net name="MOTORB-" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="OUTB-"/>
+<wire x1="76.2" y1="43.18" x2="88.9" y2="43.18" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="78.74" y="43.18" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+</segment>
+</net>
+<net name="MOTORA-" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="OUTA-"/>
+<wire x1="76.2" y1="38.1" x2="88.9" y2="38.1" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="78.74" y="38.1" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+</segment>
+</net>
+<net name="N$29" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCC"/>
+<wire x1="53.34" y1="76.2" x2="53.34" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<pinref part="R23" gate="G$1" pin="2"/>
+<wire x1="53.34" y1="88.9" x2="53.34" y2="96.52" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="50.8" y1="88.9" x2="53.34" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="53.34" y="88.9" grouprefs="MOTOR-DRIVER"/>
+<pinref part="C41" gate="G$1" pin="1"/>
+<wire x1="2.54" y1="96.52" x2="2.54" y2="93.98" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="53.34" y1="96.52" x2="15.24" y2="96.52" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<pinref part="R21" gate="G$1" pin="2"/>
+<wire x1="15.24" y1="96.52" x2="2.54" y2="96.52" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="15.24" y1="93.98" x2="15.24" y2="96.52" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="15.24" y="96.52" grouprefs="MOTOR-DRIVER"/>
+</segment>
+</net>
+<net name="N$28" class="0">
+<segment>
+<pinref part="R23" gate="G$1" pin="1"/>
+<wire x1="40.64" y1="88.9" x2="40.64" y2="78.74" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<pinref part="U$1" gate="G$1" pin="VREFB"/>
+<wire x1="43.18" y1="78.74" x2="48.26" y2="78.74" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="48.26" y1="76.2" x2="48.26" y2="78.74" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<pinref part="U$1" gate="G$1" pin="VREFA"/>
+<wire x1="43.18" y1="78.74" x2="43.18" y2="76.2" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="40.64" y1="78.74" x2="43.18" y2="78.74" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="43.18" y="78.74" grouprefs="MOTOR-DRIVER"/>
+<pinref part="R22" gate="G$1" pin="2"/>
+<wire x1="38.1" y1="88.9" x2="40.64" y2="88.9" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="40.64" y="88.9" grouprefs="MOTOR-DRIVER"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="R21" gate="G$1" pin="1"/>
+<wire x1="15.24" y1="83.82" x2="15.24" y2="78.74" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="15.24" y1="78.74" x2="38.1" y2="78.74" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<pinref part="U$1" gate="G$1" pin="OSCM"/>
+<wire x1="38.1" y1="78.74" x2="38.1" y2="76.2" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+</segment>
+</net>
+<net name="MOTORB+_HIGH" class="0">
+<segment>
+<pinref part="R25" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="OUTB+"/>
+<wire x1="88.9" y1="48.26" x2="81.28" y2="48.26" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="81.28" y="53.34" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+<wire x1="81.28" y1="48.26" x2="76.2" y2="48.26" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="81.28" y1="48.26" x2="81.28" y2="53.34" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="81.28" y1="53.34" x2="86.36" y2="53.34" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="81.28" y="48.26" grouprefs="MOTOR-DRIVER"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="IN2+"/>
+<label x="-25.4" y="-71.12" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="-5.08" y1="-71.12" x2="-25.4" y2="-71.12" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+</segment>
+</net>
+<net name="MOTORA+_HIGH" class="0">
+<segment>
+<pinref part="R24" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="OUTA+"/>
+<wire x1="88.9" y1="33.02" x2="81.28" y2="33.02" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="81.28" y="25.4" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+<wire x1="81.28" y1="33.02" x2="76.2" y2="33.02" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="81.28" y="33.02" grouprefs="MOTOR-DRIVER"/>
+<wire x1="81.28" y1="33.02" x2="81.28" y2="27.94" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="81.28" y1="27.94" x2="86.36" y2="27.94" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="IN1+"/>
+<label x="-25.4" y="-60.96" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="-5.08" y1="-60.96" x2="-25.4" y2="-60.96" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+</segment>
+</net>
+<net name="MOTORB+" class="0">
+<segment>
+<pinref part="R25" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="48.26" x2="114.3" y2="48.26" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="104.14" y="48.26" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="IN2-"/>
+<label x="-25.4" y="-66.04" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="-5.08" y1="-66.04" x2="-25.4" y2="-66.04" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+</segment>
+</net>
+<net name="MOTORA+" class="0">
+<segment>
+<pinref part="R24" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="33.02" x2="114.3" y2="33.02" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<label x="104.14" y="33.02" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="IN1-"/>
+<label x="-25.4" y="-55.88" size="1.778" layer="95" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<wire x1="-5.08" y1="-55.88" x2="-25.4" y2="-55.88" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 </net>
 </nets>
