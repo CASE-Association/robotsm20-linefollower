@@ -10526,6 +10526,7 @@ ON/OFF Switch</description>
 <schematic_group name="I2C-PULLUP"/>
 <schematic_group name="IMU"/>
 <schematic_group name="BATTERY"/>
+<schematic_group name="INTERFACE-BUTTON"/>
 </groups>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
@@ -10717,6 +10718,11 @@ ON/OFF Switch</description>
 <part name="SUPPLY69" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R32" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R35" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="U$11" library="CASE-Switches" library_urn="urn:adsk.eagle:library:7770839" deviceset="TSM2JSMA" device="" package3d_urn="urn:adsk.eagle:package:17798453/2"/>
+<part name="C46" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1u"/>
+<part name="SUPPLY70" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="+3V6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="R36" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -13023,6 +13029,24 @@ Low: 0x28</text>
 <attribute name="NAME" x="173.7614" y="49.53" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="178.562" y="49.53" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="U$11" gate="G$1" x="134.62" y="0" smashed="yes" rot="R270" grouprefs="INTERFACE-BUTTON">
+<attribute name="NAME" x="135.89" y="-3.81" size="1.27" layer="95" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="127" y="-3.81" size="1.27" layer="95" ratio="10" rot="R270"/>
+</instance>
+<instance part="C46" gate="G$1" x="147.32" y="-7.62" smashed="yes" grouprefs="INTERFACE-BUTTON">
+<attribute name="NAME" x="148.844" y="-7.239" size="1.778" layer="95"/>
+<attribute name="VALUE" x="148.844" y="-12.319" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY70" gate="GND" x="134.62" y="-20.32" smashed="yes" grouprefs="INTERFACE-BUTTON">
+<attribute name="VALUE" x="132.715" y="-23.495" size="1.778" layer="96"/>
+</instance>
+<instance part="+3V6" gate="G$1" x="134.62" y="5.08" smashed="yes" grouprefs="INTERFACE-BUTTON">
+<attribute name="VALUE" x="132.08" y="0" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R36" gate="G$1" x="152.4" y="0" smashed="yes" rot="R180" grouprefs="INTERFACE-BUTTON">
+<attribute name="NAME" x="156.21" y="-1.4986" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="156.21" y="3.302" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -13052,6 +13076,19 @@ Low: 0x28</text>
 <pinref part="U$8" gate="G$1" pin="NO"/>
 <wire x1="175.26" y1="27.94" x2="175.26" y2="38.1" width="0.1524" layer="91" grouprefs="BATTERY"/>
 <wire x1="175.26" y1="38.1" x2="170.18" y2="38.1" width="0.1524" layer="91" grouprefs="BATTERY"/>
+</segment>
+<segment>
+<pinref part="C46" gate="G$1" pin="2"/>
+<wire x1="147.32" y1="-12.7" x2="147.32" y2="-15.24" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<pinref part="U$11" gate="G$1" pin="3"/>
+<wire x1="129.54" y1="-12.7" x2="129.54" y2="-15.24" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<wire x1="129.54" y1="-15.24" x2="134.62" y2="-15.24" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<pinref part="U$11" gate="G$1" pin="4"/>
+<wire x1="134.62" y1="-15.24" x2="134.62" y2="-12.7" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<wire x1="134.62" y1="-15.24" x2="147.32" y2="-15.24" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<junction x="134.62" y="-15.24" grouprefs="INTERFACE-BUTTON"/>
+<pinref part="SUPPLY70" gate="GND" pin="GND"/>
+<wire x1="134.62" y1="-17.78" x2="134.62" y2="-15.24" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -13137,6 +13174,21 @@ Low: 0x28</text>
 <segment>
 <pinref part="R29" gate="G$1" pin="2"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="G$1" pin="2"/>
+<wire x1="129.54" y1="-2.54" x2="129.54" y2="0" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<wire x1="129.54" y1="0" x2="134.62" y2="0" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<pinref part="U$11" gate="G$1" pin="1"/>
+<wire x1="134.62" y1="0" x2="134.62" y2="-2.54" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
+<wire x1="134.62" y1="0" x2="134.62" y2="2.54" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<junction x="134.62" y="0" grouprefs="INTERFACE-BUTTON"/>
+<wire x1="134.62" y1="0" x2="147.32" y2="0" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<pinref part="C46" gate="G$1" pin="1"/>
+<wire x1="147.32" y1="-5.08" x2="147.32" y2="0" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<pinref part="R36" gate="G$1" pin="2"/>
+<junction x="147.32" y="0"/>
 </segment>
 </net>
 <net name="N$30" class="0">
@@ -13276,6 +13328,13 @@ Low: 0x28</text>
 <wire x1="170.18" y1="43.18" x2="175.26" y2="43.18" width="0.1524" layer="91" grouprefs="BATTERY"/>
 <pinref part="R35" gate="G$1" pin="1"/>
 <wire x1="175.26" y1="48.26" x2="175.26" y2="43.18" width="0.1524" layer="91" grouprefs="BATTERY"/>
+</segment>
+</net>
+<net name="INTERFACE_BUT1" class="0">
+<segment>
+<pinref part="R36" gate="G$1" pin="1"/>
+<wire x1="157.48" y1="0" x2="160.02" y2="0" width="0.1524" layer="91" grouprefs="INTERFACE-BUTTON"/>
+<label x="160.02" y="0" size="1.778" layer="95" grouprefs="INTERFACE-BUTTON"/>
 </segment>
 </net>
 </nets>
