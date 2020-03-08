@@ -11174,7 +11174,6 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <schematic_group name="BOOST-12V"/>
 <schematic_group name="LDO-3V3"/>
 <schematic_group name="BUCK-5V"/>
-<schematic_group name="BUCK-3V7"/>
 <schematic_group name="LDO-VREF-1V8"/>
 <schematic_group name="UART"/>
 <schematic_group name="DEBUG"/>
@@ -11242,15 +11241,6 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <part name="Q1" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="CSD15571Q2" device="" package3d_urn="urn:adsk.eagle:package:17626602/1"/>
 <part name="Q2" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="CSD15571Q2" device="" package3d_urn="urn:adsk.eagle:package:17626602/1"/>
 <part name="SUPPLY18" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="36.25k"/>
-<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22µF"/>
-<part name="C14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22µF"/>
-<part name="C15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="3300pF"/>
-<part name="SUPPLY21" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="SUPPLY22" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="SUPPLY23" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="PS2" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="TPS82130SILT" device="" package3d_urn="urn:adsk.eagle:package:17626603/1"/>
 <part name="U$2" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="MCP1501T-XXE" device="" package3d_urn="urn:adsk.eagle:package:17638851/1"/>
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="SUPPLY24" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="AGND" device=""/>
@@ -11438,9 +11428,6 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <part name="+3V23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="SUPPLY20" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="SUPPLY19" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="P+13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12921,13 +12908,8 @@ Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
 and gives a LOW until 
 the boost has reached 
 the desired output. </text>
-<text x="60.96" y="-6.35" size="1.778" layer="97" grouprefs="BUCK-3V7">PG should connect to PU
-and gives a LOW until 
-the boost has reached 
-the desired output. </text>
 <text x="-106.68" y="81.28" size="1.778" layer="97" grouprefs="LDO-VREF-1V8">Precise 1V8 reference to
 use with the current OP-amp.</text>
-<text x="50.8" y="20.32" size="1.778" layer="97" grouprefs="BUCK-3V7">0.8V</text>
 <text x="-76.2" y="-99.06" size="1.778" layer="97" grouprefs="BOOST-12V">75k - Switching 
 750 +- 75 kHz</text>
 <text x="17.78" y="-71.12" size="1.778" layer="97" grouprefs="BOOST-12V">1.22 V at FB</text>
@@ -13031,39 +13013,6 @@ Ipeak:      28A </text>
 </instance>
 <instance part="SUPPLY18" gate="GND" x="-5.08" y="-91.44" smashed="yes" grouprefs="BOOST-12V">
 <attribute name="VALUE" x="-6.985" y="-94.615" size="1.778" layer="96"/>
-</instance>
-<instance part="R7" gate="G$1" x="66.04" y="19.05" smashed="yes" grouprefs="BUCK-3V7">
-<attribute name="NAME" x="62.23" y="20.5486" size="1.778" layer="95"/>
-<attribute name="VALUE" x="62.23" y="15.748" size="1.778" layer="96"/>
-</instance>
-<instance part="R8" gate="G$1" x="58.42" y="11.43" smashed="yes" rot="R90" grouprefs="BUCK-3V7">
-<attribute name="NAME" x="56.9214" y="7.62" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="61.722" y="7.62" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="C13" gate="G$1" x="78.74" y="24.13" smashed="yes" grouprefs="BUCK-3V7">
-<attribute name="NAME" x="80.264" y="24.511" size="1.778" layer="95"/>
-<attribute name="VALUE" x="80.264" y="19.431" size="1.778" layer="96"/>
-</instance>
-<instance part="C14" gate="G$1" x="0" y="6.35" smashed="yes" grouprefs="BUCK-3V7">
-<attribute name="NAME" x="1.524" y="6.731" size="1.778" layer="95"/>
-<attribute name="VALUE" x="1.524" y="1.651" size="1.778" layer="96"/>
-</instance>
-<instance part="C15" gate="G$1" x="7.62" y="6.35" smashed="yes" grouprefs="BUCK-3V7">
-<attribute name="NAME" x="9.144" y="6.731" size="1.778" layer="95"/>
-<attribute name="VALUE" x="9.144" y="1.651" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY21" gate="GND" x="78.74" y="13.97" smashed="yes" grouprefs="BUCK-3V7">
-<attribute name="VALUE" x="76.835" y="10.795" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY22" gate="GND" x="7.62" y="-3.81" smashed="yes" grouprefs="BUCK-3V7">
-<attribute name="VALUE" x="5.715" y="-6.985" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY23" gate="GND" x="0" y="-3.81" smashed="yes" grouprefs="BUCK-3V7">
-<attribute name="VALUE" x="-1.905" y="-6.985" size="1.778" layer="96"/>
-</instance>
-<instance part="PS2" gate="G$1" x="35.56" y="21.59" smashed="yes" grouprefs="BUCK-3V7">
-<attribute name="NAME" x="31.75" y="8.89" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="29.21" y="34.29" size="1.778" layer="96" align="center-left"/>
 </instance>
 <instance part="U$2" gate="G$1" x="-96.52" y="71.12" smashed="yes" grouprefs="LDO-VREF-1V8"/>
 <instance part="+3V2" gate="G$1" x="-111.76" y="78.74" smashed="yes" grouprefs="LDO-VREF-1V8">
@@ -13233,15 +13182,6 @@ Ipeak:      28A </text>
 <instance part="SUPPLY78" gate="GND" x="93.98" y="-88.9" smashed="yes" grouprefs="BOOST-12V">
 <attribute name="VALUE" x="92.075" y="-92.075" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY20" gate="GND" x="53.34" y="-3.81" smashed="yes">
-<attribute name="VALUE" x="51.435" y="-6.985" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY19" gate="GND" x="17.78" y="-3.81" smashed="yes">
-<attribute name="VALUE" x="15.875" y="-6.985" size="1.778" layer="96"/>
-</instance>
-<instance part="P+13" gate="1" x="0" y="34.29" smashed="yes" grouprefs="BUCK-3V7">
-<attribute name="VALUE" x="-2.54" y="31.75" size="1.778" layer="96" rot="R90"/>
-</instance>
 </instances>
 <busses>
 </busses>
@@ -13317,21 +13257,6 @@ Ipeak:      28A </text>
 <wire x1="-53.34" y1="7.62" x2="-53.34" y2="5.08" width="0.1524" layer="91" grouprefs="BUCK-5V"/>
 <wire x1="-53.34" y1="5.08" x2="-58.42" y2="5.08" width="0.1524" layer="91" grouprefs="BUCK-5V"/>
 <junction x="-58.42" y="5.08" grouprefs="BUCK-5V"/>
-</segment>
-<segment>
-<wire x1="78.74" y1="19.05" x2="78.74" y2="16.51" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<pinref part="C13" gate="G$1" pin="2"/>
-<pinref part="SUPPLY21" gate="GND" pin="GND"/>
-</segment>
-<segment>
-<wire x1="7.62" y1="1.27" x2="7.62" y2="-1.27" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<pinref part="C15" gate="G$1" pin="2"/>
-<pinref part="SUPPLY22" gate="GND" pin="GND"/>
-</segment>
-<segment>
-<wire x1="0" y1="1.27" x2="0" y2="-1.27" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<pinref part="C14" gate="G$1" pin="2"/>
-<pinref part="SUPPLY23" gate="GND" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C17" gate="G$1" pin="2"/>
@@ -13426,23 +13351,6 @@ Ipeak:      28A </text>
 <pinref part="R45" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="-86.36" x2="93.98" y2="-83.82" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 </segment>
-<segment>
-<wire x1="50.8" y1="13.97" x2="53.34" y2="13.97" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="53.34" y1="13.97" x2="53.34" y2="3.81" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="53.34" y1="3.81" x2="53.34" y2="-1.27" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="58.42" y1="6.35" x2="58.42" y2="3.81" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="58.42" y1="3.81" x2="53.34" y2="3.81" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<junction x="53.34" y="3.81" grouprefs="BUCK-3V7"/>
-<pinref part="R8" gate="G$1" pin="1"/>
-<pinref part="PS2" gate="G$1" pin="PAD"/>
-<pinref part="SUPPLY20" gate="GND" pin="GND"/>
-</segment>
-<segment>
-<wire x1="20.32" y1="13.97" x2="17.78" y2="13.97" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="17.78" y1="13.97" x2="17.78" y2="-1.27" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<pinref part="PS2" gate="G$1" pin="GND"/>
-<pinref part="SUPPLY19" gate="GND" pin="GND"/>
-</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -13531,19 +13439,6 @@ Ipeak:      28A </text>
 <pinref part="P+5" gate="1" pin="V+"/>
 <wire x1="-111.76" y1="-26.67" x2="-111.76" y2="-27.94" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 </segment>
-<segment>
-<wire x1="20.32" y1="29.21" x2="0" y2="29.21" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="0" y1="29.21" x2="0" y2="24.13" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="0" y1="24.13" x2="0" y2="8.89" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="20.32" y1="24.13" x2="0" y2="24.13" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<junction x="0" y="24.13" grouprefs="BUCK-3V7"/>
-<wire x1="0" y1="31.75" x2="0" y2="29.21" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<junction x="0" y="29.21" grouprefs="BUCK-3V7"/>
-<pinref part="C14" gate="G$1" pin="1"/>
-<pinref part="PS2" gate="G$1" pin="EN"/>
-<pinref part="PS2" gate="G$1" pin="VIN"/>
-<pinref part="P+13" gate="1" pin="V+"/>
-</segment>
 </net>
 <net name="N$4" class="0">
 <segment>
@@ -13554,46 +13449,6 @@ Ipeak:      28A </text>
 <wire x1="-53.34" y1="20.32" x2="-60.96" y2="20.32" width="0.1524" layer="91" grouprefs="BUCK-5V"/>
 <wire x1="-53.34" y1="17.78" x2="-53.34" y2="20.32" width="0.1524" layer="91" grouprefs="BUCK-5V"/>
 <junction x="-53.34" y="20.32" grouprefs="BUCK-5V"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<wire x1="7.62" y1="8.89" x2="7.62" y2="19.05" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="7.62" y1="19.05" x2="20.32" y2="19.05" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<pinref part="C15" gate="G$1" pin="1"/>
-<pinref part="PS2" gate="G$1" pin="SS/TR"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<wire x1="60.96" y1="19.05" x2="58.42" y2="19.05" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="58.42" y1="19.05" x2="50.8" y2="19.05" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="58.42" y1="16.51" x2="58.42" y2="19.05" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<junction x="58.42" y="19.05" grouprefs="BUCK-3V7"/>
-<pinref part="R7" gate="G$1" pin="1"/>
-<pinref part="R8" gate="G$1" pin="2"/>
-<pinref part="PS2" gate="G$1" pin="FB"/>
-</segment>
-</net>
-<net name="3V7" class="0">
-<segment>
-<wire x1="50.8" y1="29.21" x2="58.42" y2="29.21" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="58.42" y1="29.21" x2="73.66" y2="29.21" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="73.66" y1="29.21" x2="78.74" y2="29.21" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="78.74" y1="31.75" x2="78.74" y2="29.21" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<junction x="78.74" y="29.21" grouprefs="BUCK-3V7"/>
-<wire x1="78.74" y1="26.67" x2="78.74" y2="29.21" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="50.8" y1="26.67" x2="58.42" y2="26.67" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="58.42" y1="26.67" x2="58.42" y2="29.21" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<junction x="58.42" y="29.21" grouprefs="BUCK-3V7"/>
-<wire x1="71.12" y1="19.05" x2="73.66" y2="19.05" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<wire x1="73.66" y1="19.05" x2="73.66" y2="29.21" width="0.1524" layer="91" grouprefs="BUCK-3V7"/>
-<junction x="73.66" y="29.21" grouprefs="BUCK-3V7"/>
-<pinref part="R7" gate="G$1" pin="2"/>
-<pinref part="C13" gate="G$1" pin="1"/>
-<pinref part="PS2" gate="G$1" pin="VOUT_1"/>
-<pinref part="PS2" gate="G$1" pin="VOUT_2"/>
-<label x="78.74" y="31.75" size="1.778" layer="95" grouprefs="BUCK-3V7"/>
 </segment>
 </net>
 <net name="AGND" class="0">
