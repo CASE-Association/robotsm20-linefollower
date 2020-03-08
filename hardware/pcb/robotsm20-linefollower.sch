@@ -12683,18 +12683,13 @@ Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
 <wire x1="-71.12" y1="86.36" x2="-73.66" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="MOTORDRIVER" gate="G$1" pin="VMB"/>
-<wire x1="-35.56" y1="73.66" x2="-35.56" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-</segment>
-</net>
 <net name="12V" class="0">
 <segment>
 <pinref part="MOTORDRIVER" gate="G$1" pin="VMA"/>
 <wire x1="-40.64" y1="73.66" x2="-40.64" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
-<wire x1="-40.64" y1="86.36" x2="-27.94" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<wire x1="-40.64" y1="86.36" x2="-35.56" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="-35.56" y1="86.36" x2="-27.94" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <wire x1="-27.94" y1="86.36" x2="-17.78" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <wire x1="-17.78" y1="86.36" x2="-7.62" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <wire x1="-7.62" y1="86.36" x2="0" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
@@ -12711,11 +12706,9 @@ Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
 <pinref part="SUPPLY9" gate="G$1" pin="12V"/>
 <wire x1="0" y1="88.9" x2="0" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <junction x="0" y="86.36" grouprefs="MOTOR-DRIVER"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<junction x="2.54" y="-55.88" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
+<pinref part="MOTORDRIVER" gate="G$1" pin="VMB"/>
+<wire x1="-35.56" y1="73.66" x2="-35.56" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
+<junction x="-35.56" y="86.36"/>
 </segment>
 </net>
 <net name="MOTOR_R-" class="0">
@@ -14192,10 +14185,10 @@ Utilizing internal pull-down</text>
 </segment>
 <segment>
 <pinref part="SUPPLY81" gate="GND" pin="GND"/>
-<wire x1="-96.52" y1="-53.34" x2="-96.52" y2="-50.84" width="0.1524" layer="91" grouprefs="FAN-POWER"/>
+<wire x1="-96.52" y1="-53.34" x2="-96.52" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="U$9" gate="G$1" pin="NEG-"/>
-<wire x1="-96.52" y1="-50.8" x2="-96.52" y2="-50.84" width="0.1524" layer="91" grouprefs="FAN-POWER"/>
-<wire x1="-96.52" y1="-50.84" x2="-99.96" y2="-50.84" width="0.1524" layer="91" grouprefs="FAN-POWER"/>
+<wire x1="-96.52" y1="-50.8" x2="-99.96" y2="-50.8" width="0.1524" layer="91"/>
+<wire x1="-99.96" y1="-50.8" x2="-99.96" y2="-50.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -14266,12 +14259,16 @@ Utilizing internal pull-down</text>
 <wire x1="12.7" y1="-7.62" x2="2.54" y2="-7.62" width="0.1524" layer="91" grouprefs="IMU"/>
 <pinref part="C44" gate="G$1" pin="1"/>
 <wire x1="2.54" y1="-7.62" x2="-7.62" y2="-7.62" width="0.1524" layer="91" grouprefs="IMU"/>
-<wire x1="-7.62" y1="-7.62" x2="-25.4" y2="-7.62" width="0.1524" layer="91" grouprefs="IMU"/>
+<wire x1="-7.62" y1="-7.62" x2="-17.78" y2="-7.62" width="0.1524" layer="91" grouprefs="IMU"/>
+<wire x1="-17.78" y1="-7.62" x2="-25.4" y2="-7.62" width="0.1524" layer="91" grouprefs="IMU"/>
 <wire x1="-7.62" y1="-10.16" x2="-7.62" y2="-7.62" width="0.1524" layer="91" grouprefs="IMU"/>
 <junction x="-7.62" y="-7.62" grouprefs="IMU"/>
 <pinref part="C45" gate="G$1" pin="1"/>
 <wire x1="2.54" y1="-10.16" x2="2.54" y2="-7.62" width="0.1524" layer="91" grouprefs="IMU"/>
 <junction x="2.54" y="-7.62" grouprefs="IMU"/>
+<pinref part="C43" gate="G$1" pin="1"/>
+<wire x1="-17.78" y1="-10.16" x2="-17.78" y2="-7.62" width="0.1524" layer="91" grouprefs="IMU"/>
+<junction x="-17.78" y="-7.62"/>
 </segment>
 <segment>
 <pinref part="R27" gate="G$1" pin="2"/>
@@ -14383,12 +14380,6 @@ Utilizing internal pull-down</text>
 <pinref part="IC1" gate="G$1" pin="!BOOT_LOAD_PIN!"/>
 <wire x1="-25.4" y1="-22.86" x2="-25.4" y2="-27.94" width="0.1524" layer="91" grouprefs="IMU"/>
 <wire x1="-25.4" y1="-27.94" x2="15.24" y2="-27.94" width="0.1524" layer="91" grouprefs="IMU"/>
-</segment>
-</net>
-<net name="N$36" class="0">
-<segment>
-<pinref part="C43" gate="G$1" pin="1"/>
-<wire x1="-17.78" y1="-10.16" x2="-17.78" y2="-7.62" width="0.1524" layer="91" grouprefs="IMU"/>
 </segment>
 </net>
 <net name="N$27" class="0">
