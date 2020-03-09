@@ -11449,8 +11449,8 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="19.4k"/>
 <part name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="SUPPLY59" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512W" package3d_urn="urn:adsk.eagle:package:23565/2" value="R001"/>
-<part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512W" package3d_urn="urn:adsk.eagle:package:23565/2" value="R001"/>
+<part name="MOTOR_LR" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512W" package3d_urn="urn:adsk.eagle:package:23565/2" value="R001"/>
+<part name="MOTOR_RR" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512W" package3d_urn="urn:adsk.eagle:package:23565/2" value="R001"/>
 <part name="BT_HC05" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="WIRELESS-BLUETOOTH-HC-05" device="" package3d_urn="urn:adsk.eagle:package:12971313/2"/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="SUPPLY60" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -12546,11 +12546,11 @@ Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
 <instance part="SUPPLY59" gate="GND" x="-73.66" y="81.28" smashed="yes" grouprefs="MOTOR-DRIVER">
 <attribute name="VALUE" x="-75.565" y="78.105" size="1.778" layer="96"/>
 </instance>
-<instance part="R24" gate="G$1" x="-5.08" y="30.48" smashed="yes" grouprefs="MOTOR-DRIVER">
+<instance part="MOTOR_LR" gate="G$1" x="-5.08" y="30.48" smashed="yes" grouprefs="MOTOR-DRIVER">
 <attribute name="NAME" x="-8.89" y="31.9786" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-8.89" y="27.178" size="1.778" layer="96"/>
 </instance>
-<instance part="R25" gate="G$1" x="-5.08" y="45.72" smashed="yes" grouprefs="MOTOR-DRIVER">
+<instance part="MOTOR_RR" gate="G$1" x="-5.08" y="45.72" smashed="yes" grouprefs="MOTOR-DRIVER">
 <attribute name="NAME" x="-8.89" y="47.2186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-8.89" y="42.418" size="1.778" layer="96"/>
 </instance>
@@ -12897,7 +12897,7 @@ Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
 </net>
 <net name="MOTOR_R+_HIGH" class="0">
 <segment>
-<pinref part="R25" gate="G$1" pin="1"/>
+<pinref part="MOTOR_RR" gate="G$1" pin="1"/>
 <pinref part="MOTORDRIVER" gate="G$1" pin="OUTB+"/>
 <wire x1="-10.16" y1="45.72" x2="-17.78" y2="45.72" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <label x="-17.78" y="50.8" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
@@ -12914,7 +12914,7 @@ Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
 </net>
 <net name="MOTOR_L+_HIGH" class="0">
 <segment>
-<pinref part="R24" gate="G$1" pin="1"/>
+<pinref part="MOTOR_LR" gate="G$1" pin="1"/>
 <pinref part="MOTORDRIVER" gate="G$1" pin="OUTA+"/>
 <wire x1="-10.16" y1="30.48" x2="-17.78" y2="30.48" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <label x="-17.78" y="22.86" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
@@ -12931,7 +12931,7 @@ Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
 </net>
 <net name="MOTOR_R+" class="0">
 <segment>
-<pinref part="R25" gate="G$1" pin="2"/>
+<pinref part="MOTOR_RR" gate="G$1" pin="2"/>
 <wire x1="0" y1="45.72" x2="15.24" y2="45.72" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <label x="5.08" y="45.72" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
 </segment>
@@ -12948,7 +12948,7 @@ Vref = 1.8V. Vout = 1.8V-0.3V = 1.5V</text>
 </net>
 <net name="MOTOR_L+" class="0">
 <segment>
-<pinref part="R24" gate="G$1" pin="2"/>
+<pinref part="MOTOR_LR" gate="G$1" pin="2"/>
 <wire x1="0" y1="30.48" x2="15.24" y2="30.48" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <label x="5.08" y="30.48" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
 </segment>
@@ -13768,23 +13768,23 @@ Ipeak:      28A </text>
 <junction x="81.28" y="-71.12" grouprefs="BOOST-12V"/>
 </segment>
 </net>
-<net name="VOLTM_BATT" class="0">
-<segment>
-<pinref part="R46" gate="G$1" pin="1"/>
-<pinref part="R45" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="-68.58" x2="93.98" y2="-71.12" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
-<wire x1="93.98" y1="-71.12" x2="93.98" y2="-73.66" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
-<wire x1="93.98" y1="-71.12" x2="104.14" y2="-71.12" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
-<junction x="93.98" y="-71.12" grouprefs="BOOST-12V"/>
-<label x="93.98" y="-71.12" size="1.778" layer="95" grouprefs="BOOST-12V"/>
-</segment>
-</net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="BOOST" gate="G$1" pin="HDRV"/>
 <wire x1="15.24" y1="-66.04" x2="68.58" y2="-66.04" width="0.1524" layer="91"/>
 <pinref part="U$10" gate="G$1" pin="G"/>
 <wire x1="68.58" y1="-66.04" x2="68.58" y2="-33.02" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VOLTM_BOOST" class="0">
+<segment>
+<pinref part="R46" gate="G$1" pin="1"/>
+<pinref part="R45" gate="G$1" pin="2"/>
+<wire x1="93.98" y1="-68.58" x2="93.98" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="-71.12" x2="93.98" y2="-73.66" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="-71.12" x2="106.68" y2="-71.12" width="0.1524" layer="91"/>
+<junction x="93.98" y="-71.12"/>
+<label x="96.52" y="-71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
