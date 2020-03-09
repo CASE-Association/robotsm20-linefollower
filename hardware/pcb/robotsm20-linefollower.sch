@@ -11444,7 +11444,6 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="88k"/>
 <part name="SUPPLY32" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R1206W" package3d_urn="urn:adsk.eagle:package:23539/2" value="R002"/>
 <part name="C22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22µF"/>
 <part name="C23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22µF"/>
 <part name="C24" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL" device="_865060445005" package3d_urn="urn:adsk.eagle:package:491734/3" technology="_6,3X7,7" value="100µF"/>
@@ -11624,6 +11623,7 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 <part name="SUPPLY21" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="C14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="4.7µF"/>
 <part name="SUPPLY22" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="RSENSE" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512W" package3d_urn="urn:adsk.eagle:package:23565/2" value="R002"/>
 </parts>
 <sheets>
 <sheet>
@@ -13310,10 +13310,6 @@ Ipeak:      28A </text>
 <instance part="SUPPLY32" gate="GND" x="81.28" y="-63.5" smashed="yes" grouprefs="BOOST-12V">
 <attribute name="VALUE" x="79.375" y="-66.675" size="1.778" layer="96"/>
 </instance>
-<instance part="R13" gate="G$1" x="-35.56" y="-2.54" smashed="yes" grouprefs="BOOST-12V">
-<attribute name="NAME" x="-39.37" y="-1.0414" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-39.37" y="-5.842" size="1.778" layer="96"/>
-</instance>
 <instance part="C22" gate="G$1" x="106.68" y="-7.874" smashed="yes" grouprefs="BOOST-12V">
 <attribute name="NAME" x="108.204" y="-7.493" size="1.778" layer="95"/>
 <attribute name="VALUE" x="108.204" y="-12.573" size="1.778" layer="96"/>
@@ -13424,6 +13420,10 @@ Ipeak:      28A </text>
 </instance>
 <instance part="SUPPLY22" gate="GND" x="33.02" y="-25.4" smashed="yes" rot="R90">
 <attribute name="VALUE" x="36.195" y="-27.305" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="RSENSE" gate="G$1" x="-35.56" y="-2.54" smashed="yes">
+<attribute name="NAME" x="-39.37" y="-1.0414" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-39.37" y="-5.842" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -13660,7 +13660,6 @@ Ipeak:      28A </text>
 <segment>
 <pinref part="BOOST" gate="G$1" pin="VIN"/>
 <wire x1="-25.654" y1="-25.4" x2="-50.8" y2="-25.4" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
-<pinref part="R13" gate="G$1" pin="1"/>
 <pinref part="R15" gate="G$1" pin="2"/>
 <wire x1="-50.8" y1="-25.4" x2="-50.8" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <wire x1="-40.64" y1="-2.54" x2="-43.18" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
@@ -13691,6 +13690,7 @@ Ipeak:      28A </text>
 <wire x1="-66.04" y1="-28.194" x2="-66.04" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="-25.4" x2="-50.8" y2="-25.4" width="0.1524" layer="91"/>
 <junction x="-50.8" y="-25.4"/>
+<pinref part="RSENSE" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -13756,7 +13756,7 @@ Ipeak:      28A </text>
 <wire x1="-45.72" y1="-53.34" x2="-45.72" y2="-52.07" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 </segment>
 </net>
-<net name="N$14" class="0">
+<net name="COMP" class="0">
 <segment>
 <pinref part="BOOST" gate="G$1" pin="COMP"/>
 <wire x1="-45.72" y1="-40.64" x2="-25.4" y2="-40.64" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
@@ -13766,6 +13766,7 @@ Ipeak:      28A </text>
 <wire x1="-55.88" y1="-53.34" x2="-55.88" y2="-40.64" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <wire x1="-55.88" y1="-40.64" x2="-45.72" y2="-40.64" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <junction x="-45.72" y="-40.64" grouprefs="BOOST-12V"/>
+<label x="-45.72" y="-40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -13776,13 +13777,14 @@ Ipeak:      28A </text>
 <wire x1="17.78" y1="-20.32" x2="17.78" y2="-14.478" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 </segment>
 </net>
-<net name="N$17" class="0">
+<net name="LDRV" class="0">
 <segment>
 <pinref part="BOOST" gate="G$1" pin="LDRV"/>
 <wire x1="15.24" y1="-30.48" x2="43.18" y2="-30.48" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <wire x1="43.18" y1="-30.48" x2="43.18" y2="-17.78" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <wire x1="43.18" y1="-17.78" x2="48.26" y2="-17.78" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <pinref part="U$9" gate="G$1" pin="G"/>
+<label x="17.78" y="-30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$19" class="0">
@@ -13808,12 +13810,12 @@ Ipeak:      28A </text>
 <net name="N$18" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="1"/>
-<pinref part="R13" gate="G$1" pin="2"/>
 <wire x1="-12.7" y1="-2.54" x2="-27.94" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <pinref part="R14" gate="G$1" pin="2"/>
 <wire x1="-27.94" y1="-2.54" x2="-30.48" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <wire x1="-27.94" y1="-5.08" x2="-27.94" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <junction x="-27.94" y="-2.54" grouprefs="BOOST-12V"/>
+<pinref part="RSENSE" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$22" class="0">
@@ -13882,12 +13884,13 @@ Ipeak:      28A </text>
 <junction x="81.28" y="-45.72" grouprefs="BOOST-12V"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="HDRV" class="0">
 <segment>
 <pinref part="BOOST" gate="G$1" pin="HDRV"/>
 <wire x1="15.24" y1="-40.64" x2="68.58" y2="-40.64" width="0.1524" layer="91"/>
 <pinref part="U$10" gate="G$1" pin="G"/>
 <wire x1="68.58" y1="-40.64" x2="68.58" y2="-7.62" width="0.1524" layer="91"/>
+<label x="17.78" y="-40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VOLTM_BOOST" class="0">
