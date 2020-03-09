@@ -160,7 +160,7 @@
 <libraries>
 <library name="MotorDriver" urn="urn:adsk.eagle:library:17561913">
 <packages>
-<package name="SOP50P490X110-10N" urn="urn:adsk.eagle:footprint:17579090/1" library_version="7">
+<package name="SOP50P490X110-10N" urn="urn:adsk.eagle:footprint:17579090/1" library_version="9">
 <description>10-SOP, 0.50 mm pitch, 4.90 mm span, 3.00 X 3.00 X 1.10 mm body
 &lt;p&gt;10-pin SOP package with 0.50 mm pitch, 4.90 mm span with body size 3.00 X 3.00 X 1.10 mm&lt;/p&gt;</description>
 <circle x="-2.2175" y="1.644" radius="0.25" width="0" layer="21"/>
@@ -187,7 +187,7 @@
 <text x="0" y="2.529" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-2.185" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="QFN50P700X700X100-49T550N" urn="urn:adsk.eagle:footprint:17604868/1" library_version="7">
+<package name="QFN50P700X700X100-49T550N" urn="urn:adsk.eagle:footprint:17604868/1" library_version="9">
 <description>48-QFN, 0.50 mm pitch, 7.00 X 7.00 X 1.00 mm body, 5.50 X 5.50 mm thermal pad
 &lt;p&gt;48-pin QFN package with 0.50 mm pitch with body size 7.00 X 7.00 X 1.00 mm and thermal pad size 5.50 X 5.50 mm&lt;/p&gt;</description>
 <circle x="-4.004" y="3.389" radius="0.25" width="0" layer="21"/>
@@ -257,14 +257,14 @@
 </package>
 </packages>
 <packages3d>
-<package3d name="SOP50P490X110-10N" urn="urn:adsk.eagle:package:17579079/1" type="model" library_version="7">
+<package3d name="SOP50P490X110-10N" urn="urn:adsk.eagle:package:17579079/1" type="model" library_version="9">
 <description>10-SOP, 0.50 mm pitch, 4.90 mm span, 3.00 X 3.00 X 1.10 mm body
 &lt;p&gt;10-pin SOP package with 0.50 mm pitch, 4.90 mm span with body size 3.00 X 3.00 X 1.10 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="SOP50P490X110-10N"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN50P700X700X100-49T550N" urn="urn:adsk.eagle:package:17604854/1" type="box" library_version="7">
+<package3d name="QFN50P700X700X100-49T550N" urn="urn:adsk.eagle:package:17604854/2" type="model" library_version="9">
 <description>48-QFN, 0.50 mm pitch, 7.00 X 7.00 X 1.00 mm body, 5.50 X 5.50 mm thermal pad
 &lt;p&gt;48-pin QFN package with 0.50 mm pitch with body size 7.00 X 7.00 X 1.00 mm and thermal pad size 5.50 X 5.50 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -330,7 +330,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="INA2181" urn="urn:adsk.eagle:component:17579258/2" library_version="7">
+<deviceset name="INA2181" urn="urn:adsk.eagle:component:17579258/2" library_version="9">
 <description>&lt;h1&gt;INA2181&lt;/h1&gt;
 &lt;p&gt;Dual current measure amplifier&lt;/p&gt;
 &lt;a href="http://www.ti.com/general/docs/suppproductinfo.tsp?distId=26&amp;gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fds%2Fsymlink%2Fina2181.pdf"&gt;Datasheet&lt;/a&gt;
@@ -365,7 +365,7 @@ Part number
 </device>
 </devices>
 </deviceset>
-<deviceset name="TB67H420FTG" urn="urn:adsk.eagle:component:17610418/2" library_version="7">
+<deviceset name="TB67H420FTG" urn="urn:adsk.eagle:component:17610418/3" library_version="9">
 <description>&lt;h1&gt;TB67H420FTG&lt;/h1&gt;
 &lt;p&gt;Dual motor driver&lt;/p&gt;
 &lt;a href="https://www.mouser.se/datasheet/2/408/TB67H420FTG_datasheet_en_20170818-1368033.pdf"&gt;Datasheet&lt;/a&gt;
@@ -405,7 +405,7 @@ Part number
 <connect gate="G$1" pin="VREFB" pad="31"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:17604854/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:17604854/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -8492,7 +8492,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-1.9" y1="0.9" x2="-1.9" y2="0.9" width="0.2" layer="21"/>
 <wire x1="-1.9" y1="0.9" x2="-1.9" y2="1.1" width="0.2" layer="21" curve="-180"/>
 </package>
-<package name="SON50P200X200X80-9T80X120N" urn="urn:adsk.eagle:footprint:17638857/1" library_version="7">
+<package name="SON50P200X200X80-9T80X120N" urn="urn:adsk.eagle:footprint:17638857/1" library_version="8">
 <description>8-SON (DFN), 0.50 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.20 X 0.80 mm thermal pad
 &lt;p&gt;8-pin SON (DFN) package with 0.50 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.20 X 0.80 mm&lt;/p&gt;</description>
 <circle x="-1.504" y="1.389" radius="0.25" width="0" layer="21"/>
@@ -8514,7 +8514,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="0" y="2.274" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.834" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="INDM135125X330N" urn="urn:adsk.eagle:footprint:17676988/1" library_version="7">
+<package name="INDM135125X330N" urn="urn:adsk.eagle:footprint:17676988/1" library_version="8">
 <description>Molded Body, 13.50 X 12.50 X 3.30 mm body
 &lt;p&gt;Molded Body package with body size 13.50 X 12.50 X 3.30 mm&lt;/p&gt;</description>
 <wire x1="-7" y1="6.4" x2="7" y2="6.4" width="0.12" layer="21"/>
@@ -8559,26 +8559,26 @@ In this library the device names are the same as the pin names of the symbols, t
 <packageinstance name="SOT230P700X180-4"/>
 </packageinstances>
 </package3d>
-<package3d name="SON50P200X200X80-9T80X120N" urn="urn:adsk.eagle:package:17638851/1" type="model" library_version="7">
+<package3d name="SON50P200X200X80-9T80X120N" urn="urn:adsk.eagle:package:17638851/1" type="model" library_version="8">
 <description>8-SON (DFN), 0.50 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.20 X 0.80 mm thermal pad
 &lt;p&gt;8-pin SON (DFN) package with 0.50 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.20 X 0.80 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="SON50P200X200X80-9T80X120N"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN50P300X300X80-17N" urn="urn:adsk.eagle:package:17626604/1" type="box" library_version="4" library_locally_modified="yes">
+<package3d name="QFN50P300X300X80-17N" urn="urn:adsk.eagle:package:17626604/2" type="model" library_version="8">
 <description>&lt;b&gt;RTE (S-PWQFN-N16)&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="QFN50P300X300X80-17N"/>
 </packageinstances>
 </package3d>
-<package3d name="TPS82130SILT" urn="urn:adsk.eagle:package:17626603/1" type="box" library_version="4" library_locally_modified="yes">
+<package3d name="TPS82130SILT" urn="urn:adsk.eagle:package:17626603/2" type="model" library_version="8">
 <description>&lt;b&gt;SIL0008D_1&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="TPS82130SILT"/>
 </packageinstances>
 </package3d>
-<package3d name="INDM135125X330N" urn="urn:adsk.eagle:package:17676955/1" type="model" library_version="7">
+<package3d name="INDM135125X330N" urn="urn:adsk.eagle:package:17676955/1" type="model" library_version="8">
 <description>Molded Body, 13.50 X 12.50 X 3.30 mm body
 &lt;p&gt;Molded Body package with body size 13.50 X 12.50 X 3.30 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -8751,7 +8751,7 @@ Out: 3.3V, 800mA
 </device>
 </devices>
 </deviceset>
-<deviceset name="TPS43061RTER" urn="urn:adsk.eagle:component:17626607/2" prefix="IC" library_version="5">
+<deviceset name="TPS43061RTER" urn="urn:adsk.eagle:component:17626607/3" prefix="IC" library_version="8">
 <description>&lt;b&gt;Low Iq, Synchronous Boost Controller with Wide Input Voltage and 5.5V Gate Drive for Low Qg  NexFETs&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.ti.com/lit/gpn/tps43061"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -8779,7 +8779,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps43061"&gt; Datasheet &lt;/a&gt;
 <connect gate="G$1" pin="VIN" pad="7"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:17626604/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:17626604/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -8794,7 +8794,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps43061"&gt; Datasheet &lt;/a&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="TPS82130SILT" urn="urn:adsk.eagle:component:17626606/1" prefix="PS" library_version="4" library_locally_modified="yes">
+<deviceset name="TPS82130SILT" urn="urn:adsk.eagle:component:17626606/2" prefix="PS" library_version="8">
 <description>&lt;b&gt;3-A 17V Step-down Converter Module with Integrated Inductor&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.ti.com/lit/gpn/tps82130"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -8814,7 +8814,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps82130"&gt; Datasheet &lt;/a&gt;
 <connect gate="G$1" pin="VOUT_2" pad="5"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:17626603/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:17626603/2"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -8829,7 +8829,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps82130"&gt; Datasheet &lt;/a&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="MCP1501T-XXE" urn="urn:adsk.eagle:component:17855582/1" library_version="7">
+<deviceset name="MCP1501T-XXE" urn="urn:adsk.eagle:component:17855582/1" library_version="8">
 <description>&lt;h1&gt;MCP1501T-XXE&lt;/h1&gt;
 &lt;p&gt;Precision Buffered Voltage Reference&lt;/p&gt;
 &lt;a href="https://www.mouser.se/datasheet/2/268/20005474C-961722.pdf"&gt;Datasheet&lt;/a&gt;
@@ -8859,7 +8859,7 @@ Part number FOR 1.8V ref.
 </device>
 </devices>
 </deviceset>
-<deviceset name="SRP1238A-XXXX" urn="urn:adsk.eagle:component:17855581/1" library_version="7">
+<deviceset name="SRP1238A-XXXX" urn="urn:adsk.eagle:component:17855581/1" library_version="8">
 <description>&lt;b&gt;Inductor &lt;/b&gt;&lt;p&gt;
 &lt;i&gt; Description:&lt;/i&gt;  
 &lt;br&gt;R68M: 0.68µH + 28A + 49Asat
@@ -9216,90 +9216,66 @@ Used as a test point connection for pogo pins or other debugging tools.
 </library>
 <library name="Passive" urn="urn:adsk.eagle:library:17612641">
 <packages>
-<package name="3.5X1.6X2.1(BXCXA)" urn="urn:adsk.eagle:footprint:491571/3" library_version="1" library_locally_modified="yes">
-<smd name="2" x="-2.8" y="0" dx="3.5" dy="1.6" layer="1"/>
-<smd name="1" x="2.8" y="0" dx="3.5" dy="1.6" layer="1"/>
-<wire x1="-3.3" y1="3.3" x2="1.75" y2="3.3" width="0.127" layer="21"/>
-<wire x1="-3.3" y1="-3.3" x2="-3.3" y2="-1.1" width="0.127" layer="21"/>
-<wire x1="-3.3" y1="-3.3" x2="1.75" y2="-3.3" width="0.127" layer="21"/>
-<wire x1="-3.3" y1="3.3" x2="-3.3" y2="1.1" width="0.127" layer="21"/>
-<wire x1="1.75" y1="3.3" x2="3.3" y2="1.75" width="0.127" layer="21"/>
-<wire x1="1.75" y1="-3.3" x2="3.3" y2="-1.75" width="0.127" layer="21"/>
-<wire x1="-4.8" y1="3.55" x2="4.8" y2="3.55" width="0.127" layer="39"/>
-<wire x1="-4.8" y1="-3.55" x2="4.8" y2="-3.55" width="0.127" layer="39"/>
-<wire x1="-4.8" y1="3.55" x2="-4.8" y2="-3.55" width="0.127" layer="39"/>
-<wire x1="4.8" y1="3.55" x2="4.8" y2="-3.55" width="0.127" layer="39"/>
-<wire x1="3.3" y1="1.75" x2="3.3" y2="1.1" width="0.127" layer="21"/>
-<wire x1="3.3" y1="-1.75" x2="3.3" y2="-1.1" width="0.127" layer="21"/>
-<text x="-3.2" y="4.3" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.1" y="-5.2" size="1.27" layer="27">&gt;VALUE</text>
-<text x="3.7" y="-2.4" size="1.27" layer="21">+</text>
+<package name="CAPAE660X700N" urn="urn:adsk.eagle:footprint:17897125/1" library_version="9">
+<description>ECAP (Aluminum Electrolytic Capacitor), 6.60 X 7.00 mm body
+&lt;p&gt;ECAP (Aluminum Electrolytic Capacitor) package with body size 6.60 X 7.00 mm&lt;/p&gt;</description>
+<wire x1="-3.3" y1="1.0349" x2="-3.3" y2="2.0405" width="0.12" layer="21"/>
+<wire x1="-3.3" y1="2.0405" x2="-2.0405" y2="3.3" width="0.12" layer="21"/>
+<wire x1="-2.0405" y1="3.3" x2="3.3" y2="3.3" width="0.12" layer="21"/>
+<wire x1="3.3" y1="3.3" x2="3.3" y2="1.0349" width="0.12" layer="21"/>
+<wire x1="-3.3" y1="-1.0349" x2="-3.3" y2="-2.0405" width="0.12" layer="21"/>
+<wire x1="-3.3" y1="-2.0405" x2="-2.0405" y2="-3.3" width="0.12" layer="21"/>
+<wire x1="-2.0405" y1="-3.3" x2="3.3" y2="-3.3" width="0.12" layer="21"/>
+<wire x1="3.3" y1="-3.3" x2="3.3" y2="-1.0349" width="0.12" layer="21"/>
+<wire x1="3.3" y1="-3.3" x2="-3.3" y2="-3.3" width="0.12" layer="51"/>
+<wire x1="-3.3" y1="-3.3" x2="-3.3" y2="3.3" width="0.12" layer="51"/>
+<wire x1="-3.3" y1="3.3" x2="3.3" y2="3.3" width="0.12" layer="51"/>
+<wire x1="3.3" y1="3.3" x2="3.3" y2="-3.3" width="0.12" layer="51"/>
+<smd name="1" x="-2.675" y="0" dx="3.0618" dy="1.5618" layer="1"/>
+<smd name="2" x="2.675" y="0" dx="3.0618" dy="1.5618" layer="1"/>
+<text x="0" y="3.935" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-3.935" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
 </packages>
 <packages3d>
-<package3d name="3.5X1.6X2.1(BXCXA)" urn="urn:adsk.eagle:package:491734/3" type="box" library_version="1" library_locally_modified="yes">
+<package3d name="CAPAE660X700N" urn="urn:adsk.eagle:package:17897073/3" type="model" library_version="9">
+<description>ECAP (Aluminum Electrolytic Capacitor), 6.60 X 7.00 mm body
+&lt;p&gt;ECAP (Aluminum Electrolytic Capacitor) package with body size 6.60 X 7.00 mm&lt;/p&gt;</description>
 <packageinstances>
-<packageinstance name="3.5X1.6X2.1(BXCXA)"/>
+<packageinstance name="CAPAE660X700N"/>
 </packageinstances>
 </package3d>
 </packages3d>
 <symbols>
-<symbol name="C_POLARIZED" urn="urn:adsk.eagle:symbol:17626609/1" library_version="2">
-<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
-<pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
-<text x="3.175" y="5.08" size="1.778" layer="95">&gt;NAME</text>
-<text x="3.175" y="-3.175" size="1.778" layer="96">&gt;VALUE</text>
-<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.127" layer="94"/>
-<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.905" width="0.127" layer="94"/>
-<wire x1="-2.54" y1="1.905" x2="2.54" y2="1.905" width="0.127" layer="94"/>
-<wire x1="2.54" y1="1.905" x2="2.54" y2="2.54" width="0.127" layer="94"/>
-<wire x1="-1.905" y1="3.175" x2="-1.905" y2="4.445" width="0.127" layer="94"/>
-<wire x1="-2.54" y1="3.81" x2="-1.27" y2="3.81" width="0.127" layer="94"/>
-<wire x1="-2.54" y1="-1.27" x2="-1.27" y2="-1.27" width="0.127" layer="94"/>
-<rectangle x1="-0.3175" y1="-2.2225" x2="0.3175" y2="2.8575" layer="94" rot="R90"/>
+<symbol name="C_POL" urn="urn:adsk.eagle:symbol:17897168/1" library_version="9">
+<wire x1="-4.064" y1="1.651" x2="-1.016" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="1.651" x2="-1.016" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-4.064" y1="2.54" x2="-4.064" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-4.064" y1="2.54" x2="-1.016" y2="2.54" width="0.254" layer="94"/>
+<text x="-1.397" y="3.0226" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.1242" y="2.9464" size="1.27" layer="94" rot="R90">+</text>
+<text x="-1.397" y="-2.0574" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-4.191" y1="0" x2="-0.889" y2="0.889" layer="94"/>
+<pin name="-" x="-2.54" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="+" x="-2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="WCAP-ASLL" urn="urn:adsk.eagle:component:17626610/1" prefix="C" uservalue="yes" library_version="2">
-<description>&lt;b&gt;WCAP-ASLL Aluminum Electrolytic Capacitors
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;Characteristics
-&lt;br&gt;&lt;/b&gt;Aluminum Electrolytic Capacitor
-&lt;br&gt;Recommended soldering: Reflow
-&lt;br&gt;Operating temperature: -55 °C to +105 °C
-&lt;br&gt;Low impedance product series
-&lt;br&gt;Load life: 2000 - 5000 h @ +105 °C
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;&lt;b&gt; Package name and Variant abbreviation:
-&lt;br&gt;&lt;/b&gt; Package:
-&lt;br&gt;Package: B X C X A = length of the solder pad X width of the solder pad X pitch of the solder pad.
-
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;&lt;a href="http://katalog.we-online.de/media/images/eisos/WCAP-ASLL_pf2.jpg" title="Enlarge picture"&gt;
-&lt;img src="http://katalog.we-online.de/media/thumbs2/eisos/thb_WCAP-ASLL_pf2.jpg" width="320"&gt;&lt;/a&gt;&lt;p&gt;
-Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http://katalog.we-online.de/en/pbs/WCAP-ASLL?m
-&lt;/a&gt;&lt;p&gt;Updated by: Yingchun,Shan
-&lt;/a&gt;&lt;p&gt;Updated: 2017-03-16
-&lt;br&gt;2017 (C) Wurth Elektronik</description>
+<deviceset name="WCAP-ASLL-WE" urn="urn:adsk.eagle:component:17897169/5" prefix="C" uservalue="yes" library_version="9">
 <gates>
-<gate name="G$1" symbol="C_POLARIZED" x="0" y="0"/>
+<gate name="G$1" symbol="C_POL" x="0" y="0"/>
 </gates>
 <devices>
-<device name="_865060445005" package="3.5X1.6X2.1(BXCXA)">
+<device name="WCAP-ASLL" package="CAPAE660X700N">
 <connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="+" pad="1"/>
+<connect gate="G$1" pin="-" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:491734/3"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:17897073/3"/>
 </package3dinstances>
 <technologies>
-<technology name="_6,3X7,7">
-<attribute name="WE-NUMBER" value="865060445005/100uF" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -9685,7 +9661,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http
 </package>
 </packages>
 <packages3d>
-<package3d name="TSM2JSMA" urn="urn:adsk.eagle:package:17798453/2" type="model" library_version="11">
+<package3d name="TSM2JSMA" urn="urn:adsk.eagle:package:17798453/3" type="model" library_version="12">
 <description>Switch Tactile OFF (ON) SPST Round Button Gull Wing 0.05A 12VDC 1.57N SMD Loose Piece</description>
 <packageinstances>
 <packageinstance name="TSM2JSMA"/>
@@ -9713,7 +9689,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TSM2JSMA" urn="urn:adsk.eagle:component:17798454/2" library_version="11">
+<deviceset name="TSM2JSMA" urn="urn:adsk.eagle:component:17798454/3" library_version="12">
 <description>&lt;b&gt;FSM2JSMA Tactile SPST switches&lt;/b&gt;&lt;hr /&gt;
 &lt;br /&gt;
 &lt;i&gt;Description: &lt;/i&gt;C&amp;K JS202011CQN (Vertical) and AQN (Angled) Slide DPDT switches in DIP package.
@@ -9739,7 +9715,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http
 <connect gate="G$1" pin="4" pad="4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:17798453/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:17798453/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -9749,85 +9725,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http
 </deviceset>
 </devicesets>
 </library>
-<library name="CASE-RCL">
-<packages>
-<package name="R0603" urn="urn:adsk.eagle:footprint:5332301/1">
-<description>&lt;b&gt;Chip RESISTOR 0603 (1608 Metric)&lt;/b&gt;</description>
-<wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
-<wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.1524" layer="51"/>
-<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
-<smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
-<rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="R0603" urn="urn:adsk.eagle:package:5332309/1" type="box">
-<description>&lt;b&gt;Chip RESISTOR 0603 (1608 Metric)&lt;/b&gt;</description>
-<packageinstances>
-<packageinstance name="R0603"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="R-EU" urn="urn:adsk.eagle:symbol:5332294/1">
-<wire x1="-2.54" y1="-0.889" x2="2.54" y2="-0.889" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0.889" x2="-2.54" y2="0.889" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-0.889" x2="2.54" y2="0.889" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-0.889" x2="-2.54" y2="0.889" width="0.254" layer="94"/>
-<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
-<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="R0603" urn="urn:adsk.eagle:component:5332325/2" prefix="R" uservalue="yes">
-<description>&lt;b&gt;&lt;b&gt;Standard Chip RESISTOR 0603 (1608 Metric)&lt;/b&gt;
-&lt;/b&gt;&lt;hr /&gt;
-&lt;br /&gt;
-&lt;i&gt;Description: &lt;/i&gt; Standard Chip RESISTOR 0603 (1608 Metric)
-
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;</description>
-<gates>
-<gate name="G$1" symbol="R-EU" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="R0603">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5332309/1"/>
-</package3dinstances>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="CASE-Pinhead">
+<library name="CASE-Pinhead" urn="urn:adsk.eagle:library:5774664">
 <description>&lt;b&gt;Pin Header Connectors&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
@@ -9980,7 +9878,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/pbs/WCAP-ASLL?m"&gt;http
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-PowerSymbols">
+<library name="SparkFun-PowerSymbols" urn="urn:adsk.eagle:library:530">
 <description>&lt;h3&gt;SparkFun Power Symbols&lt;/h3&gt;
 This library contains power, ground, and voltage-supply symbols.
 &lt;br&gt;
@@ -9997,7 +9895,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <packages>
 </packages>
 <symbols>
-<symbol name="DGND">
+<symbol name="DGND" urn="urn:adsk.eagle:symbol:39415/1" library_version="1">
 <description>&lt;h3&gt;Digital Ground Supply&lt;/h3&gt;</description>
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
@@ -10005,7 +9903,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="GND" prefix="GND">
+<deviceset name="GND" urn="urn:adsk.eagle:component:39439/1" prefix="GND" library_version="1">
 <description>&lt;h3&gt;Ground Supply Symbol&lt;/h3&gt;
 &lt;p&gt;Generic signal ground supply symbol.&lt;/p&gt;</description>
 <gates>
@@ -10100,7 +9998,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 <packages3d>
-<package3d name="B3B-EH" urn="urn:adsk.eagle:package:5644951/1" type="box" library_version="9">
+<package3d name="B3B-EH" urn="urn:adsk.eagle:package:5644951/2" type="model" library_version="13">
 <description>&lt;b&gt;JST B3B-EH&lt;/b&gt;
 
 &lt;a href="http://www.jst-mfg.com/product/pdf/eng/eEH.pdf"&gt;Datasheet&lt;/a&gt;</description>
@@ -10116,7 +10014,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <packageinstance name="B2B-EH"/>
 </packageinstances>
 </package3d>
-<package3d name="B6B-ZR" urn="urn:adsk.eagle:package:5644773/1" type="box" library_version="10">
+<package3d name="B6B-ZR" urn="urn:adsk.eagle:package:5644773/2" type="model" library_version="13">
 <description>&lt;b&gt;JST B6B-ZR&lt;/b&gt;
 
 &lt;a href="http://www.jst-mfg.com/product/pdf/eng/eZH.pdf"&gt;Datasheet&lt;/a&gt;</description>
@@ -10194,7 +10092,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="EH_B3B-EH" urn="urn:adsk.eagle:component:5644969/1" prefix="CON" library_version="9">
+<deviceset name="EH_B3B-EH" urn="urn:adsk.eagle:component:5644969/2" prefix="CON" library_version="13">
 <description>&lt;b&gt;JST EH Connector, through hole, 3 pin, top entry&lt;/b&gt;&lt;hr /&gt;
 &lt;br /&gt;
 &lt;i&gt;Description: &lt;/i&gt; JST EH connector with 2.5 mm pitch, through hole version, 3 pin, top entry.
@@ -10226,7 +10124,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5644951/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5644951/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -10273,7 +10171,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </device>
 </devices>
 </deviceset>
-<deviceset name="ZR_B6B-ZR" urn="urn:adsk.eagle:component:5644800/1" prefix="CON" library_version="10">
+<deviceset name="ZR_B6B-ZR" urn="urn:adsk.eagle:component:5644800/2" prefix="CON" library_version="13">
 <description>&lt;b&gt;JST ZR Connector, through hole, 6 pin, top entry&lt;/b&gt;&lt;hr /&gt;
 &lt;br /&gt;
 &lt;i&gt;Description: &lt;/i&gt; JST ZR connector with 1.5 mm pitch, through hole version, 6 pin, top entry.
@@ -10308,7 +10206,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <connect gate="G$1" pin="6" pad="6"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5644773/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5644773/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -10689,7 +10587,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/BNO055.pdf"&g
 </package>
 </packages>
 <packages3d>
-<package3d name="JS202011AQN" urn="urn:adsk.eagle:package:17810530/2" type="model" library_version="2">
+<package3d name="JS202011AQN" urn="urn:adsk.eagle:package:17810530/3" type="model" library_version="3">
 <description>&lt;b&gt;JS (DPDT)&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="JS202011AQN"/>
@@ -10714,7 +10612,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/BNO055.pdf"&g
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="JS202011AQN" urn="urn:adsk.eagle:component:17810531/2" library_version="2">
+<deviceset name="JS202011AQN" urn="urn:adsk.eagle:component:17810531/3" library_version="3">
 <description>&lt;title&gt;JS202011AQN&lt;/title&gt;
 ON/OFF Switch</description>
 <gates>
@@ -10728,7 +10626,7 @@ ON/OFF Switch</description>
 <connect gate="G$1" pin="NO" pad="3 6"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:17810530/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:17810530/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -10946,7 +10844,7 @@ Created by Yingchun,Shan  2019-11-22&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="CASE-LED">
+<library name="CASE-LED" urn="urn:adsk.eagle:library:7770838">
 <packages>
 <package name="150141M173100" urn="urn:adsk.eagle:footprint:16853560/1" library_version="6">
 <description>&lt;b&gt;WL-SFTW 150141M173100&lt;/b&gt;&lt;br&gt;
@@ -10972,7 +10870,7 @@ Created by Yingchun,Shan  2019-11-22&lt;br&gt;
 </package>
 </packages>
 <packages3d>
-<package3d name="150141M173100" urn="urn:adsk.eagle:package:16853563/1" type="box" library_version="6">
+<package3d name="150141M173100" urn="urn:adsk.eagle:package:16853563/2" type="model" library_version="8">
 <description>&lt;b&gt;WL-SFTW 150141M173100&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="150141M173100"/>
@@ -11039,7 +10937,7 @@ Created by Yingchun,Shan  2019-11-22&lt;br&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="150141M173100" urn="urn:adsk.eagle:component:16853564/3" prefix="LED" library_version="6">
+<deviceset name="150141M173100" urn="urn:adsk.eagle:component:16853564/4" prefix="LED" library_version="8">
 <description>&lt;b&gt;Wurth Elektronik 150141M173100 Common Anode RGB LED&lt;/b&gt;&lt;hr /&gt;
 &lt;br /&gt;
 &lt;i&gt;Description: &lt;/i&gt; 150141M173100 Common Anode RGB LED from Wurth Elektronik.
@@ -11072,7 +10970,7 @@ Created by Yingchun,Shan  2019-11-22&lt;br&gt;
 <connect gate="G$1" pin="R" pad="3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16853563/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16853563/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -11082,7 +10980,7 @@ Created by Yingchun,Shan  2019-11-22&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="CASE-Transistors">
+<library name="CASE-Transistors" urn="urn:adsk.eagle:library:7770837">
 <packages>
 <package name="SOT23" urn="urn:adsk.eagle:footprint:29840/1" library_version="4">
 <description>&lt;b&gt;SOT-23&lt;/b&gt;</description>
@@ -11101,7 +10999,7 @@ Created by Yingchun,Shan  2019-11-22&lt;br&gt;
 </package>
 </packages>
 <packages3d>
-<package3d name="SOT23" urn="urn:adsk.eagle:package:7890778/1" type="box" library_version="4">
+<package3d name="SOT23" urn="urn:adsk.eagle:package:7890778/2" type="model" library_version="5">
 <description>SOT-23</description>
 <packageinstances>
 <packageinstance name="SOT23"/>
@@ -11153,7 +11051,7 @@ Created by Yingchun,Shan  2019-11-22&lt;br&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="BSS138LT3G" urn="urn:adsk.eagle:component:7890782/2" prefix="Q" library_version="4">
+<deviceset name="BSS138LT3G" urn="urn:adsk.eagle:component:7890782/3" prefix="Q" library_version="5">
 <description>&lt;b&gt;BSS138LT3G N-Channel Mosfet (SOT-23)&lt;/b&gt;&lt;hr /&gt;
 &lt;br /&gt;
 &lt;i&gt;Description: &lt;/i&gt; BSS138LT3G N-Channel Mosfet in a SOT-23 package
@@ -11185,7 +11083,7 @@ Created by Yingchun,Shan  2019-11-22&lt;br&gt;
 <connect gate="G$1" pin="S" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:7890778/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7890778/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -13296,18 +13194,16 @@ Source: www.kingbright.com</description>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1µF"/>
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="AGND" device=""/>
 <part name="FRAME2" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
-<part name="MOTORDRIVER" library="MotorDriver" library_urn="urn:adsk.eagle:library:17561913" deviceset="TB67H420FTG" device="" package3d_urn="urn:adsk.eagle:package:17604854/1"/>
+<part name="MOTORDRIVER" library="MotorDriver" library_urn="urn:adsk.eagle:library:17561913" deviceset="TB67H420FTG" device="" package3d_urn="urn:adsk.eagle:package:17604854/2"/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="C4" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL" device="_865060445005" package3d_urn="urn:adsk.eagle:package:491734/3" technology="_6,3X7,7" value="100µF"/>
-<part name="C5" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL" device="_865060445005" package3d_urn="urn:adsk.eagle:package:491734/3" technology="_6,3X7,7" value="100µF"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1µF"/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1µF"/>
 <part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY9" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="12V" device=""/>
 <part name="LDO_3V3" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="LM1117-3.3" device="" package3d_urn="urn:adsk.eagle:package:17618934/1"/>
-<part name="BOOST" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="TPS43061RTER" device="" package3d_urn="urn:adsk.eagle:package:17626604/1"/>
+<part name="BOOST" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="TPS43061RTER" device="" package3d_urn="urn:adsk.eagle:package:17626604/2"/>
 <part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
@@ -13327,7 +13223,7 @@ Source: www.kingbright.com</description>
 <part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22µF"/>
 <part name="SUPPLY16" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY17" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="BUCK" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="TPS82130SILT" device="" package3d_urn="urn:adsk.eagle:package:17626603/1"/>
+<part name="BUCK" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="TPS82130SILT" device="" package3d_urn="urn:adsk.eagle:package:17626603/2"/>
 <part name="SUPPLY18" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="LDO_VREF_1V8" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="MCP1501T-XXE" device="" package3d_urn="urn:adsk.eagle:package:17638851/1"/>
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
@@ -13353,8 +13249,6 @@ Source: www.kingbright.com</description>
 <part name="SUPPLY32" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="C22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22µF"/>
 <part name="C23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22µF"/>
-<part name="C24" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL" device="_865060445005" package3d_urn="urn:adsk.eagle:package:491734/3" technology="_6,3X7,7" value="100µF"/>
-<part name="C25" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL" device="_865060445005" package3d_urn="urn:adsk.eagle:package:491734/3" technology="_6,3X7,7" value="100µF"/>
 <part name="SUPPLY33" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY34" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY35" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -13365,8 +13259,6 @@ Source: www.kingbright.com</description>
 <part name="C26" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="100pF"/>
 <part name="C27" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22µF"/>
 <part name="C28" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22µF"/>
-<part name="C29" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL" device="_865060445005" package3d_urn="urn:adsk.eagle:package:491734/3" technology="_6,3X7,7" value="100µF"/>
-<part name="C30" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL" device="_865060445005" package3d_urn="urn:adsk.eagle:package:491734/3" technology="_6,3X7,7" value="100µF"/>
 <part name="SUPPLY37" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY38" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY39" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -13393,16 +13285,14 @@ Source: www.kingbright.com</description>
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
 <part name="R20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3"/>
-<part name="U$4" library="CASE-Switches" library_urn="urn:adsk.eagle:library:7770839" deviceset="TSM2JSMA" device="" package3d_urn="urn:adsk.eagle:package:17798453/2"/>
+<part name="U$4" library="CASE-Switches" library_urn="urn:adsk.eagle:library:7770839" deviceset="TSM2JSMA" device="" package3d_urn="urn:adsk.eagle:package:17798453/3"/>
 <part name="C40" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1u"/>
 <part name="SUPPLY54" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="BOOT" library="CASE-Pinhead" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2" override_package3d_urn="urn:adsk.eagle:package:13090277/2" override_package_urn="urn:adsk.eagle:footprint:22348/1"/>
-<part name="GND36" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="R33" library="CASE-RCL" deviceset="R0603" device="" package3d_urn="urn:adsk.eagle:package:5332309/1" value="10k"/>
-<part name="R34" library="CASE-RCL" deviceset="R0603" device="" package3d_urn="urn:adsk.eagle:package:5332309/1" value="10k"/>
-<part name="DEBUG_CONNECTOR" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="EH_B3B-EH" device="" package3d_urn="urn:adsk.eagle:package:5644951/1" value="JST-EH-03"/>
+<part name="BOOT" library="CASE-Pinhead" library_urn="urn:adsk.eagle:library:5774664" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2" override_package3d_urn="urn:adsk.eagle:package:13090277/2" override_package_urn="urn:adsk.eagle:footprint:22348/1"/>
+<part name="GND36" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="DEBUG_CONNECTOR" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="EH_B3B-EH" device="" package3d_urn="urn:adsk.eagle:package:5644951/2" value="JST-EH-03"/>
 <part name="SUPPLY53" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="UART_CONNECTOR" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="EH_B3B-EH" device="" package3d_urn="urn:adsk.eagle:package:5644951/1" value="JST-EH-03"/>
+<part name="UART_CONNECTOR" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="EH_B3B-EH" device="" package3d_urn="urn:adsk.eagle:package:5644951/2" value="JST-EH-03"/>
 <part name="SUPPLY56" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="FRAME4" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
 <part name="OLED_DISPLAY" library="Displays" library_urn="urn:adsk.eagle:library:17801130" deviceset="DISPLAY-OLED-128X64-I2C" device="" package3d_urn="urn:adsk.eagle:package:17801164/1"/>
@@ -13438,14 +13328,14 @@ Source: www.kingbright.com</description>
 <part name="+3V4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R30" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R31" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="BTN_SEL" library="CASE-Switches" library_urn="urn:adsk.eagle:library:7770839" deviceset="TSM2JSMA" device="" package3d_urn="urn:adsk.eagle:package:17798453/2"/>
+<part name="BTN_SEL" library="CASE-Switches" library_urn="urn:adsk.eagle:library:7770839" deviceset="TSM2JSMA" device="" package3d_urn="urn:adsk.eagle:package:17798453/3"/>
 <part name="C46" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1u"/>
 <part name="SUPPLY70" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="MOTOR_L" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="EH_B2B-EH" device="" package3d_urn="urn:adsk.eagle:package:5644950/1" value="EH-2"/>
 <part name="MOTOR_R" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="EH_B2B-EH" device="" package3d_urn="urn:adsk.eagle:package:5644950/1" value="EH-2"/>
-<part name="ENC_L" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="ZR_B6B-ZR" device="" package3d_urn="urn:adsk.eagle:package:5644773/1" value="ZH-6"/>
-<part name="ENC_R" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="ZR_B6B-ZR" device="" package3d_urn="urn:adsk.eagle:package:5644773/1" value="ZH-6"/>
+<part name="ENC_L" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="ZR_B6B-ZR" device="" package3d_urn="urn:adsk.eagle:package:5644773/2" value="ZH-6"/>
+<part name="ENC_R" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="ZR_B6B-ZR" device="" package3d_urn="urn:adsk.eagle:package:5644773/2" value="ZH-6"/>
 <part name="SUPPLY71" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="AGND" device=""/>
 <part name="+3V8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="AGND" device=""/>
@@ -13454,18 +13344,18 @@ Source: www.kingbright.com</description>
 <part name="U$15" library="Connectors" library_urn="urn:adsk.eagle:library:17855584" deviceset="XT30PW-M" device="" package3d_urn="urn:adsk.eagle:package:17855625/2"/>
 <part name="R39" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
-<part name="U$16" library="Switches" library_urn="urn:adsk.eagle:library:17810526" deviceset="JS202011AQN" device="" package3d_urn="urn:adsk.eagle:package:17810530/2"/>
+<part name="U$16" library="Switches" library_urn="urn:adsk.eagle:library:17810526" deviceset="JS202011AQN" device="" package3d_urn="urn:adsk.eagle:package:17810530/3"/>
 <part name="R37" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100R"/>
 <part name="R32" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="300R"/>
 <part name="R35" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="LED1" library="CASE-LED" deviceset="150141M173100" device="" package3d_urn="urn:adsk.eagle:package:16853563/1"/>
+<part name="LED1" library="CASE-LED" library_urn="urn:adsk.eagle:library:7770838" deviceset="150141M173100" device="" package3d_urn="urn:adsk.eagle:package:16853563/2"/>
 <part name="+3V11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R36" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="50R"/>
 <part name="R38" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="0R"/>
 <part name="R40" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="0R"/>
-<part name="Q5" library="CASE-Transistors" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/1"/>
-<part name="Q6" library="CASE-Transistors" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/1"/>
-<part name="Q7" library="CASE-Transistors" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/1"/>
+<part name="Q5" library="CASE-Transistors" library_urn="urn:adsk.eagle:library:7770837" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/2"/>
+<part name="Q6" library="CASE-Transistors" library_urn="urn:adsk.eagle:library:7770837" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/2"/>
+<part name="Q7" library="CASE-Transistors" library_urn="urn:adsk.eagle:library:7770837" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/2"/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY68" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY69" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -13483,7 +13373,7 @@ Source: www.kingbright.com</description>
 <part name="PWM_FAN_L" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="ZR_B2B-ZR" device="" package3d_urn="urn:adsk.eagle:package:5644775/1" value="ZH"/>
 <part name="PWM_FAN_R" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="ZR_B2B-ZR" device="" package3d_urn="urn:adsk.eagle:package:5644775/1" value="ZH"/>
 <part name="U$1" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="SMT-0540-S-R" device="" package3d_urn="urn:adsk.eagle:package:12016513/3"/>
-<part name="Q8" library="CASE-Transistors" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/1"/>
+<part name="Q8" library="CASE-Transistors" library_urn="urn:adsk.eagle:library:7770837" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/2"/>
 <part name="SUPPLY79" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="+3V12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R47" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
@@ -13531,6 +13421,14 @@ Source: www.kingbright.com</description>
 <part name="SUPPLY22" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="RSENSE" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R2512W" package3d_urn="urn:adsk.eagle:package:23565/2" value="R002"/>
 <part name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_0603" package3d_urn="urn:adsk.eagle:package:15822/2"/>
+<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="C15" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL-WE" device="WCAP-ASLL" package3d_urn="urn:adsk.eagle:package:17897073/3" value="100uF"/>
+<part name="C24" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL-WE" device="WCAP-ASLL" package3d_urn="urn:adsk.eagle:package:17897073/3" value="100uF"/>
+<part name="C25" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL-WE" device="WCAP-ASLL" package3d_urn="urn:adsk.eagle:package:17897073/3" value="100uF"/>
+<part name="C29" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL-WE" device="WCAP-ASLL" package3d_urn="urn:adsk.eagle:package:17897073/3" value="100uF"/>
+<part name="C30" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL-WE" device="WCAP-ASLL" package3d_urn="urn:adsk.eagle:package:17897073/3" value="100uF"/>
+<part name="C4" library="Passive" library_urn="urn:adsk.eagle:library:17612641" deviceset="WCAP-ASLL-WE" device="WCAP-ASLL" package3d_urn="urn:adsk.eagle:package:17897073/3" value="100uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -13663,14 +13561,6 @@ or in the I2C display</text>
 <instance part="GND36" gate="1" x="-63.5" y="71.12" smashed="yes" grouprefs="BOOT_MODE">
 <attribute name="VALUE" x="-63.5" y="70.866" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="R33" gate="G$1" x="-43.18" y="81.28" smashed="yes" rot="R180" grouprefs="BOOT_MODE">
-<attribute name="NAME" x="-44.45" y="82.7786" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-44.45" y="77.978" size="1.778" layer="96"/>
-</instance>
-<instance part="R34" gate="G$1" x="-81.28" y="81.28" smashed="yes" rot="R180" grouprefs="BOOT_MODE">
-<attribute name="NAME" x="-82.55" y="82.7786" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-82.55" y="77.978" size="1.778" layer="96"/>
-</instance>
 <instance part="DEBUG_CONNECTOR" gate="G$1" x="111.76" y="91.44" smashed="yes" grouprefs="DEBUG">
 <attribute name="NAME" x="105.41" y="97.155" size="1.778" layer="95"/>
 <attribute name="VALUE" x="105.41" y="83.82" size="1.778" layer="96"/>
@@ -13733,6 +13623,14 @@ or in the I2C display</text>
 </instance>
 <instance part="+3V25" gate="G$1" x="116.84" y="48.26" smashed="yes">
 <attribute name="VALUE" x="114.3" y="43.18" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R13" gate="G$1" x="-81.28" y="81.28" smashed="yes" rot="R180">
+<attribute name="NAME" x="-85.09" y="82.7786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-85.09" y="77.978" size="1.778" layer="96"/>
+</instance>
+<instance part="R16" gate="G$1" x="-43.18" y="81.28" smashed="yes" rot="R180">
+<attribute name="NAME" x="-46.99" y="82.7786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-46.99" y="77.978" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -13850,9 +13748,9 @@ or in the I2C display</text>
 <label x="-121.92" y="-45.72" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R33" gate="G$1" pin="1"/>
 <wire x1="-38.1" y1="81.28" x2="-35.56" y2="81.28" width="0.1524" layer="91" grouprefs="BOOT_MODE"/>
 <label x="-35.56" y="81.28" size="1.778" layer="95" xref="yes" grouprefs="BOOT_MODE"/>
+<pinref part="R16" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="XLINE" class="0">
@@ -13904,9 +13802,9 @@ or in the I2C display</text>
 <label x="-17.78" y="12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R34" gate="G$1" pin="2"/>
 <wire x1="-86.36" y1="81.28" x2="-88.9" y2="81.28" width="0.1524" layer="91" grouprefs="BOOT_MODE"/>
 <label x="-88.9" y="81.28" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="BOOT_MODE"/>
+<pinref part="R13" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="IN_L_2" class="0">
@@ -14290,14 +14188,14 @@ or in the I2C display</text>
 <segment>
 <pinref part="BOOT" gate="A" pin="4"/>
 <wire x1="-58.42" y1="81.28" x2="-48.26" y2="81.28" width="0.1524" layer="91" grouprefs="BOOT_MODE"/>
-<pinref part="R33" gate="G$1" pin="2"/>
+<pinref part="R16" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$34" class="0">
 <segment>
 <pinref part="BOOT" gate="A" pin="3"/>
 <wire x1="-66.04" y1="81.28" x2="-76.2" y2="81.28" width="0.1524" layer="91" grouprefs="BOOT_MODE"/>
-<pinref part="R34" gate="G$1" pin="1"/>
+<pinref part="R13" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SDIO_CMD" class="0">
@@ -14483,14 +14381,6 @@ Iout = Vref * 2.5</text>
 <attribute name="NAME" x="-95.4786" y="29.21" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-90.678" y="29.21" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="C4" gate="G$1" x="-27.94" y="78.74" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="-27.305" y="83.82" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-27.305" y="75.565" size="1.778" layer="96"/>
-</instance>
-<instance part="C5" gate="G$1" x="-17.78" y="78.74" smashed="yes" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="-17.145" y="83.82" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-17.145" y="75.565" size="1.778" layer="96"/>
-</instance>
 <instance part="C6" gate="G$1" x="-7.62" y="81.28" smashed="yes" grouprefs="MOTOR-DRIVER">
 <attribute name="NAME" x="-6.096" y="81.661" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-6.096" y="76.581" size="1.778" layer="96"/>
@@ -14584,6 +14474,14 @@ Iout = Vref * 2.5</text>
 </instance>
 <instance part="+3V26" gate="G$1" x="-106.68" y="-40.64" smashed="yes">
 <attribute name="VALUE" x="-109.22" y="-45.72" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C30" gate="G$1" x="-25.4" y="78.74" smashed="yes">
+<attribute name="NAME" x="-26.797" y="81.7626" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-26.797" y="76.6826" size="1.778" layer="96"/>
+</instance>
+<instance part="C4" gate="G$1" x="-15.24" y="78.74" smashed="yes">
+<attribute name="NAME" x="-16.637" y="81.7626" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-16.637" y="76.6826" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -14757,7 +14655,6 @@ Iout = Vref * 2.5</text>
 <junction x="-43.18" y="2.54" grouprefs="MOTOR-DRIVER"/>
 </segment>
 <segment>
-<pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="-27.94" y1="76.2" x2="-27.94" y2="73.66" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <wire x1="-27.94" y1="73.66" x2="-17.78" y2="73.66" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <pinref part="C7" gate="G$1" pin="2"/>
@@ -14767,12 +14664,13 @@ Iout = Vref * 2.5</text>
 <pinref part="C6" gate="G$1" pin="2"/>
 <wire x1="-7.62" y1="76.2" x2="-7.62" y2="73.66" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <junction x="-7.62" y="73.66" grouprefs="MOTOR-DRIVER"/>
-<pinref part="C5" gate="G$1" pin="2"/>
 <wire x1="-17.78" y1="76.2" x2="-17.78" y2="73.66" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <junction x="-17.78" y="73.66" grouprefs="MOTOR-DRIVER"/>
 <pinref part="SUPPLY8" gate="GND" pin="GND"/>
 <wire x1="0" y1="73.66" x2="0" y2="71.12" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <junction x="0" y="73.66" grouprefs="MOTOR-DRIVER"/>
+<pinref part="C30" gate="G$1" pin="-"/>
+<pinref part="C4" gate="G$1" pin="-"/>
 </segment>
 <segment>
 <pinref part="SUPPLY58" gate="GND" pin="GND"/>
@@ -14805,10 +14703,8 @@ Iout = Vref * 2.5</text>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="-7.62" y1="86.36" x2="-7.62" y2="83.82" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <junction x="-7.62" y="86.36" grouprefs="MOTOR-DRIVER"/>
-<pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="-17.78" y1="86.36" x2="-17.78" y2="83.82" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <junction x="-17.78" y="86.36" grouprefs="MOTOR-DRIVER"/>
-<pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="-27.94" y1="86.36" x2="-27.94" y2="83.82" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <junction x="-27.94" y="86.36" grouprefs="MOTOR-DRIVER"/>
 <pinref part="SUPPLY9" gate="G$1" pin="12V"/>
@@ -14817,6 +14713,8 @@ Iout = Vref * 2.5</text>
 <pinref part="MOTORDRIVER" gate="G$1" pin="VMB"/>
 <wire x1="-35.56" y1="73.66" x2="-35.56" y2="86.36" width="0.1524" layer="91" grouprefs="MOTOR-DRIVER"/>
 <junction x="-35.56" y="86.36"/>
+<pinref part="C30" gate="G$1" pin="+"/>
+<pinref part="C4" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="MOTOR_R-" class="0">
@@ -15225,14 +15123,6 @@ Ipeak:      28A </text>
 <attribute name="NAME" x="118.364" y="-7.493" size="1.778" layer="95"/>
 <attribute name="VALUE" x="118.364" y="-12.573" size="1.778" layer="96"/>
 </instance>
-<instance part="C24" gate="G$1" x="127" y="-10.16" smashed="yes" grouprefs="BOOST-12V">
-<attribute name="NAME" x="130.175" y="-5.08" size="1.778" layer="95"/>
-<attribute name="VALUE" x="130.175" y="-13.335" size="1.778" layer="96"/>
-</instance>
-<instance part="C25" gate="G$1" x="139.7" y="-10.16" smashed="yes" grouprefs="BOOST-12V">
-<attribute name="NAME" x="142.875" y="-5.08" size="1.778" layer="95"/>
-<attribute name="VALUE" x="142.875" y="-13.335" size="1.778" layer="96"/>
-</instance>
 <instance part="SUPPLY33" gate="GND" x="106.68" y="-17.78" smashed="yes" grouprefs="BOOST-12V">
 <attribute name="VALUE" x="104.775" y="-20.955" size="1.778" layer="96"/>
 </instance>
@@ -15268,14 +15158,6 @@ Ipeak:      28A </text>
 <instance part="C28" gate="G$1" x="-99.06" y="-7.874" smashed="yes" grouprefs="BOOST-12V">
 <attribute name="NAME" x="-97.536" y="-7.493" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-97.536" y="-12.573" size="1.778" layer="96"/>
-</instance>
-<instance part="C29" gate="G$1" x="-88.9" y="-10.16" smashed="yes" grouprefs="BOOST-12V">
-<attribute name="NAME" x="-85.725" y="-5.08" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-85.725" y="-13.335" size="1.778" layer="96"/>
-</instance>
-<instance part="C30" gate="G$1" x="-76.2" y="-10.16" smashed="yes" grouprefs="BOOST-12V">
-<attribute name="NAME" x="-73.025" y="-5.08" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-73.025" y="-13.335" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY37" gate="GND" x="-109.22" y="-17.78" smashed="yes" grouprefs="BOOST-12V">
 <attribute name="VALUE" x="-111.125" y="-20.955" size="1.778" layer="96"/>
@@ -15331,6 +15213,22 @@ Ipeak:      28A </text>
 <instance part="RSENSE" gate="G$1" x="-35.56" y="-2.54" smashed="yes">
 <attribute name="NAME" x="-39.37" y="-1.0414" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-39.37" y="-5.842" size="1.778" layer="96"/>
+</instance>
+<instance part="C15" gate="G$1" x="129.54" y="-10.16" smashed="yes">
+<attribute name="NAME" x="128.143" y="-7.1374" size="1.778" layer="95"/>
+<attribute name="VALUE" x="128.143" y="-12.2174" size="1.778" layer="96"/>
+</instance>
+<instance part="C24" gate="G$1" x="142.24" y="-10.16" smashed="yes">
+<attribute name="NAME" x="140.843" y="-7.1374" size="1.778" layer="95"/>
+<attribute name="VALUE" x="140.843" y="-12.2174" size="1.778" layer="96"/>
+</instance>
+<instance part="C25" gate="G$1" x="-86.36" y="-10.16" smashed="yes">
+<attribute name="NAME" x="-87.757" y="-7.1374" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-87.757" y="-12.2174" size="1.778" layer="96"/>
+</instance>
+<instance part="C29" gate="G$1" x="-73.66" y="-10.16" smashed="yes">
+<attribute name="NAME" x="-75.057" y="-7.1374" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-75.057" y="-12.2174" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -15458,13 +15356,13 @@ Ipeak:      28A </text>
 </segment>
 <segment>
 <pinref part="SUPPLY36" gate="GND" pin="GND"/>
-<pinref part="C25" gate="G$1" pin="2"/>
 <wire x1="139.7" y1="-15.24" x2="139.7" y2="-12.7" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
+<pinref part="C24" gate="G$1" pin="-"/>
 </segment>
 <segment>
-<pinref part="C24" gate="G$1" pin="2"/>
 <pinref part="SUPPLY35" gate="GND" pin="GND"/>
 <wire x1="127" y1="-12.7" x2="127" y2="-15.24" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
+<pinref part="C15" gate="G$1" pin="-"/>
 </segment>
 <segment>
 <pinref part="C23" gate="G$1" pin="2"/>
@@ -15478,13 +15376,13 @@ Ipeak:      28A </text>
 </segment>
 <segment>
 <pinref part="SUPPLY40" gate="GND" pin="GND"/>
-<pinref part="C30" gate="G$1" pin="2"/>
 <wire x1="-76.2" y1="-15.24" x2="-76.2" y2="-12.7" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
+<pinref part="C29" gate="G$1" pin="-"/>
 </segment>
 <segment>
-<pinref part="C29" gate="G$1" pin="2"/>
 <pinref part="SUPPLY39" gate="GND" pin="GND"/>
 <wire x1="-88.9" y1="-12.7" x2="-88.9" y2="-15.24" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
+<pinref part="C25" gate="G$1" pin="-"/>
 </segment>
 <segment>
 <pinref part="C28" gate="G$1" pin="2"/>
@@ -15581,10 +15479,8 @@ Ipeak:      28A </text>
 <wire x1="-99.06" y1="-2.54" x2="-109.22" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <wire x1="-99.06" y1="-5.334" x2="-99.06" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <junction x="-99.06" y="-2.54" grouprefs="BOOST-12V"/>
-<pinref part="C29" gate="G$1" pin="1"/>
 <wire x1="-88.9" y1="-5.08" x2="-88.9" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <junction x="-88.9" y="-2.54" grouprefs="BOOST-12V"/>
-<pinref part="C30" gate="G$1" pin="1"/>
 <wire x1="-76.2" y1="-5.08" x2="-76.2" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <junction x="-76.2" y="-2.54" grouprefs="BOOST-12V"/>
 <pinref part="C27" gate="G$1" pin="1"/>
@@ -15598,6 +15494,8 @@ Ipeak:      28A </text>
 <wire x1="-66.04" y1="-25.4" x2="-50.8" y2="-25.4" width="0.1524" layer="91"/>
 <junction x="-50.8" y="-25.4"/>
 <pinref part="RSENSE" gate="G$1" pin="1"/>
+<pinref part="C25" gate="G$1" pin="+"/>
+<pinref part="C29" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -15754,7 +15652,6 @@ Ipeak:      28A </text>
 <wire x1="81.28" y1="-33.02" x2="81.28" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <junction x="81.28" y="-2.54" grouprefs="BOOST-12V"/>
 <wire x1="81.28" y1="-2.54" x2="93.98" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
-<pinref part="C25" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="-2.54" x2="106.68" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <wire x1="106.68" y1="-2.54" x2="116.84" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <wire x1="116.84" y1="-2.54" x2="127" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
@@ -15762,7 +15659,6 @@ Ipeak:      28A </text>
 <wire x1="139.7" y1="-2.54" x2="149.86" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <wire x1="139.7" y1="-5.08" x2="139.7" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <junction x="139.7" y="-2.54" grouprefs="BOOST-12V"/>
-<pinref part="C24" gate="G$1" pin="1"/>
 <wire x1="127" y1="-5.08" x2="127" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <junction x="127" y="-2.54" grouprefs="BOOST-12V"/>
 <pinref part="C23" gate="G$1" pin="1"/>
@@ -15778,6 +15674,8 @@ Ipeak:      28A </text>
 <junction x="93.98" y="-2.54"/>
 <pinref part="U$10" gate="G$1" pin="D"/>
 <junction x="76.2" y="-2.54"/>
+<pinref part="C15" gate="G$1" pin="+"/>
+<pinref part="C24" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="N$20" class="0">
