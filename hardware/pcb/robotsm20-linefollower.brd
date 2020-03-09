@@ -3,7 +3,7 @@
 <eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -158,10 +158,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="160" y2="0" width="0" layer="20"/>
-<wire x1="160" y1="0" x2="160" y2="100" width="0" layer="20"/>
-<wire x1="160" y1="100" x2="0" y2="100" width="0" layer="20"/>
-<wire x1="0" y1="100" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="292.08" y2="2.54" width="0" layer="20"/>
+<wire x1="292.08" y1="2.54" x2="294.62" y2="223.19" width="0" layer="20"/>
+<wire x1="294.62" y1="223.19" x2="2.54" y2="220.65" width="0" layer="20"/>
+<wire x1="2.54" y1="220.65" x2="0" y2="0" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="MotorDriver" urn="urn:adsk.eagle:library:17561913">
@@ -2462,6 +2462,50 @@ Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
 </package3d>
 </packages3d>
 </library>
+<library name="MISC" urn="urn:adsk.eagle:library:17889139">
+<packages>
+<package name="BLDC-MOUNT-D12MM" urn="urn:adsk.eagle:footprint:17889140/1" library_version="2">
+<circle x="0" y="0" radius="6" width="0.127" layer="21"/>
+<circle x="-6" y="0" radius="1.1" width="0.2" layer="20"/>
+<circle x="6" y="0" radius="1.1" width="0.2" layer="20"/>
+<circle x="0" y="-6" radius="1.1" width="0.2" layer="20"/>
+<circle x="0" y="6" radius="1.1" width="0.2" layer="20"/>
+<circle x="0" y="0" radius="3" width="0.2" layer="20"/>
+<circle x="0" y="0" radius="10.4" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="8.4" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="11" width="0.3048" layer="39"/>
+<text x="0" y="-4" size="1" layer="21" ratio="18" align="center">Ø2</text>
+<text x="0" y="9.2" size="1" layer="21" ratio="15" align="center">RS1606</text>
+<text x="0" y="11.2" size="1" layer="21" ratio="15" align="center">RS1306</text>
+<text x="0" y="4" size="1" layer="21" ratio="18" align="center">Ø6</text>
+</package>
+<package name="FAULHABER-2237CXR+IE3-1024" urn="urn:adsk.eagle:footprint:17889954/1" library_version="2">
+<description>&lt;h1&gt;Faulhaber 2237CXR + IE3-1024&lt;/h1&gt;
+&lt;hr \&gt;
+&lt;p&gt;Motor cutout for faulhaber 2237CXR motor with IE3-1024 incremental encoder. &lt;br/&gt; &lt;i&gt;Links: &lt;/i&gt; &lt;a href="https://www.faulhaber.com/fileadmin/Import/Media/EN_2237_CXR_DFF.pdf"&gt;2237CXR&lt;/a&gt;, &lt;a href="https://www.faulhaber.com/fileadmin/Import/Media/EN_IE3-1024_DFF.pdf"&gt;IE3-1024&lt;/a&gt;&lt;/p&gt;</description>
+<wire x1="0" y1="22" x2="55" y2="22" width="0.127" layer="20"/>
+<wire x1="55" y1="22" x2="55" y2="0" width="0.127" layer="20"/>
+<wire x1="55" y1="0" x2="0" y2="0" width="0.127" layer="20"/>
+<wire x1="0" y1="0" x2="0" y2="22" width="0.127" layer="20"/>
+<text x="12.7" y="22.86" size="1.27" layer="21" ratio="15">Faulhaber 2237CXR + IE3-1024</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="BLDC-MOUNT-D12MM" urn="urn:adsk.eagle:package:17889142/1" type="box" library_version="2">
+<packageinstances>
+<packageinstance name="BLDC-MOUNT-D12MM"/>
+</packageinstances>
+</package3d>
+<package3d name="FAULHABER-2237CXR+IE3-1024" urn="urn:adsk.eagle:package:17889956/1" type="box" library_version="2">
+<description>&lt;h1&gt;Faulhaber 2237CXR + IE3-1024&lt;/h1&gt;
+&lt;hr \&gt;
+&lt;p&gt;Motor cutout for faulhaber 2237CXR motor with IE3-1024 incremental encoder. &lt;br/&gt; &lt;i&gt;Links: &lt;/i&gt; &lt;a href="https://www.faulhaber.com/fileadmin/Import/Media/EN_2237_CXR_DFF.pdf"&gt;2237CXR&lt;/a&gt;, &lt;a href="https://www.faulhaber.com/fileadmin/Import/Media/EN_IE3-1024_DFF.pdf"&gt;IE3-1024&lt;/a&gt;&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="FAULHABER-2237CXR+IE3-1024"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3372,6 +3416,10 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="78.74" y="107.95" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="79.375" y="109.855" size="1.27" layer="27" rot="R180"/>
 </element>
+<element name="U$6" library="MISC" library_urn="urn:adsk.eagle:library:17889139" package="BLDC-MOUNT-D12MM" package3d_urn="urn:adsk.eagle:package:17889142/1" value="EMAX-1306/1606_MOTOR_MOUNT" x="185.42" y="171.45" smashed="yes"/>
+<element name="U$7" library="MISC" library_urn="urn:adsk.eagle:library:17889139" package="BLDC-MOUNT-D12MM" package3d_urn="urn:adsk.eagle:package:17889142/1" value="EMAX-1306/1606_MOTOR_MOUNT" x="148.59" y="123.19" smashed="yes"/>
+<element name="U$11" library="MISC" library_urn="urn:adsk.eagle:library:17889139" package="FAULHABER-2237CXR+IE3-1024" package3d_urn="urn:adsk.eagle:package:17889956/1" value="FAULHABER-2237CXR+IE3-1024" x="212.09" y="101.6" smashed="yes"/>
+<element name="U$12" library="MISC" library_urn="urn:adsk.eagle:library:17889139" package="FAULHABER-2237CXR+IE3-1024" package3d_urn="urn:adsk.eagle:package:17889956/1" value="FAULHABER-2237CXR+IE3-1024" x="40.64" y="154.94" smashed="yes"/>
 </elements>
 <signals>
 <signal name="AGND">
