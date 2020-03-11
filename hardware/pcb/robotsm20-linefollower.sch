@@ -14626,9 +14626,9 @@ Iout = Vref * 2.5</text>
 <label x="-20.32" y="40.64" size="1.778" layer="95" grouprefs="MOTOR-DRIVER"/>
 </segment>
 <segment>
-<pinref part="MOTOR_R" gate="G$1" pin="2"/>
-<wire x1="58.42" y1="29.21" x2="43.18" y2="29.21" width="0.1524" layer="91" grouprefs="MOTOR-CONNECTOR"/>
-<label x="44.45" y="29.21" size="1.778" layer="95"/>
+<pinref part="MOTOR_R" gate="G$1" pin="1"/>
+<wire x1="58.42" y1="31.75" x2="43.18" y2="31.75" width="0.1524" layer="91" grouprefs="MOTOR-CONNECTOR"/>
+<label x="44.196" y="31.75" size="1.778" layer="95" grouprefs="MOTOR-CONNECTOR"/>
 </segment>
 </net>
 <net name="MOTOR_L-" class="0">
@@ -14717,9 +14717,9 @@ Iout = Vref * 2.5</text>
 <wire x1="-63.5" y1="-60.96" x2="-83.82" y2="-60.96" width="0.1524" layer="91" grouprefs="BIDIRECTIONAL-CURRENT-SENSOR"/>
 </segment>
 <segment>
-<pinref part="MOTOR_R" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="31.75" x2="43.18" y2="31.75" width="0.1524" layer="91" grouprefs="MOTOR-CONNECTOR"/>
-<label x="44.45" y="31.75" size="1.778" layer="95"/>
+<pinref part="MOTOR_R" gate="G$1" pin="2"/>
+<wire x1="58.42" y1="29.21" x2="43.18" y2="29.21" width="0.1524" layer="91" grouprefs="MOTOR-CONNECTOR"/>
+<label x="43.942" y="29.21" size="1.778" layer="95" grouprefs="MOTOR-CONNECTOR"/>
 </segment>
 </net>
 <net name="MOTOR_L+" class="0">
