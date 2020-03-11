@@ -13542,8 +13542,8 @@ or in the I2C display</text>
 <instance part="SUPPLY9" gate="G$1" x="-165.1" y="73.66" smashed="yes" grouprefs="RESET_BUTTON">
 <attribute name="VALUE" x="-167.767" y="70.485" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY48" gate="G$1" x="17.78" y="78.74" smashed="yes" grouprefs="UART">
-<attribute name="VALUE" x="15.113" y="75.565" size="1.778" layer="96"/>
+<instance part="SUPPLY48" gate="G$1" x="25.4" y="78.74" smashed="yes" grouprefs="UART">
+<attribute name="VALUE" x="22.733" y="75.565" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY49" gate="G$1" x="93.98" y="83.82" smashed="yes" grouprefs="DEBUG">
 <attribute name="VALUE" x="91.313" y="80.645" size="1.778" layer="96"/>
@@ -13562,7 +13562,7 @@ or in the I2C display</text>
 <instance part="SUPPLY69" gate="G$1" x="-86.36" y="66.04" smashed="yes" grouprefs="MODE">
 <attribute name="VALUE" x="-89.027" y="62.865" size="1.778" layer="96"/>
 </instance>
-<instance part="SW1" gate="G$1" x="-76.2" y="106.68" smashed="yes" rot="R270">
+<instance part="SW1" gate="G$1" x="-76.2" y="106.68" smashed="yes" rot="R270" grouprefs="MODE">
 <attribute name="NAME" x="-76.2" y="107.442" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="-76.2" y="92.964" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
@@ -13823,6 +13823,11 @@ or in the I2C display</text>
 <label x="-86.36" y="104.14" size="1.778" layer="95" grouprefs="MODE"/>
 <pinref part="SW1" gate="G$1" pin="B1"/>
 </segment>
+<segment>
+<pinref part="UART_CONNECTOR" gate="G$1" pin="1"/>
+<wire x1="35.56" y1="88.9" x2="25.4" y2="88.9" width="0.1524" layer="91" grouprefs="UART"/>
+<label x="27.94" y="88.9" size="1.778" layer="95" grouprefs="UART"/>
+</segment>
 </net>
 <net name="BUZZER" class="0">
 <segment>
@@ -13858,6 +13863,11 @@ or in the I2C display</text>
 <wire x1="-86.36" y1="101.6" x2="-78.74" y2="101.6" width="0.1524" layer="91" grouprefs="MODE"/>
 <label x="-86.36" y="101.6" size="1.778" layer="95" grouprefs="MODE"/>
 <pinref part="SW1" gate="G$1" pin="B2"/>
+</segment>
+<segment>
+<pinref part="UART_CONNECTOR" gate="G$1" pin="2"/>
+<wire x1="35.56" y1="86.36" x2="25.4" y2="86.36" width="0.1524" layer="91" grouprefs="UART"/>
+<label x="27.94" y="86.36" size="1.778" layer="95" grouprefs="UART"/>
 </segment>
 </net>
 <net name="SDIO_D0" class="0">
@@ -13927,20 +13937,6 @@ or in the I2C display</text>
 <pinref part="SW1" gate="G$1" pin="A1"/>
 </segment>
 </net>
-<net name="RX_HEADER" class="0">
-<segment>
-<pinref part="UART_CONNECTOR" gate="G$1" pin="1"/>
-<wire x1="35.56" y1="88.9" x2="17.78" y2="88.9" width="0.1524" layer="91" grouprefs="UART"/>
-<label x="20.32" y="88.9" size="1.778" layer="95" grouprefs="UART"/>
-</segment>
-</net>
-<net name="TX_HEADER" class="0">
-<segment>
-<pinref part="UART_CONNECTOR" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="86.36" x2="17.78" y2="86.36" width="0.1524" layer="91" grouprefs="UART"/>
-<label x="20.32" y="86.36" size="1.778" layer="95" grouprefs="UART"/>
-</segment>
-</net>
 <net name="TX_BT" class="0">
 <segment>
 <wire x1="-66.04" y1="101.6" x2="-50.8" y2="101.6" width="0.1524" layer="91" grouprefs="MODE"/>
@@ -13969,8 +13965,8 @@ or in the I2C display</text>
 <wire x1="-86.36" y1="78.74" x2="-88.9" y2="78.74" width="0.1524" layer="91" grouprefs="MODE"/>
 <junction x="-86.36" y="78.74" grouprefs="MODE"/>
 <pinref part="SW1" gate="G$1" pin="B4"/>
-<wire x1="-78.74" y1="96.52" x2="-81.28" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="-81.28" y1="96.52" x2="-81.28" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="96.52" x2="-81.28" y2="96.52" width="0.1524" layer="91" grouprefs="MODE"/>
+<wire x1="-81.28" y1="96.52" x2="-81.28" y2="78.74" width="0.1524" layer="91" grouprefs="MODE"/>
 </segment>
 </net>
 <net name="N$34" class="0">
@@ -13979,8 +13975,8 @@ or in the I2C display</text>
 <pinref part="R18" gate="G$1" pin="2"/>
 <wire x1="-86.36" y1="99.06" x2="-88.9" y2="99.06" width="0.1524" layer="91" grouprefs="MODE"/>
 <pinref part="SW1" gate="G$1" pin="B3"/>
-<wire x1="-78.74" y1="99.06" x2="-86.36" y2="99.06" width="0.1524" layer="91"/>
-<junction x="-86.36" y="99.06"/>
+<wire x1="-78.74" y1="99.06" x2="-86.36" y2="99.06" width="0.1524" layer="91" grouprefs="MODE"/>
+<junction x="-86.36" y="99.06" grouprefs="MODE"/>
 </segment>
 </net>
 <net name="SDIO_CMD" class="0">
@@ -14082,13 +14078,13 @@ or in the I2C display</text>
 </segment>
 <segment>
 <pinref part="+3V15" gate="G$1" pin="+3V3"/>
-<wire x1="-43.18" y1="101.6" x2="-43.18" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="101.6" x2="-43.18" y2="99.06" width="0.1524" layer="91" grouprefs="MODE"/>
 <pinref part="SW1" gate="G$1" pin="A3"/>
-<wire x1="-43.18" y1="99.06" x2="-66.04" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-43.18" y1="99.06" x2="-66.04" y2="99.06" width="0.1524" layer="91" grouprefs="MODE"/>
 <pinref part="SW1" gate="G$1" pin="A4"/>
-<wire x1="-66.04" y1="96.52" x2="-43.18" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="-43.18" y1="96.52" x2="-43.18" y2="99.06" width="0.1524" layer="91"/>
-<junction x="-43.18" y="99.06"/>
+<wire x1="-66.04" y1="96.52" x2="-43.18" y2="96.52" width="0.1524" layer="91" grouprefs="MODE"/>
+<wire x1="-43.18" y1="96.52" x2="-43.18" y2="99.06" width="0.1524" layer="91" grouprefs="MODE"/>
+<junction x="-43.18" y="99.06" grouprefs="MODE"/>
 </segment>
 </net>
 <net name="AGND" class="0">
@@ -14217,9 +14213,9 @@ or in the I2C display</text>
 </segment>
 <segment>
 <pinref part="SUPPLY48" gate="G$1" pin="DGND"/>
-<wire x1="17.78" y1="81.28" x2="17.78" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="81.28" x2="25.4" y2="83.82" width="0.1524" layer="91" grouprefs="UART"/>
 <pinref part="UART_CONNECTOR" gate="G$1" pin="3"/>
-<wire x1="17.78" y1="83.82" x2="35.56" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="83.82" x2="35.56" y2="83.82" width="0.1524" layer="91" grouprefs="UART"/>
 </segment>
 <segment>
 <pinref part="R18" gate="G$1" pin="1"/>
