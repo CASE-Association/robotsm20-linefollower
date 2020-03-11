@@ -13302,7 +13302,7 @@ Source: www.kingbright.com</description>
 <part name="R30" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R31" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="BTN_SEL" library="CASE-Switches" library_urn="urn:adsk.eagle:library:7770839" deviceset="TSM2JSMA" device="" package3d_urn="urn:adsk.eagle:package:17798453/3"/>
-<part name="C46" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1u"/>
+<part name="C46" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1u"/>
 <part name="+3V6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="ENC_L" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="ZR_B6B-ZR" device="" package3d_urn="urn:adsk.eagle:package:5644773/2" value="ZH-6"/>
 <part name="ENC_R" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="ZR_B6B-ZR" device="" package3d_urn="urn:adsk.eagle:package:5644773/2" value="ZH-6"/>
@@ -13339,7 +13339,7 @@ Source: www.kingbright.com</description>
 <part name="+3V12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R47" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="U$5" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="DIODE_1N4148WX" device="" package3d_urn="urn:adsk.eagle:package:12971321/3"/>
-<part name="C47" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2"/>
+<part name="C47" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2"/>
 <part name="XLINE" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="ZR_B7B-ZR" device="" package3d_urn="urn:adsk.eagle:package:5644772/2" value="ZH"/>
 <part name="+3V13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="FAN_POWER_L" library="CASE_DC-Connector" library_urn="urn:adsk.eagle:library:8194510" deviceset="XT30" device="" package3d_urn="urn:adsk.eagle:package:17871162/2"/>
