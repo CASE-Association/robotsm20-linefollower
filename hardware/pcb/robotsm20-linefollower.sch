@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -13704,23 +13704,9 @@ or in the I2C display</text>
 </net>
 <net name="PWM_L" class="0">
 <segment>
-<wire x1="2.54" y1="15.24" x2="-20.32" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="U1" gate="STM32F405RG" pin="PB8"/>
-<label x="-17.78" y="15.24" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="PWM_R" class="0">
-<segment>
-<wire x1="2.54" y1="17.78" x2="-20.32" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="U1" gate="STM32F405RG" pin="PB9"/>
+<wire x1="-20.32" y1="17.78" x2="2.54" y2="17.78" width="0.1524" layer="91"/>
 <label x="-17.78" y="17.78" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IN_R_2" class="0">
-<segment>
-<wire x1="2.54" y1="10.16" x2="-20.32" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="U1" gate="STM32F405RG" pin="PB7"/>
-<label x="-17.78" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BOOT0" class="0">
@@ -13735,32 +13721,11 @@ or in the I2C display</text>
 <pinref part="R13" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="IN_L_2" class="0">
-<segment>
-<wire x1="2.54" y1="5.08" x2="-20.32" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="U1" gate="STM32F405RG" pin="PB5"/>
-<label x="-17.78" y="5.08" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IN_R_1" class="0">
-<segment>
-<wire x1="2.54" y1="7.62" x2="-20.32" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="U1" gate="STM32F405RG" pin="PB6"/>
-<label x="-17.78" y="7.62" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="ENC_R_B" class="0">
 <segment>
 <wire x1="2.54" y1="0" x2="-20.32" y2="0" width="0.1524" layer="91"/>
 <pinref part="U1" gate="STM32F405RG" pin="PB3"/>
 <label x="-17.78" y="0" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IN_L_1" class="0">
-<segment>
-<wire x1="2.54" y1="2.54" x2="-20.32" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="U1" gate="STM32F405RG" pin="PB4"/>
-<label x="-17.78" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDIO_CK" class="0">
@@ -14237,6 +14202,41 @@ or in the I2C display</text>
 <pinref part="U1" gate="STM32F405RG" pin="VSSA"/>
 <junction x="-139.7" y="-5.08"/>
 <pinref part="SUPPLY41" gate="G$1" pin="AGND"/>
+</segment>
+</net>
+<net name="PWM_R" class="0">
+<segment>
+<pinref part="U1" gate="STM32F405RG" pin="PB8"/>
+<wire x1="-20.32" y1="15.24" x2="2.54" y2="15.24" width="0.1524" layer="91"/>
+<label x="-17.78" y="15.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="IN_R_2" class="0">
+<segment>
+<pinref part="U1" gate="STM32F405RG" pin="PB4"/>
+<wire x1="-20.32" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="91"/>
+<label x="-17.78" y="2.54" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="IN_R_1" class="0">
+<segment>
+<pinref part="U1" gate="STM32F405RG" pin="PB5"/>
+<wire x1="-20.32" y1="5.08" x2="2.54" y2="5.08" width="0.1524" layer="91"/>
+<label x="-17.78" y="5.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="IN_L_2" class="0">
+<segment>
+<pinref part="U1" gate="STM32F405RG" pin="PB6"/>
+<wire x1="-20.32" y1="7.62" x2="2.54" y2="7.62" width="0.1524" layer="91"/>
+<label x="-17.78" y="7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="IN_L_1" class="0">
+<segment>
+<pinref part="U1" gate="STM32F405RG" pin="PB7"/>
+<wire x1="-20.32" y1="10.16" x2="2.54" y2="10.16" width="0.1524" layer="91"/>
+<label x="-17.78" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
