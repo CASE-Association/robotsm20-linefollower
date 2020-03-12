@@ -157,7 +157,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYmYwNjZh" projecturn="a.cGVyc29uYWw6dWUyYjM5YWQ2IzIwMjAwMzA5MjcyOTk2MzA2" f3durn="urn:adsk.wipprod:dm.lineage:mmRuPv7lRaqGjXx8WPgOcw" pcbguid="783a7e7e-69a0-495a-9315-ab4b5d70f980" lastpulledtime="2020-03-12T12:28:11Z" lastsyncedchangeguid="eb7c8a98-1c62-42c0-a18c-e946854ad82a" latestrevisionid="" lastsyncedrevisionid="" lastboardhashguid="48e7ab3c-9778-2ca0-7fd0-ba3c96116061" lastpushedtime="2020-03-12T13:33:52Z" linktopcb3d="%12"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYmYwNjZh" projecturn="a.cGVyc29uYWw6dWUyYjM5YWQ2IzIwMjAwMzA5MjcyOTk2MzA2" f3durn="urn:adsk.wipprod:dm.lineage:mmRuPv7lRaqGjXx8WPgOcw" pcbguid="783a7e7e-69a0-495a-9315-ab4b5d70f980" lastpulledtime="2020-03-12T12:28:11Z" lastsyncedchangeguid="eb7c8a98-1c62-42c0-a18c-e946854ad82a" latestrevisionid="" lastsyncedrevisionid="" lastboardhashguid="19d7b8c5-98cd-14b1-75f0-bf808a19a643" lastpushedtime="2020-03-12T13:44:59Z" linktopcb3d="%12"/>
 <plain>
 <wire x1="114.9858" y1="104.775" x2="114.9858" y2="-0.635" width="0.1524" layer="51"/>
 <circle x="170" y="65" radius="38" width="0.3" layer="47"/>
@@ -1869,11 +1869,15 @@
 <rectangle x1="80.5815" y1="54.1401" x2="82.9437" y2="54.2163" layer="201"/>
 <rectangle x1="80.9625" y1="54.2163" x2="82.9437" y2="54.2925" layer="201"/>
 <rectangle x1="81.4197" y1="54.2925" x2="82.9437" y2="54.3687" layer="201"/>
-<text x="50.7492" y="11.5824" size="1.016" layer="125" ratio="15" align="top-center">Blitz V2
+<text x="85.1916" y="34.1376" size="1.016" layer="125" ratio="15" align="top-center">Blitz V2
 rev 1.0 
 2020-03-13
-Isak Åslund &amp; Oskar Johansson 
-Board 19/02</text>
+Isak Åslund 
+&amp; 
+Oskar Johansson 
+Board 19/02
+</text>
+<text x="11.811" y="75.2602" size="1.016" layer="125" ratio="15" rot="R15">https://github.com/caselabbet/robotsm20-linefollower</text>
 </plain>
 <libraries>
 <library name="MotorDriver" urn="urn:adsk.eagle:library:17561913">
@@ -7656,7 +7660,7 @@ design rules under a new name.</description>
 </signal>
 </signals>
 <mfgpreviewcolors>
-<mfgpreviewcolor name="soldermaskcolor" color="0xFF191919"/>
+<mfgpreviewcolor name="soldermaskcolor" color="0xFF505050"/>
 <mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
 <mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
 <mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
