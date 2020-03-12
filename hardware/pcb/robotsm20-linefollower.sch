@@ -187,7 +187,7 @@
 <text x="0" y="2.529" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-2.185" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="QFN50P700X700X100-49T550N" urn="urn:adsk.eagle:footprint:17604868/1" library_version="9">
+<package name="QFN50P700X700X100-49T550N" urn="urn:adsk.eagle:footprint:17604868/1" locally_modified="yes" library_version="9" library_locally_modified="yes">
 <description>48-QFN, 0.50 mm pitch, 7.00 X 7.00 X 1.00 mm body, 5.50 X 5.50 mm thermal pad
 &lt;p&gt;48-pin QFN package with 0.50 mm pitch with body size 7.00 X 7.00 X 1.00 mm and thermal pad size 5.50 X 5.50 mm&lt;/p&gt;</description>
 <circle x="-4.004" y="3.389" radius="0.25" width="0" layer="21"/>
@@ -251,7 +251,7 @@
 <smd name="46" x="-1.75" y="3.4756" dx="0.7607" dy="0.27" layer="1" rot="R90"/>
 <smd name="47" x="-2.25" y="3.4756" dx="0.7607" dy="0.27" layer="1" rot="R90"/>
 <smd name="48" x="-2.75" y="3.4756" dx="0.7607" dy="0.27" layer="1" rot="R90"/>
-<smd name="49" x="0" y="0" dx="5.5" dy="5.5" layer="1" thermals="no"/>
+<smd name="49" x="0" y="0" dx="5.5" dy="5.5" layer="1"/>
 <text x="0" y="4.4909" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-4.4909" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
@@ -264,7 +264,7 @@
 <packageinstance name="SOP50P490X110-10N"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN50P700X700X100-49T550N" urn="urn:adsk.eagle:package:17604854/2" type="model" library_version="9">
+<package3d name="QFN50P700X700X100-49T550N" urn="urn:adsk.eagle:package:17604854/2" type="model" library_version="9" library_locally_modified="yes">
 <description>48-QFN, 0.50 mm pitch, 7.00 X 7.00 X 1.00 mm body, 5.50 X 5.50 mm thermal pad
 &lt;p&gt;48-pin QFN package with 0.50 mm pitch with body size 7.00 X 7.00 X 1.00 mm and thermal pad size 5.50 X 5.50 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -365,7 +365,7 @@ Part number
 </device>
 </devices>
 </deviceset>
-<deviceset name="TB67H420FTG" urn="urn:adsk.eagle:component:17610418/3" library_version="9">
+<deviceset name="TB67H420FTG" urn="urn:adsk.eagle:component:17610418/3" library_version="9" library_locally_modified="yes">
 <description>&lt;h1&gt;TB67H420FTG&lt;/h1&gt;
 &lt;p&gt;Dual motor driver&lt;/p&gt;
 &lt;a href="https://www.mouser.se/datasheet/2/408/TB67H420FTG_datasheet_en_20170818-1368033.pdf"&gt;Datasheet&lt;/a&gt;
@@ -13094,6 +13094,99 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="MISC" urn="urn:adsk.eagle:library:17889139">
+<packages>
+<package name="PAD_HOLE" urn="urn:adsk.eagle:footprint:18118318/1" locally_modified="yes" library_version="6" library_locally_modified="yes">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<pad name="P$1" x="0" y="0" drill="0.8" thermals="no"/>
+</package>
+<package name="PAD" urn="urn:adsk.eagle:footprint:18118316/1" locally_modified="yes" library_version="6" library_locally_modified="yes">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$2" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" thermals="no"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="PAD_HOLE" urn="urn:adsk.eagle:package:18118320/1" type="box" library_version="6" library_locally_modified="yes">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="PAD_HOLE"/>
+</packageinstances>
+</package3d>
+<package3d name="PAD" urn="urn:adsk.eagle:package:18118319/1" type="box" library_version="6" library_locally_modified="yes">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="PAD"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="TEST-POINT" urn="urn:adsk.eagle:symbol:18118317/1" library_version="6">
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<text x="1.27" y="1.27" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<pin name="1" x="0" y="0" visible="off" length="point" rot="R180"/>
+<circle x="3.556" y="0" radius="1" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TEST_POINT" urn="urn:adsk.eagle:component:18118321/1" library_version="6" library_locally_modified="yes">
+<gates>
+<gate name="G$1" symbol="TEST-POINT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="PAD_SMD" package="PAD">
+<connects>
+<connect gate="G$1" pin="1" pad="P$2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:18118319/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="PAD_HOLE" package="PAD_HOLE">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:18118320/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -13340,10 +13433,6 @@ Source: www.kingbright.com</description>
 <part name="MOTOR_L" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="XH-02" device="" package3d_urn="urn:adsk.eagle:package:17754557/1"/>
 <part name="SUPPLY41" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="AGND" device=""/>
 <part name="R21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
-<part name="TP_5V" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="TEST-POINT" device="3X5" package3d_urn="urn:adsk.eagle:package:13270955/1"/>
-<part name="TP_3V3" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="TEST-POINT" device="3X5" package3d_urn="urn:adsk.eagle:package:13270955/1"/>
-<part name="TP_1V8" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="TEST-POINT" device="3X5" package3d_urn="urn:adsk.eagle:package:13270955/1"/>
-<part name="TP_12V" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="TEST-POINT" device="3X5" package3d_urn="urn:adsk.eagle:package:13270955/1"/>
 <part name="SUPPLY43" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
 <part name="SUPPLY23" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
@@ -13383,6 +13472,10 @@ Source: www.kingbright.com</description>
 <part name="SUPPLY68" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
 <part name="SUPPLY69" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
 <part name="SW1" library="CASE-Switches" library_urn="urn:adsk.eagle:library:7770839" deviceset="CTS_219-4LPST" device="" package3d_urn="urn:adsk.eagle:package:7903078/2"/>
+<part name="TP_5V" library="MISC" library_urn="urn:adsk.eagle:library:17889139" deviceset="TEST_POINT" device="PAD_HOLE" package3d_urn="urn:adsk.eagle:package:18118320/1"/>
+<part name="TP_1V8" library="MISC" library_urn="urn:adsk.eagle:library:17889139" deviceset="TEST_POINT" device="PAD_HOLE" package3d_urn="urn:adsk.eagle:package:18118320/1"/>
+<part name="TP_3V3" library="MISC" library_urn="urn:adsk.eagle:library:17889139" deviceset="TEST_POINT" device="PAD_HOLE" package3d_urn="urn:adsk.eagle:package:18118320/1"/>
+<part name="TP_12V" library="MISC" library_urn="urn:adsk.eagle:library:17889139" deviceset="TEST_POINT" device="PAD_HOLE" package3d_urn="urn:adsk.eagle:package:18118320/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -15122,18 +15215,6 @@ Ipeak:      28A </text>
 <attribute name="NAME" x="-75.057" y="-7.1374" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-75.057" y="-12.2174" size="1.778" layer="96"/>
 </instance>
-<instance part="TP_5V" gate="G$1" x="-27.94" y="55.88" smashed="yes" grouprefs="BUCK-5V">
-<attribute name="NAME" x="-21.59" y="59.69" size="1.778" layer="95" font="vector" rot="R180"/>
-</instance>
-<instance part="TP_3V3" gate="G$1" x="111.76" y="38.1" smashed="yes" grouprefs="LDO-3V3">
-<attribute name="NAME" x="118.11" y="41.91" size="1.778" layer="95" font="vector" rot="R180"/>
-</instance>
-<instance part="TP_1V8" gate="G$1" x="45.72" y="38.1" smashed="yes" grouprefs="LDO-VREF-1V8">
-<attribute name="NAME" x="52.07" y="41.91" size="1.778" layer="95" font="vector" rot="R180"/>
-</instance>
-<instance part="TP_12V" gate="G$1" x="154.94" y="-2.54" smashed="yes" grouprefs="BOOST-12V">
-<attribute name="NAME" x="161.29" y="1.27" size="1.778" layer="95" font="vector" rot="R180"/>
-</instance>
 <instance part="SUPPLY14" gate="G$1" x="-104.14" y="22.86" smashed="yes" grouprefs="BUCK-5V">
 <attribute name="VALUE" x="-106.807" y="19.685" size="1.778" layer="96"/>
 </instance>
@@ -15172,6 +15253,18 @@ Ipeak:      28A </text>
 <instance part="SUPPLY11" gate="GND" x="-111.76" y="22.86" smashed="yes" grouprefs="BUCK-5V">
 <attribute name="VALUE" x="-113.665" y="19.685" size="1.778" layer="96"/>
 </instance>
+<instance part="TP_5V" gate="G$1" x="-27.94" y="55.88" smashed="yes" grouprefs="BUCK-5V">
+<attribute name="NAME" x="-26.67" y="57.15" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP_1V8" gate="G$1" x="45.72" y="38.1" smashed="yes" grouprefs="LDO-VREF-1V8">
+<attribute name="NAME" x="46.99" y="39.37" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP_3V3" gate="G$1" x="111.76" y="38.1" smashed="yes" grouprefs="LDO-3V3">
+<attribute name="NAME" x="113.03" y="39.37" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP_12V" gate="G$1" x="154.94" y="-2.54" smashed="yes" grouprefs="BOOST-12V">
+<attribute name="NAME" x="156.21" y="-1.27" size="1.778" layer="95" font="vector"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -15185,8 +15278,8 @@ Ipeak:      28A </text>
 <junction x="106.68" y="38.1" grouprefs="LDO-3V3"/>
 <wire x1="106.68" y1="38.1" x2="106.68" y2="35.56" width="0.1524" layer="91" grouprefs="LDO-3V3"/>
 <pinref part="C12" gate="G$1" pin="1"/>
+<wire x1="111.76" y1="38.1" x2="106.68" y2="38.1" width="0.1524" layer="91" grouprefs="LDO-3V3"/>
 <pinref part="TP_3V3" gate="G$1" pin="1"/>
-<wire x1="111.76" y1="38.1" x2="106.68" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LDO_VREF_1V8" gate="G$1" pin="VIN"/>
@@ -15337,8 +15430,8 @@ Ipeak:      28A </text>
 <wire x1="-40.64" y1="45.72" x2="-38.1" y2="45.72" width="0.1524" layer="91" grouprefs="BUCK-5V"/>
 <wire x1="-38.1" y1="45.72" x2="-38.1" y2="55.88" width="0.1524" layer="91" grouprefs="BUCK-5V"/>
 <junction x="-38.1" y="55.88" grouprefs="BUCK-5V"/>
+<wire x1="-27.94" y1="55.88" x2="-33.02" y2="55.88" width="0.1524" layer="91" grouprefs="BUCK-5V"/>
 <pinref part="TP_5V" gate="G$1" pin="1"/>
-<wire x1="-27.94" y1="55.88" x2="-33.02" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LDO_3V3" gate="G$1" pin="VIN"/>
@@ -15452,9 +15545,9 @@ Ipeak:      28A </text>
 <wire x1="40.64" y1="43.18" x2="43.18" y2="43.18" width="0.1524" layer="91" grouprefs="LDO-VREF-1V8"/>
 <junction x="40.64" y="43.18" grouprefs="LDO-VREF-1V8"/>
 <label x="44.45" y="43.18" size="1.778" layer="95" grouprefs="LDO-VREF-1V8"/>
+<wire x1="45.72" y1="38.1" x2="40.64" y2="38.1" width="0.1524" layer="91" grouprefs="LDO-VREF-1V8"/>
+<junction x="40.64" y="38.1" grouprefs="LDO-VREF-1V8"/>
 <pinref part="TP_1V8" gate="G$1" pin="1"/>
-<wire x1="45.72" y1="38.1" x2="40.64" y2="38.1" width="0.1524" layer="91"/>
-<junction x="40.64" y="38.1"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -15595,9 +15688,9 @@ Ipeak:      28A </text>
 <junction x="76.2" y="-2.54"/>
 <pinref part="C15" gate="G$1" pin="+"/>
 <pinref part="C24" gate="G$1" pin="+"/>
-<pinref part="TP_12V" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="-2.54" x2="149.86" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="-2.54" x2="149.86" y2="-2.54" width="0.1524" layer="91" grouprefs="BOOST-12V"/>
 <junction x="149.86" y="-2.54"/>
+<pinref part="TP_12V" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$20" class="0">
