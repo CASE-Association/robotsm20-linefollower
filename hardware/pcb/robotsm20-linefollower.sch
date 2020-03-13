@@ -8512,7 +8512,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-1.9" y1="0.9" x2="-1.9" y2="0.9" width="0.2" layer="21"/>
 <wire x1="-1.9" y1="0.9" x2="-1.9" y2="1.1" width="0.2" layer="21" curve="-180"/>
 </package>
-<package name="SON50P200X200X80-9T80X120N" urn="urn:adsk.eagle:footprint:17638857/1" library_version="8">
+<package name="SON50P200X200X80-9T80X120N" urn="urn:adsk.eagle:footprint:17638857/1" library_version="8" library_locally_modified="yes">
 <description>8-SON (DFN), 0.50 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.20 X 0.80 mm thermal pad
 &lt;p&gt;8-pin SON (DFN) package with 0.50 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.20 X 0.80 mm&lt;/p&gt;</description>
 <circle x="-1.504" y="1.389" radius="0.25" width="0" layer="21"/>
@@ -8534,7 +8534,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <text x="0" y="2.274" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.834" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="INDM135125X330N" urn="urn:adsk.eagle:footprint:17676988/1" library_version="8">
+<package name="INDM135125X330N" urn="urn:adsk.eagle:footprint:17676988/1" library_version="8" library_locally_modified="yes">
 <description>Molded Body, 13.50 X 12.50 X 3.30 mm body
 &lt;p&gt;Molded Body package with body size 13.50 X 12.50 X 3.30 mm&lt;/p&gt;</description>
 <wire x1="-7" y1="6.4" x2="7" y2="6.4" width="0.12" layer="21"/>
@@ -8570,6 +8570,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-2.875" y1="2.45" x2="2.875" y2="2.45" width="0.2" layer="21"/>
 <wire x1="2.875" y1="-2.45" x2="-2.875" y2="-2.45" width="0.2" layer="21"/>
 </package>
+<package name="SPLITTER" library_version="8" library_locally_modified="yes">
+<smd name="P$1" x="0" y="0.635" dx="1.27" dy="1.27" layer="1" stop="no" thermals="no" cream="no"/>
+<smd name="P$2" x="0" y="-0.635" dx="1.27" dy="1.27" layer="1" stop="no" thermals="no" cream="no"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="SOT230P700X180-4" urn="urn:adsk.eagle:package:17618934/1" type="model" library_version="3">
@@ -8579,7 +8583,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <packageinstance name="SOT230P700X180-4"/>
 </packageinstances>
 </package3d>
-<package3d name="SON50P200X200X80-9T80X120N" urn="urn:adsk.eagle:package:17638851/1" type="model" library_version="8">
+<package3d name="SON50P200X200X80-9T80X120N" urn="urn:adsk.eagle:package:17638851/1" type="model" library_version="8" library_locally_modified="yes">
 <description>8-SON (DFN), 0.50 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.20 X 0.80 mm thermal pad
 &lt;p&gt;8-pin SON (DFN) package with 0.50 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.20 X 0.80 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -8598,7 +8602,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <packageinstance name="TPS82130SILT"/>
 </packageinstances>
 </package3d>
-<package3d name="INDM135125X330N" urn="urn:adsk.eagle:package:17676955/1" type="model" library_version="8">
+<package3d name="INDM135125X330N" urn="urn:adsk.eagle:package:17676955/1" type="model" library_version="8" library_locally_modified="yes">
 <description>Molded Body, 13.50 X 12.50 X 3.30 mm body
 &lt;p&gt;Molded Body package with body size 13.50 X 12.50 X 3.30 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -8733,6 +8737,21 @@ In this library the device names are the same as the pin names of the symbols, t
 <vertex x="2.032" y="-0.762"/>
 </polygon>
 </symbol>
+<symbol name="SPLITTER" library_version="8" library_locally_modified="yes">
+<wire x1="-2.54" y1="1.27" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-2.54" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="1.27" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-3.81" y2="-1.27" width="0.1524" layer="94"/>
+<text x="-3.81" y="-3.302" size="1.27" layer="94">Splitter</text>
+<pin name="2" x="5.08" y="0" visible="pad" length="short" rot="R180"/>
+<pin name="1" x="-7.62" y="0" visible="pad" length="middle"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="LM1117-3.3" urn="urn:adsk.eagle:component:17618936/1" prefix="VR" library_version="3">
@@ -8849,7 +8868,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/tps82130"&gt; Datasheet &lt;/a&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="MCP1501T-XXE" urn="urn:adsk.eagle:component:17855582/1" library_version="8">
+<deviceset name="MCP1501T-XXE" urn="urn:adsk.eagle:component:17855582/1" library_version="8" library_locally_modified="yes">
 <description>&lt;h1&gt;MCP1501T-XXE&lt;/h1&gt;
 &lt;p&gt;Precision Buffered Voltage Reference&lt;/p&gt;
 &lt;a href="https://www.mouser.se/datasheet/2/268/20005474C-961722.pdf"&gt;Datasheet&lt;/a&gt;
@@ -8879,7 +8898,7 @@ Part number FOR 1.8V ref.
 </device>
 </devices>
 </deviceset>
-<deviceset name="SRP1238A-XXXX" urn="urn:adsk.eagle:component:17855581/1" library_version="8">
+<deviceset name="SRP1238A-XXXX" urn="urn:adsk.eagle:component:17855581/1" library_version="8" library_locally_modified="yes">
 <description>&lt;b&gt;Inductor &lt;/b&gt;&lt;p&gt;
 &lt;i&gt; Description:&lt;/i&gt;  
 &lt;br&gt;R68M: 0.68µH + 28A + 49Asat
@@ -8925,6 +8944,22 @@ Part number
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:17886597/2"/>
 </package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPLITTER" library_version="8" library_locally_modified="yes">
+<gates>
+<gate name="G$1" symbol="SPLITTER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SPLITTER">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -9040,10 +9075,6 @@ Used as a test point connection for pogo pins or other debugging tools.
 <smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
 <text x="-2.413" y="0.889" size="1.016" layer="21" font="vector" ratio="15" distance="70">&gt;NAME</text>
 </package>
-<package name="SPLITTER" urn="urn:adsk.eagle:footprint:12971299/1" library_version="26">
-<smd name="1" x="0" y="0" dx="0.1016" dy="0.1016" layer="1" roundness="100" rot="R90" stop="no" thermals="no" cream="no"/>
-<smd name="2" x="0" y="0" dx="0.1016" dy="0.1016" layer="1" roundness="100" rot="R90" stop="no" thermals="no" cream="no"/>
-</package>
 </packages>
 <packages3d>
 <package3d name="WIRELESS-BLUETOOTH-HC-05" urn="urn:adsk.eagle:package:12971313/2" type="model" library_version="26">
@@ -9073,11 +9104,6 @@ Used as a test point connection for pogo pins or other debugging tools.
 &lt;/ul&gt;&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="PAD.03X.05"/>
-</packageinstances>
-</package3d>
-<package3d name="SPLITTER" urn="urn:adsk.eagle:package:12971320/1" type="box" library_version="26">
-<packageinstances>
-<packageinstance name="SPLITTER"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -9126,21 +9152,6 @@ Used as a test point connection for pogo pins or other debugging tools.
 <text x="1.27" y="1.27" size="1.778" layer="95" font="vector">&gt;NAME</text>
 <pin name="1" x="0" y="0" visible="off" length="point" rot="R180"/>
 <circle x="3.556" y="0" radius="1" width="0.254" layer="94"/>
-</symbol>
-<symbol name="SPLITTER" urn="urn:adsk.eagle:symbol:12971275/1" library_version="26">
-<wire x1="-2.54" y1="1.27" x2="-1.27" y2="0" width="0.1524" layer="94"/>
-<wire x1="-1.27" y1="0" x2="-2.54" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="-1.27" y1="1.27" x2="0" y2="0" width="0.1524" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="0" y1="1.27" x2="1.27" y2="0" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="1.27" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="1.27" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="-3.81" y1="1.27" x2="-2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-3.81" y2="-1.27" width="0.1524" layer="94"/>
-<text x="-3.81" y="-3.302" size="1.27" layer="94">Splitter</text>
-<pin name="2" x="5.08" y="0" visible="pad" length="short" rot="R180"/>
-<pin name="1" x="-7.62" y="0" visible="pad" length="middle"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -9229,26 +9240,6 @@ Used as a test point connection for pogo pins or other debugging tools.
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:13270955/1"/>
-</package3dinstances>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SPLITTER" urn="urn:adsk.eagle:component:12971336/1" library_version="26">
-<description>Used for separating grounds</description>
-<gates>
-<gate name="G$1" symbol="SPLITTER" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SPLITTER">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:12971320/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -13463,8 +13454,6 @@ Used as a test point connection for pogo pins or other debugging tools.
 <part name="SUPPLY60" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
 <part name="SUPPLY66" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="AGND" device=""/>
 <part name="SUPPLY67" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="U$4" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="SPLITTER" device="" package3d_urn="urn:adsk.eagle:package:12971320/1"/>
-<part name="U$6" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="SPLITTER" device="" package3d_urn="urn:adsk.eagle:package:12971320/1"/>
 <part name="SUPPLY11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
@@ -13475,6 +13464,8 @@ Used as a test point connection for pogo pins or other debugging tools.
 <part name="TP_1V8" library="MISC" library_urn="urn:adsk.eagle:library:17889139" deviceset="TEST_POINT" device="PAD_HOLE" package3d_urn="urn:adsk.eagle:package:18118320/1"/>
 <part name="TP_3V3" library="MISC" library_urn="urn:adsk.eagle:library:17889139" deviceset="TEST_POINT" device="PAD_HOLE" package3d_urn="urn:adsk.eagle:package:18118320/1"/>
 <part name="TP_12V" library="MISC" library_urn="urn:adsk.eagle:library:17889139" deviceset="TEST_POINT" device="PAD_HOLE" package3d_urn="urn:adsk.eagle:package:18118320/1"/>
+<part name="U$4" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="SPLITTER" device=""/>
+<part name="U$6" library="PowerManagement" library_urn="urn:adsk.eagle:library:17599692" deviceset="SPLITTER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15246,8 +15237,6 @@ Ipeak:      28A </text>
 <instance part="SUPPLY67" gate="GND" x="157.48" y="22.86" smashed="yes" grouprefs="GND-UNITE">
 <attribute name="VALUE" x="155.575" y="19.685" size="1.778" layer="96"/>
 </instance>
-<instance part="U$4" gate="G$1" x="147.32" y="35.56" smashed="yes" rot="R90" grouprefs="GND-UNITE"/>
-<instance part="U$6" gate="G$1" x="137.16" y="35.56" smashed="yes" rot="R90" grouprefs="GND-UNITE"/>
 <instance part="SUPPLY11" gate="GND" x="-111.76" y="22.86" smashed="yes" grouprefs="BUCK-5V">
 <attribute name="VALUE" x="-113.665" y="19.685" size="1.778" layer="96"/>
 </instance>
@@ -15263,6 +15252,8 @@ Ipeak:      28A </text>
 <instance part="TP_12V" gate="G$1" x="154.94" y="-2.54" smashed="yes" grouprefs="BOOST-12V">
 <attribute name="NAME" x="156.21" y="-1.27" size="1.778" layer="95" font="vector"/>
 </instance>
+<instance part="U$4" gate="G$1" x="137.16" y="35.56" smashed="yes" rot="R90"/>
+<instance part="U$6" gate="G$1" x="147.32" y="35.56" smashed="yes" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -15393,15 +15384,15 @@ Ipeak:      28A </text>
 <wire x1="27.178" y1="-25.4" x2="30.48" y2="-25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="2"/>
 <wire x1="137.16" y1="40.64" x2="137.16" y2="43.18" width="0.1524" layer="91" grouprefs="GND-UNITE"/>
 <wire x1="137.16" y1="43.18" x2="147.32" y2="43.18" width="0.1524" layer="91" grouprefs="GND-UNITE"/>
 <wire x1="147.32" y1="43.18" x2="157.48" y2="43.18" width="0.1524" layer="91" grouprefs="GND-UNITE"/>
 <wire x1="157.48" y1="43.18" x2="157.48" y2="25.4" width="0.1524" layer="91" grouprefs="GND-UNITE"/>
 <pinref part="SUPPLY67" gate="GND" pin="GND"/>
-<pinref part="U$4" gate="G$1" pin="2"/>
 <wire x1="147.32" y1="40.64" x2="147.32" y2="43.18" width="0.1524" layer="91" grouprefs="GND-UNITE"/>
 <junction x="147.32" y="43.18" grouprefs="GND-UNITE"/>
+<pinref part="U$4" gate="G$1" pin="2"/>
+<pinref part="U$6" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="C9" gate="G$1" pin="2"/>
@@ -15524,8 +15515,8 @@ Ipeak:      28A </text>
 </segment>
 <segment>
 <pinref part="SUPPLY66" gate="G$1" pin="AGND"/>
-<pinref part="U$6" gate="G$1" pin="1"/>
 <wire x1="137.16" y1="25.4" x2="137.16" y2="27.94" width="0.1524" layer="91" grouprefs="GND-UNITE"/>
+<pinref part="U$4" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="VREF" class="0">
@@ -15779,8 +15770,8 @@ Ipeak:      28A </text>
 </segment>
 <segment>
 <pinref part="SUPPLY60" gate="G$1" pin="DGND"/>
-<pinref part="U$4" gate="G$1" pin="1"/>
 <wire x1="147.32" y1="25.4" x2="147.32" y2="27.94" width="0.1524" layer="91" grouprefs="GND-UNITE"/>
+<pinref part="U$6" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
@@ -16323,13 +16314,6 @@ Utilizing internal pull-down</text>
 <wire x1="76.2" y1="-33.02" x2="76.2" y2="-25.4" width="0.1524" layer="91" grouprefs="IMU"/>
 </segment>
 </net>
-<net name="IMU_INT" class="0">
-<segment>
-<pinref part="IMU-BNO055" gate="G$1" pin="INT"/>
-<wire x1="38.1" y1="-27.94" x2="45.72" y2="-27.94" width="0.1524" layer="91" grouprefs="IMU"/>
-<label x="38.1" y="-27.94" size="1.778" layer="95" grouprefs="IMU"/>
-</segment>
-</net>
 <net name="V+" class="0">
 <segment>
 <pinref part="U$15" gate="G$1" pin="+"/>
@@ -16703,11 +16687,66 @@ Utilizing internal pull-down</text>
 </sheet>
 </sheets>
 <errors>
+<approved hash="102,3,101.6,38.1,VOUT,+3V3,,,,"/>
+<approved hash="102,3,88.9,30.48,GND,DGND,,,,"/>
 <approved hash="201,3,88.9,30.48,GND,DGND\, GND,,,,"/>
+<approved hash="102,4,-114.3,-2.54,GND,DGND,,,,"/>
+<approved hash="102,4,-114.3,-5.08,VIN,+5V,,,,"/>
 <approved hash="201,4,-114.3,-2.54,GND,DGND\, GND,,,,"/>
+<approved hash="104,2,-63.5,-45.72,CURRENTAMP,VS,+3V3,,,"/>
+<approved hash="104,2,-25.4,-45.72,CURRENTAMP,GND,AGND,,,"/>
+<approved hash="104,2,-40.64,73.66,MOTORDRIVER,VMA,+12V,,,"/>
+<approved hash="104,2,-43.18,5.08,MOTORDRIVER,RSAGND,GND,,,"/>
+<approved hash="104,2,-45.72,73.66,MOTORDRIVER,VCC,VCC5V,,,"/>
+<approved hash="104,2,-35.56,73.66,MOTORDRIVER,VMB,+12V,,,"/>
+<approved hash="104,2,-38.1,5.08,MOTORDRIVER,RSBGND,GND,,,"/>
+<approved hash="104,3,76.2,38.1,LDO_3V3,VIN,+5V,,,"/>
+<approved hash="104,3,-25.654,-25.4,BOOST,VIN,V+,,,"/>
+<approved hash="104,3,15.24,-25.4,BOOST,VCC,N$2,,,"/>
+<approved hash="104,3,-10.16,-58.42,BOOST,PGND,GND,,,"/>
+<approved hash="104,3,-5.08,-58.42,BOOST,POWERPAD,GND,,,"/>
+<approved hash="104,3,0,-58.42,BOOST,AGND,GND,,,"/>
 <approved hash="202,3,-25.4,-30.48,BOOST,EN,,,,"/>
+<approved hash="104,3,2.54,43.18,LDO_VREF_1V8,VIN,+3V3,,,"/>
+<approved hash="104,3,30.48,43.18,LDO_VREF_1V8,VOUT,VREF,,,"/>
+<approved hash="104,3,30.48,38.1,LDO_VREF_1V8,GND,AGND,,,"/>
+<approved hash="104,1,-101.6,22.86,U1,VBAT,+3V3,,,"/>
 <approved hash="202,1,-101.6,12.7,U1,PH0_OSC_IN,,,,"/>
+<approved hash="104,1,-101.6,-5.08,U1,VSSA,AGND,,,"/>
+<approved hash="104,1,-101.6,-7.62,U1,VDDA,+3V3,,,"/>
+<approved hash="104,1,-101.6,-20.32,U1,VSS_4,DGND,,,"/>
+<approved hash="104,1,-101.6,-22.86,U1,VDD_4,+3V3,,,"/>
+<approved hash="104,1,-101.6,-53.34,U1,VCAP_1,N$54,,,"/>
+<approved hash="104,1,-101.6,-55.88,U1,VDD_1,+3V3,,,"/>
+<approved hash="104,1,-20.32,-20.32,U1,VCAP_2,N$72,,,"/>
+<approved hash="104,1,-20.32,-17.78,U1,VDD_2,+3V3,,,"/>
+<approved hash="104,1,-20.32,20.32,U1,VSS_3,DGND,,,"/>
+<approved hash="104,1,-20.32,22.86,U1,VDD_3,+3V3,,,"/>
+<approved hash="104,4,111.76,20.32,OLED_DISPLAY,GND,DGND,,,"/>
+<approved hash="104,4,114.3,20.32,OLED_DISPLAY,VCC,+5V,,,"/>
+<approved hash="104,4,-10.16,-12.7,IMU-BNO055,VDD,+3V3,,,"/>
+<approved hash="104,4,-10.16,-33.02,IMU-BNO055,!BOOT_LOAD_PIN!,N$37,,,"/>
+<approved hash="104,4,38.1,-38.1,IMU-BNO055,PS0,AGND,,,"/>
+<approved hash="104,4,12.7,-53.34,IMU-BNO055,CAP,N$30,,,"/>
 <approved hash="202,4,-10.16,-43.18,IMU-BNO055,XOUT32,,,,"/>
+<approved hash="106,2,58.42,55.88,ENC_L_I,,,,,"/>
+<approved hash="106,2,58.42,10.16,ENC_R_I,,,,,"/>
+<approved hash="106,1,-20.32,-48.26,N$5,,,,,"/>
+<approved hash="106,1,-20.32,-50.8,N$6,,,,,"/>
+<approved hash="106,1,-20.32,-53.34,N$9,,,,,"/>
+<approved hash="106,1,-101.6,-48.26,N$21,,,,,"/>
+<approved hash="106,1,-101.6,-25.4,N$25,,,,,"/>
+<approved hash="106,1,-101.6,0,N$32,,,,,"/>
+<approved hash="106,1,-101.6,-30.48,N$44,,,,,"/>
+<approved hash="106,1,-101.6,-50.8,N$52,,,,,"/>
+<approved hash="106,1,-20.32,-25.4,N$74,,,,,"/>
+<approved hash="106,1,-20.32,-55.88,N$87,,,,,"/>
+<approved hash="113,3,10.691,-4.549,FRAME2,,,,,"/>
+<approved hash="113,1,-6.454,4.976,FRAME3,,,,,"/>
+<approved hash="113,4,43.711,13.231,FRAME4,,,,,"/>
+<approved hash="113,2,-11.534,12.596,FRAME5,,,,,"/>
+<approved hash="113,4,185.387,23.4304,SD_CARDHOLDER,,,,,"/>
+<approved hash="113,4,156.21,114.622,LED2,,,,,"/>
 </errors>
 </schematic>
 </drawing>
