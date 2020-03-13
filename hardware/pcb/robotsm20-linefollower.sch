@@ -13349,8 +13349,8 @@ Used as a test point connection for pogo pins or other debugging tools.
 <part name="R39" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="BATT_SWITCH" library="Switches" library_urn="urn:adsk.eagle:library:17810526" deviceset="JS202011AQN" device="" package3d_urn="urn:adsk.eagle:package:17810530/3"/>
-<part name="R37" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100"/>
-<part name="R32" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="300"/>
+<part name="R37" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="100R"/>
+<part name="R32" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="300R"/>
 <part name="R35" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="LED1" library="CASE-LED" library_urn="urn:adsk.eagle:library:7770838" deviceset="150141M173100" device="" package3d_urn="urn:adsk.eagle:package:16853563/2"/>
 <part name="+3V11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
@@ -13610,9 +13610,9 @@ or in the I2C display</text>
 <attribute name="NAME" x="-97.79" y="100.5586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-97.79" y="95.758" size="1.778" layer="96"/>
 </instance>
-<instance part="R16" gate="G$1" x="-93.98" y="78.74" smashed="yes" grouprefs="MODE">
-<attribute name="NAME" x="-90.17" y="77.2414" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-90.17" y="82.042" size="1.778" layer="96" rot="R180"/>
+<instance part="R16" gate="G$1" x="-93.98" y="76.2" smashed="yes" grouprefs="MODE">
+<attribute name="NAME" x="-97.79" y="77.6986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-97.79" y="72.898" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY41" gate="G$1" x="-144.78" y="-10.16" smashed="yes">
 <attribute name="VALUE" x="-147.447" y="-13.335" size="1.778" layer="96"/>
@@ -13641,19 +13641,19 @@ or in the I2C display</text>
 <instance part="SUPPLY49" gate="G$1" x="93.98" y="83.82" smashed="yes" grouprefs="DEBUG">
 <attribute name="VALUE" x="91.313" y="80.645" size="1.778" layer="96"/>
 </instance>
-<instance part="R17" gate="G$1" x="-86.36" y="73.66" smashed="yes" rot="R90" grouprefs="MODE">
-<attribute name="NAME" x="-84.8614" y="77.47" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-89.662" y="77.47" size="1.778" layer="96" rot="R270"/>
+<instance part="R17" gate="G$1" x="-86.36" y="71.12" smashed="yes" rot="R90" grouprefs="MODE">
+<attribute name="NAME" x="-87.63" y="72.1614" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-87.63" y="69.342" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R18" gate="G$1" x="-86.36" y="93.98" smashed="yes" rot="R90" grouprefs="MODE">
-<attribute name="NAME" x="-84.8614" y="97.79" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-89.662" y="97.79" size="1.778" layer="96" rot="R270"/>
+<attribute name="NAME" x="-87.63" y="95.0214" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-87.63" y="92.202" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SUPPLY68" gate="G$1" x="-86.36" y="86.36" smashed="yes" grouprefs="MODE">
-<attribute name="VALUE" x="-89.027" y="83.185" size="1.778" layer="96"/>
+<instance part="SUPPLY68" gate="G$1" x="-86.36" y="83.82" smashed="yes" grouprefs="MODE">
+<attribute name="VALUE" x="-89.027" y="80.645" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY69" gate="G$1" x="-86.36" y="66.04" smashed="yes" grouprefs="MODE">
-<attribute name="VALUE" x="-89.027" y="62.865" size="1.778" layer="96"/>
+<instance part="SUPPLY69" gate="G$1" x="-86.36" y="60.96" smashed="yes" grouprefs="MODE">
+<attribute name="VALUE" x="-89.027" y="57.785" size="1.778" layer="96"/>
 </instance>
 <instance part="SW1" gate="G$1" x="-76.2" y="106.68" smashed="yes" rot="R270" grouprefs="MODE">
 <attribute name="NAME" x="-76.2" y="107.442" size="1.778" layer="95" font="vector"/>
@@ -13761,8 +13761,8 @@ or in the I2C display</text>
 <label x="-121.92" y="-45.72" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-99.06" y1="78.74" x2="-101.6" y2="78.74" width="0.1524" layer="91" grouprefs="MODE"/>
-<label x="-101.6" y="78.74" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="MODE"/>
+<wire x1="-99.06" y1="76.2" x2="-101.6" y2="76.2" width="0.1524" layer="91" grouprefs="MODE"/>
+<label x="-101.6" y="76.2" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="MODE"/>
 <pinref part="R16" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -14040,12 +14040,12 @@ or in the I2C display</text>
 <segment>
 <pinref part="R16" gate="G$1" pin="2"/>
 <pinref part="R17" gate="G$1" pin="2"/>
-<wire x1="-81.28" y1="78.74" x2="-86.36" y2="78.74" width="0.1524" layer="91" grouprefs="MODE"/>
-<wire x1="-86.36" y1="78.74" x2="-88.9" y2="78.74" width="0.1524" layer="91" grouprefs="MODE"/>
-<junction x="-86.36" y="78.74" grouprefs="MODE"/>
+<wire x1="-81.28" y1="76.2" x2="-86.36" y2="76.2" width="0.1524" layer="91" grouprefs="MODE"/>
+<wire x1="-86.36" y1="76.2" x2="-88.9" y2="76.2" width="0.1524" layer="91" grouprefs="MODE"/>
+<junction x="-86.36" y="76.2" grouprefs="MODE"/>
 <pinref part="SW1" gate="G$1" pin="B4"/>
 <wire x1="-78.74" y1="96.52" x2="-81.28" y2="96.52" width="0.1524" layer="91" grouprefs="MODE"/>
-<wire x1="-81.28" y1="96.52" x2="-81.28" y2="78.74" width="0.1524" layer="91" grouprefs="MODE"/>
+<wire x1="-81.28" y1="96.52" x2="-81.28" y2="76.2" width="0.1524" layer="91" grouprefs="MODE"/>
 </segment>
 </net>
 <net name="N$34" class="0">
@@ -14299,10 +14299,12 @@ or in the I2C display</text>
 <segment>
 <pinref part="R18" gate="G$1" pin="1"/>
 <pinref part="SUPPLY68" gate="G$1" pin="DGND"/>
+<wire x1="-86.36" y1="86.36" x2="-86.36" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R17" gate="G$1" pin="1"/>
 <pinref part="SUPPLY69" gate="G$1" pin="DGND"/>
+<wire x1="-86.36" y1="63.5" x2="-86.36" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_R_A" class="0">
@@ -14384,12 +14386,12 @@ Iout = Vref * 2.5</text>
 <attribute name="VALUE" x="-50.165" y="-5.715" size="1.778" layer="96"/>
 </instance>
 <instance part="R1" gate="G$1" x="-101.6" y="33.02" smashed="yes" rot="R90" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="-103.0986" y="29.21" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="-98.298" y="29.21" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="-102.87" y="36.6014" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-102.87" y="33.782" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R2" gate="G$1" x="-93.98" y="33.02" smashed="yes" rot="R90" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="-95.4786" y="29.21" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="-90.678" y="29.21" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="-95.25" y="36.6014" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-95.25" y="33.782" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C6" gate="G$1" x="-7.62" y="81.28" smashed="yes" grouprefs="MOTOR-DRIVER">
 <attribute name="NAME" x="-6.096" y="81.661" size="1.778" layer="95"/>
@@ -14407,8 +14409,8 @@ Iout = Vref * 2.5</text>
 <attribute name="VALUE" x="-89.916" y="66.421" size="1.778" layer="96"/>
 </instance>
 <instance part="ROSC" gate="G$1" x="-91.44" y="86.36" smashed="yes" rot="R90" grouprefs="MOTOR-DRIVER">
-<attribute name="NAME" x="-92.9386" y="82.55" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="-88.138" y="82.55" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="-90.17" y="87.8586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-90.17" y="83.058" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY58" gate="GND" x="-91.44" y="60.96" smashed="yes" grouprefs="MOTOR-DRIVER">
 <attribute name="VALUE" x="-93.345" y="57.785" size="1.778" layer="96"/>
@@ -15920,11 +15922,11 @@ Utilizing internal pull-down</text>
 <attribute name="VALUE" x="176.53" y="-19.558" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="LED1" gate="G$1" x="58.42" y="104.14" smashed="yes" grouprefs="RGB-LED">
-<attribute name="NAME" x="48.26" y="99.314" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="69.85" y="99.06" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="43.434" y="106.68" size="1.778" layer="95"/>
+<attribute name="VALUE" x="33.02" y="102.87" size="1.778" layer="96"/>
 </instance>
 <instance part="+3V11" gate="G$1" x="58.42" y="124.46" smashed="yes" grouprefs="RGB-LED">
-<attribute name="VALUE" x="55.88" y="119.38" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="60.96" y="127" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R36" gate="G$1" x="53.34" y="91.44" smashed="yes" rot="R90" grouprefs="RGB-LED">
 <attribute name="NAME" x="46.99" y="92.9386" size="1.778" layer="95"/>
@@ -15945,7 +15947,7 @@ Utilizing internal pull-down</text>
 <attribute name="NAME" x="49.53" y="63.5" size="1.778" layer="95"/>
 </instance>
 <instance part="Q7" gate="G$1" x="76.2" y="73.66" smashed="yes" grouprefs="RGB-LED">
-<attribute name="NAME" x="67.31" y="76.2" size="1.778" layer="95"/>
+<attribute name="NAME" x="72.39" y="76.2" size="1.778" layer="95"/>
 </instance>
 <instance part="R43" gate="G$1" x="116.84" y="114.3" smashed="yes" rot="R270" grouprefs="BATTERY">
 <attribute name="NAME" x="115.57" y="117.8814" size="1.778" layer="95" rot="R180"/>
@@ -16716,6 +16718,13 @@ Utilizing internal pull-down</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="201,3,88.9,30.48,GND,DGND\, GND,,,,"/>
+<approved hash="201,4,-114.3,-2.54,GND,DGND\, GND,,,,"/>
+<approved hash="202,3,-25.4,-30.48,BOOST,EN,,,,"/>
+<approved hash="202,1,-101.6,12.7,U1,PH0_OSC_IN,,,,"/>
+<approved hash="202,4,-10.16,-43.18,IMU-BNO055,XOUT32,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
