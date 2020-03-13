@@ -10456,7 +10456,7 @@ Variant with &lt;b&gt;I2C interface&lt;/b&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="BNO055" urn="urn:adsk.eagle:component:17610086/4" prefix="IC" library_version="5">
+<deviceset name="BNO055" urn="urn:adsk.eagle:component:17610086/5" prefix="IC" library_version="6">
 <description>&lt;b&gt;IMUs - Inertial Measurement Units Absolute Orientation 9-Axis Sensor&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/BNO055.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -10473,7 +10473,7 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/1/BNO055.pdf"&g
 <connect gate="G$1" pin="COM2/GNDIO" pad="18"/>
 <connect gate="G$1" pin="COM3/I2CADDR" pad="17"/>
 <connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="GNDIO" pad="10 15 16 25"/>
+<connect gate="G$1" pin="GNDIO" pad="15 16 25"/>
 <connect gate="G$1" pin="INT" pad="14"/>
 <connect gate="G$1" pin="PS0" pad="6"/>
 <connect gate="G$1" pin="PS1" pad="5"/>
@@ -13377,7 +13377,6 @@ Used as a test point connection for pogo pins or other debugging tools.
 <part name="+3V12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="R47" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="U$5" library="Isaks Bibliotek" library_urn="urn:adsk.eagle:library:11889733" deviceset="DIODE_1N4148WX" device="" package3d_urn="urn:adsk.eagle:package:12971321/3"/>
-<part name="C47" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2"/>
 <part name="XLINE" library="CASE-JST" library_urn="urn:adsk.eagle:library:5637561" deviceset="ZR_B7B-ZR" device="" package3d_urn="urn:adsk.eagle:package:5644772/2" value="ZH"/>
 <part name="+3V13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="FAN_POWER_L" library="CASE_DC-Connector" library_urn="urn:adsk.eagle:library:8194510" deviceset="XT30" device="" package3d_urn="urn:adsk.eagle:package:17871162/2"/>
@@ -13982,27 +13981,6 @@ or in the I2C display</text>
 <label x="-17.78" y="-43.18" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="MISO" class="0">
-<segment>
-<wire x1="2.54" y1="-50.8" x2="-20.32" y2="-50.8" width="0.1524" layer="91"/>
-<pinref part="U1" gate="STM32F405RG" pin="PB14"/>
-<label x="-17.78" y="-50.8" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="MOSI" class="0">
-<segment>
-<wire x1="2.54" y1="-48.26" x2="-20.32" y2="-48.26" width="0.1524" layer="91"/>
-<pinref part="U1" gate="STM32F405RG" pin="PB15"/>
-<label x="-17.78" y="-48.26" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SCK" class="0">
-<segment>
-<wire x1="2.54" y1="-53.34" x2="-20.32" y2="-53.34" width="0.1524" layer="91"/>
-<pinref part="U1" gate="STM32F405RG" pin="PB13"/>
-<label x="-17.78" y="-53.34" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$87" class="0">
 <segment>
 <wire x1="2.54" y1="-55.88" x2="-20.32" y2="-55.88" width="0.1524" layer="91"/>
@@ -14319,6 +14297,24 @@ or in the I2C display</text>
 <pinref part="U1" gate="STM32F405RG" pin="PB3"/>
 <wire x1="-20.32" y1="0" x2="2.54" y2="0" width="0.1524" layer="91"/>
 <label x="-17.78" y="0" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="U1" gate="STM32F405RG" pin="PB15"/>
+<wire x1="-20.32" y1="-48.26" x2="2.54" y2="-48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U1" gate="STM32F405RG" pin="PB14"/>
+<wire x1="-20.32" y1="-50.8" x2="2.54" y2="-50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="U1" gate="STM32F405RG" pin="PB13"/>
+<wire x1="-20.32" y1="-53.34" x2="2.54" y2="-53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -15988,10 +15984,6 @@ Utilizing internal pull-down</text>
 <instance part="U$5" gate="G$1" x="-21.082" y="72.39" smashed="yes" rot="MR90" grouprefs="BUZZER">
 <attribute name="NAME" x="-17.78" y="71.882" size="1.27" layer="95" rot="MR180"/>
 </instance>
-<instance part="C47" gate="G$1" x="-7.112" y="72.39" smashed="yes" rot="MR0" grouprefs="BUZZER">
-<attribute name="NAME" x="-6.604" y="74.549" size="1.778" layer="95" rot="MR180"/>
-<attribute name="VALUE" x="-8.636" y="67.691" size="1.778" layer="96" rot="MR0"/>
-</instance>
 <instance part="XLINE" gate="G$1" x="-7.62" y="111.76" smashed="yes" grouprefs="XLINE-SENSOR">
 <attribute name="NAME" x="-13.97" y="122.555" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-13.97" y="99.06" size="1.778" layer="96"/>
@@ -16227,10 +16219,6 @@ Utilizing internal pull-down</text>
 <wire x1="-21.082" y1="74.93" x2="-21.082" y2="76.2" width="0.1524" layer="91" grouprefs="BUZZER"/>
 <junction x="-30.48" y="76.2" grouprefs="BUZZER"/>
 <wire x1="-21.082" y1="76.2" x2="-30.48" y2="76.2" width="0.1524" layer="91" grouprefs="BUZZER"/>
-<wire x1="-21.082" y1="76.2" x2="-7.112" y2="76.2" width="0.1524" layer="91" grouprefs="BUZZER"/>
-<junction x="-21.082" y="76.2" grouprefs="BUZZER"/>
-<pinref part="C47" gate="G$1" pin="1"/>
-<wire x1="-7.112" y1="74.93" x2="-7.112" y2="76.2" width="0.1524" layer="91" grouprefs="BUZZER"/>
 </segment>
 <segment>
 <pinref part="XLINE" gate="G$1" pin="2"/>
@@ -16554,10 +16542,6 @@ Utilizing internal pull-down</text>
 <wire x1="-21.082" y1="67.31" x2="-21.082" y2="66.04" width="0.1524" layer="91" grouprefs="BUZZER"/>
 <wire x1="-21.082" y1="66.04" x2="-30.48" y2="66.04" width="0.1524" layer="91" grouprefs="BUZZER"/>
 <junction x="-30.48" y="66.04" grouprefs="BUZZER"/>
-<pinref part="C47" gate="G$1" pin="2"/>
-<wire x1="-7.112" y1="67.31" x2="-7.112" y2="66.04" width="0.1524" layer="91" grouprefs="BUZZER"/>
-<wire x1="-7.112" y1="66.04" x2="-21.082" y2="66.04" width="0.1524" layer="91" grouprefs="BUZZER"/>
-<junction x="-21.082" y="66.04" grouprefs="BUZZER"/>
 </segment>
 </net>
 <net name="BUZZER" class="0">
