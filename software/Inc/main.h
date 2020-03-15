@@ -29,6 +29,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
+#include "stm32f4xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -58,12 +59,78 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define MOTOR_L_CURR_Pin GPIO_PIN_0
+#define MOTOR_L_CURR_GPIO_Port GPIOC
+#define MOTOR_R_CURR_Pin GPIO_PIN_1
+#define MOTOR_R_CURR_GPIO_Port GPIOC
+#define BTN_SEL_Pin GPIO_PIN_3
+#define BTN_SEL_GPIO_Port GPIOC
+#define ENC_R_B_Pin GPIO_PIN_0
+#define ENC_R_B_GPIO_Port GPIOA
+#define ENC_R_A_Pin GPIO_PIN_1
+#define ENC_R_A_GPIO_Port GPIOA
+#define VOLTM_BOOST_Pin GPIO_PIN_2
+#define VOLTM_BOOST_GPIO_Port GPIOA
+#define VOLTM_BATT_Pin GPIO_PIN_3
+#define VOLTM_BATT_GPIO_Port GPIOA
+#define ENC_L_A_Pin GPIO_PIN_5
+#define ENC_L_A_GPIO_Port GPIOA
+#define MUX3_Pin GPIO_PIN_7
+#define MUX3_GPIO_Port GPIOA
+#define MUX2_Pin GPIO_PIN_4
+#define MUX2_GPIO_Port GPIOC
+#define MUX1_Pin GPIO_PIN_5
+#define MUX1_GPIO_Port GPIOC
+#define MUX0_Pin GPIO_PIN_0
+#define MUX0_GPIO_Port GPIOB
+#define XLINE_Pin GPIO_PIN_1
+#define XLINE_GPIO_Port GPIOB
+#define BOOT1_Pin GPIO_PIN_2
+#define BOOT1_GPIO_Port GPIOB
+#define SCK_Pin GPIO_PIN_13
+#define SCK_GPIO_Port GPIOB
+#define MISO_Pin GPIO_PIN_14
+#define MISO_GPIO_Port GPIOB
+#define MOSI_Pin GPIO_PIN_15
+#define MOSI_GPIO_Port GPIOB
+#define FAN_L_PWM_Pin GPIO_PIN_6
+#define FAN_L_PWM_GPIO_Port GPIOC
+#define FAN_R_PWM_Pin GPIO_PIN_7
+#define FAN_R_PWM_GPIO_Port GPIOC
+#define SDA_Pin GPIO_PIN_9
+#define SDA_GPIO_Port GPIOC
+#define SCL_Pin GPIO_PIN_8
+#define SCL_GPIO_Port GPIOA
+#define TX_Pin GPIO_PIN_9
+#define TX_GPIO_Port GPIOA
+#define RX_Pin GPIO_PIN_10
+#define RX_GPIO_Port GPIOA
+#define BUZZER_Pin GPIO_PIN_11
+#define BUZZER_GPIO_Port GPIOA
+#define SWDIO_Pin GPIO_PIN_13
+#define SWDIO_GPIO_Port GPIOA
+#define SWCLK_Pin GPIO_PIN_14
+#define SWCLK_GPIO_Port GPIOA
 #define LED_B_Pin GPIO_PIN_15
 #define LED_B_GPIO_Port GPIOA
 #define LED_G_Pin GPIO_PIN_10
 #define LED_G_GPIO_Port GPIOC
 #define LED_R_Pin GPIO_PIN_11
 #define LED_R_GPIO_Port GPIOC
+#define ENC_L_B_Pin GPIO_PIN_3
+#define ENC_L_B_GPIO_Port GPIOB
+#define MOTOR_R_IN2_Pin GPIO_PIN_4
+#define MOTOR_R_IN2_GPIO_Port GPIOB
+#define MOTOR_R_IN1_Pin GPIO_PIN_5
+#define MOTOR_R_IN1_GPIO_Port GPIOB
+#define MOTOR_L_IN2_Pin GPIO_PIN_6
+#define MOTOR_L_IN2_GPIO_Port GPIOB
+#define MOTOR_L_IN1_Pin GPIO_PIN_7
+#define MOTOR_L_IN1_GPIO_Port GPIOB
+#define MOTOR_R_PWM_Pin GPIO_PIN_8
+#define MOTOR_R_PWM_GPIO_Port GPIOB
+#define MOTOR_L_PWM_Pin GPIO_PIN_9
+#define MOTOR_L_PWM_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
