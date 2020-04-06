@@ -13349,7 +13349,6 @@ Used as a test point connection for pogo pins or other debugging tools.
 <part name="R38" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="0R"/>
 <part name="R40" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="0R"/>
 <part name="Q5" library="CASE-Transistors" library_urn="urn:adsk.eagle:library:7770837" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/2"/>
-<part name="Q6" library="CASE-Transistors" library_urn="urn:adsk.eagle:library:7770837" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/2"/>
 <part name="Q7" library="CASE-Transistors" library_urn="urn:adsk.eagle:library:7770837" deviceset="BSS138LT3G" device="" package3d_urn="urn:adsk.eagle:package:7890778/2"/>
 <part name="R41" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R42" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
@@ -15930,9 +15929,6 @@ Utilizing internal pull-down</text>
 <instance part="Q5" gate="G$1" x="35.56" y="73.66" smashed="yes" grouprefs="RGB-LED">
 <attribute name="NAME" x="29.21" y="76.2" size="1.778" layer="95"/>
 </instance>
-<instance part="Q6" gate="G$1" x="55.88" y="60.96" smashed="yes" grouprefs="RGB-LED">
-<attribute name="NAME" x="49.53" y="63.5" size="1.778" layer="95"/>
-</instance>
 <instance part="Q7" gate="G$1" x="76.2" y="73.66" smashed="yes" grouprefs="RGB-LED">
 <attribute name="NAME" x="72.39" y="76.2" size="1.778" layer="95"/>
 </instance>
@@ -16436,7 +16432,6 @@ Utilizing internal pull-down</text>
 <segment>
 <pinref part="R38" gate="G$1" pin="1"/>
 <wire x1="58.42" y1="73.66" x2="58.42" y2="66.04" width="0.1524" layer="91" grouprefs="RGB-LED"/>
-<pinref part="Q6" gate="G$1" pin="D"/>
 </segment>
 </net>
 <net name="N$45" class="0">
@@ -16470,7 +16465,6 @@ Utilizing internal pull-down</text>
 </net>
 <net name="LED_G" class="0">
 <segment>
-<pinref part="Q6" gate="G$1" pin="G"/>
 <label x="43.18" y="58.42" size="1.778" layer="95" grouprefs="RGB-LED"/>
 <wire x1="53.34" y1="58.42" x2="50.8" y2="58.42" width="0.1524" layer="91" grouprefs="RGB-LED"/>
 <pinref part="R48" gate="G$1" pin="2"/>
@@ -16637,7 +16631,6 @@ Utilizing internal pull-down</text>
 <pinref part="SUPPLY7" gate="G$1" pin="DGND"/>
 </segment>
 <segment>
-<pinref part="Q6" gate="G$1" pin="S"/>
 <wire x1="58.42" y1="55.88" x2="58.42" y2="43.18" width="0.1524" layer="91" grouprefs="RGB-LED"/>
 <pinref part="R48" gate="G$1" pin="1"/>
 <wire x1="58.42" y1="43.18" x2="58.42" y2="40.64" width="0.1524" layer="91" grouprefs="RGB-LED"/>
