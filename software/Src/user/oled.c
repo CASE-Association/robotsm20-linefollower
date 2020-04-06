@@ -15,7 +15,6 @@
 #include "oled.h"
 #include "ssd1306.h"
 #include "bitmaps.h"
-#include "battery.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -40,13 +39,7 @@ typedef enum {
 	IMAGE = 0x02
 } OLED_SCREEN;
 
-/* // TODO put general oled info in struct.
-typedef struct {
-	uint8_t error_occurd;
-	uint8_t cursor;
-	OLED_SCREEN active_screen;
-}oled_t;
-*/
+
 
 OLED_SCREEN active_screen;
 const unsigned char * curr_image;
@@ -81,8 +74,9 @@ menu_item_t menu_item_32;
 void oled_init(void){
 	ssd1306_Init();
 	
-	ssd1306_DrawBitmap(jerry_bmp);
+	ssd1306_DrawBitmap(case_head_bmp);
 	ssd1306_UpdateScreen();
+	/*
 	HAL_Delay(1000);
 	
 	// Show main menu
@@ -137,6 +131,7 @@ void oled_init(void){
 	
 	strcpy(menu_item_32.name, "Item 32");
 	menu_item_32.pNext = &menu_item_back_main;
+	*/
 }
 
 
@@ -170,30 +165,10 @@ void oled_info_screen(){
 	char buff[60];
 	
 	ssd1306_Fill(Black);
-	
-	snprintf(buff, sizeof(buff), "Battery: %.2f V", GET_voltage_battery());
-	ssd1306_SetCursor(0,0);
-	ssd1306_WriteString(buff, Font_7x10, White);
-	
-	snprintf(buff, sizeof(buff), "Cell 1: %.2f V", GET_voltage_cell_1());
-	ssd1306_SetCursor(0,10);
-	ssd1306_WriteString(buff, Font_7x10, White);
-	
-	snprintf(buff, sizeof(buff), "Cell 2: %.2f V", GET_voltage_cell_2());
-	ssd1306_SetCursor(0,20);
-	ssd1306_WriteString(buff, Font_7x10, White);
-	
-	snprintf(buff, sizeof(buff), "Boost: %.2f V", GET_voltage_boost());
-	ssd1306_SetCursor(0,30);
-	ssd1306_WriteString(buff, Font_7x10, White);
-	
-	snprintf(buff, sizeof(buff), "Encoder L: %d", -TIM5->CNT);
-	ssd1306_SetCursor(0,40);
-	ssd1306_WriteString(buff, Font_7x10, White);
-	
-	snprintf(buff, sizeof(buff), "Encoder R: %d", -TIM2->CNT);
-	ssd1306_SetCursor(0,50);
-	ssd1306_WriteString(buff, Font_7x10, White);
+	ssd1306_SetCursor((128-15*7)/2, 0);
+	ssd1306_WriteString("NOT IMPLEMENTED", Font_7x10, White);
+
+	ssd1306_UpdateScreen();
 }
 
 
@@ -264,6 +239,7 @@ uint8_t oled_nr_items(void){
 	*
 */
 void oled_menu(void){
+	/*
 	// Calculate cursor index based on encoder
 	revolutions = (-TIM2->CNT / (float)(2048 * 60/16)) * 6;
 	cursor = (int) revolutions % oled_nr_items(); // Should be calculated based on acctual number of items in the current sub_menu
@@ -307,6 +283,7 @@ void oled_menu(void){
 		}		
 	}
 	ssd1306_UpdateScreen();
+	*/
 }
 
 

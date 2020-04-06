@@ -24,13 +24,15 @@
 #include "fatfs.h"
 #include "i2c.h"
 #include "sdio.h"
-#include "spi.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <string.h>
+#include "pwm.h"
+#include "oled.h"
 
 /* USER CODE END Includes */
 
@@ -58,6 +60,15 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+#ifdef __GNUC__
+	#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#else
+	#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#endif
+PUTCHAR_PROTOTYPE{
+	HAL_UART_Transmit(&huart1, (uint8_t *) &ch, 1, 0xFFFF);
+	return ch;
+}
 
 /* USER CODE END PFP */
 
@@ -73,10 +84,8 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  volatile uint8_t oskar = 0;
 
   /* USER CODE END 1 */
-  
 
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -101,16 +110,29 @@ int main(void)
   MX_ADC3_Init();
   MX_I2C3_Init();
   MX_SDIO_SD_Init();
-  MX_SPI2_Init();
   MX_TIM1_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
   MX_TIM4_Init();
   MX_TIM5_Init();
+  MX_TIM14_Init();
   MX_USART1_UART_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 
+  printf("========== Starting Blitz V2 ==========\r\n");
+
+  init_buzzer();
+  //init_motors();
+  //oled_init(); // Draws CASE LOGO for now
+
+
+  printf("\t- Initialization complete\r\n");
+  printf("\t- Hot glue secured\r\n");
+  printf("\t- BÖP kablar anchored\r\n");
+  printf("========== Startup COMPLETE ==========\r\n");
+  printf("\r\n\r\n========== RUN TESTS ==========\r\n");
+  printf("\t- Buzzer");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -120,11 +142,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    oskar += 1;
-    HAL_GPIO_TogglePin(LED_R_GPIO_Port, LED_R_Pin);
-    HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-    HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
-    HAL_Delay(500);
+    test_buzzer();
+    //test_motors();
   }
   /* USER CODE END 3 */
 }

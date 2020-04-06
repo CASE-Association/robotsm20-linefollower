@@ -1,5 +1,5 @@
-#ifndef oled_h
-#define oled_h
+#ifndef OLED_H
+#define OLED_H
 
 #include "main.h"
 
@@ -22,4 +22,4 @@ void oled_show_case(void);
 void oled_show_cats(void);
 void oled_show_info(void);
 
-#endif
+#endif //OLED_H

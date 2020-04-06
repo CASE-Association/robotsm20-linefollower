@@ -52,11 +52,12 @@
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+int checking = 0;
+extern TIM_HandleTypeDef htim14;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern TIM_HandleTypeDef htim14;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -196,6 +197,44 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f4xx.s).                    */
 /******************************************************************************/
+
+/**
+  * @brief This function handles EXTI line3 interrupt.
+  */
+void EXTI3_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI3_IRQn 0 */
+
+  /* USER CODE END EXTI3_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_3);
+  /* USER CODE BEGIN EXTI3_IRQn 1 */
+  if(!checking){
+		HAL_TIM_Base_Start_IT(&htim14);
+		checking = 1;
+	}
+
+  /* USER CODE END EXTI3_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM8 trigger and commutation interrupts and TIM14 global interrupt.
+  */
+void TIM8_TRG_COM_TIM14_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 0 */
+
+  /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim14);
+  if(HAL_GPIO_ReadPin(BUTTON_SELECT_GPIO_Port, BUTTON_SELECT_Pin) == GPIO_PIN_RESET){
+		checking = 0;
+		HAL_TIM_Base_Stop_IT(&htim14);
+		HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
+	}
+  /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 1 */
+  
+
+  /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 1 */
+}
 
 /* USER CODE BEGIN 1 */
 

@@ -63,8 +63,9 @@ void Error_Handler(void);
 #define MOTOR_L_CURR_GPIO_Port GPIOC
 #define MOTOR_R_CURR_Pin GPIO_PIN_1
 #define MOTOR_R_CURR_GPIO_Port GPIOC
-#define BTN_SEL_Pin GPIO_PIN_3
-#define BTN_SEL_GPIO_Port GPIOC
+#define BUTTON_SELECT_Pin GPIO_PIN_3
+#define BUTTON_SELECT_GPIO_Port GPIOC
+#define BUTTON_SELECT_EXTI_IRQn EXTI3_IRQn
 #define ENC_R_B_Pin GPIO_PIN_0
 #define ENC_R_B_GPIO_Port GPIOA
 #define ENC_R_A_Pin GPIO_PIN_1
@@ -87,12 +88,6 @@ void Error_Handler(void);
 #define XLINE_GPIO_Port GPIOB
 #define BOOT1_Pin GPIO_PIN_2
 #define BOOT1_GPIO_Port GPIOB
-#define SCK_Pin GPIO_PIN_13
-#define SCK_GPIO_Port GPIOB
-#define MISO_Pin GPIO_PIN_14
-#define MISO_GPIO_Port GPIOB
-#define MOSI_Pin GPIO_PIN_15
-#define MOSI_GPIO_Port GPIOB
 #define FAN_L_PWM_Pin GPIO_PIN_6
 #define FAN_L_PWM_GPIO_Port GPIOC
 #define FAN_R_PWM_Pin GPIO_PIN_7
