@@ -11,10 +11,9 @@
  * 
  */
 
-
-#include "oled.h"
-#include "ssd1306.h"
-#include "bitmaps.h"
+#include "user/oled.h"
+#include "user/ssd1306.h"
+#include "user/bitmaps.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -162,7 +161,6 @@ void oled_update(){
 	* @brief Show an screen with general info about the mouse peripherals.
 */
 void oled_info_screen(){
-	char buff[60];
 	
 	ssd1306_Fill(Black);
 	ssd1306_SetCursor((128-15*7)/2, 0);

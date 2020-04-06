@@ -225,11 +225,6 @@ void TIM8_TRG_COM_TIM14_IRQHandler(void)
 
   /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 0 */
   HAL_TIM_IRQHandler(&htim14);
-  if(HAL_GPIO_ReadPin(BUTTON_SELECT_GPIO_Port, BUTTON_SELECT_Pin) == GPIO_PIN_RESET){
-		checking = 0;
-		HAL_TIM_Base_Stop_IT(&htim14);
-		HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
-	}
   /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 1 */
   
 
