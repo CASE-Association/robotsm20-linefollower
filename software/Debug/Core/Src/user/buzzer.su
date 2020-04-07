@@ -1,0 +1,5 @@
+buzzer.c:53:6:init_buzzer	8	static
+buzzer.c:57:6:beep	16	static
+buzzer.c:74:6:tone	24	static
+buzzer.c:101:6:play_song	40	static
+buzzer.c:133:6:test_buzzer	8	static
