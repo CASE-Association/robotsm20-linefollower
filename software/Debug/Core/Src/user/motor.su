@@ -1,0 +1,6 @@
+motor.c:8:6:init_motors	8	static
+motor.c:21:5:limit_speed	16	static
+motor.c:31:6:motor_l_set_speed	24	static
+motor.c:46:6:motor_r_set_speed	24	static
+motor.c:62:6:motors_stop	8	static
+motor.c:73:6:test_motors	8	static

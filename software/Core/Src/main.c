@@ -27,6 +27,7 @@
 #include <string.h>
 #include "user/buzzer.h"
 #include "user/oled.h"
+#include "user/motor.h"
 
 /* USER CODE END Includes */
 
@@ -48,6 +49,8 @@
 I2C_HandleTypeDef hi2c3;
 
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim3;
+TIM_HandleTypeDef htim4;
 
 UART_HandleTypeDef huart1;
 
@@ -61,6 +64,8 @@ static void MX_GPIO_Init(void);
 static void MX_I2C3_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_TIM4_Init(void);
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 #ifdef __GNUC__
 	#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
@@ -110,13 +115,15 @@ int main(void)
   MX_I2C3_Init();
   MX_TIM1_Init();
   MX_USART1_UART_Init();
+  MX_TIM4_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   printf("========== Starting Blitz V2 ==========\r\n");
 
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
   init_buzzer();
   oled_init(); // Draws CASE LOGO for now
-  //init_motors();
+  init_motors();
 
 
 
@@ -127,6 +134,40 @@ int main(void)
   printf("\r\n\r\n========== RUN TESTS ==========\r\n");
   printf("\t- Buzzer\r\n");
   printf("\t- OLED\r\n");
+
+  printf("\r\n\r\n Enabling motors\r\n");
+/*
+  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3); // Right
+	HAL_GPIO_WritePin(MOTOR_R_IN1_GPIO_Port, MOTOR_R_IN1_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(MOTOR_R_IN2_GPIO_Port, MOTOR_R_IN2_Pin, GPIO_PIN_SET);
+	*/
+
+  /*
+	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4); // Left
+	HAL_GPIO_WritePin(MOTOR_L_IN1_GPIO_Port, MOTOR_L_IN1_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(MOTOR_L_IN2_GPIO_Port, MOTOR_L_IN2_Pin, GPIO_PIN_RESET);
+
+	HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
+	HAL_Delay(2000);
+	*/
+
+
+  //Test for right fan motor. // something is weird, check with oscillioscope, freq and that 1500 => 1.5ms
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2); // Right FAN
+  TIM3->CCR2 = 1400;
+  HAL_Delay(8000);
+
+  HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
+	HAL_Delay(80);
+	HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
+	HAL_Delay(80);
+	HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
+	HAL_Delay(80);
+	HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
+	HAL_Delay(80);
+
+	HAL_Delay(500);
+  TIM3->CCR2 = 1430;
 
 
   /* USER CODE END 2 */
@@ -141,8 +182,11 @@ int main(void)
   	//HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
   	//test_buzzer();
 		//test_motors();
-  	play_song();
-  	HAL_Delay(2000);
+  	//play_song();
+  	HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
+  	HAL_Delay(500);
+
+
 
   }
   /* USER CODE END 3 */
@@ -285,6 +329,112 @@ static void MX_TIM1_Init(void)
 }
 
 /**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 16;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 20000;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+  HAL_TIM_MspPostInit(&htim3);
+
+}
+
+/**
+  * @brief TIM4 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM4_Init(void)
+{
+
+  /* USER CODE BEGIN TIM4_Init 0 */
+
+  /* USER CODE END TIM4_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM4_Init 1 */
+
+  /* USER CODE END TIM4_Init 1 */
+  htim4.Instance = TIM4;
+  htim4.Init.Prescaler = 0;
+  htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim4.Init.Period = 1000;
+  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_PWM_Init(&htim4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM4_Init 2 */
+
+  /* USER CODE END TIM4_Init 2 */
+  HAL_TIM_MspPostInit(&htim4);
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -337,6 +487,9 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, LED_G_Pin|LED_R_Pin, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, MOTOR_R_IN2_Pin|MOTOR_R_IN1_Pin|MOTOR_L_IN2_Pin|MOTOR_L_IN1_Pin, GPIO_PIN_RESET);
+
   /*Configure GPIO pin : BUTTON_SELECT_Pin */
   GPIO_InitStruct.Pin = BUTTON_SELECT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
@@ -362,6 +515,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : MOTOR_R_IN2_Pin MOTOR_R_IN1_Pin MOTOR_L_IN2_Pin MOTOR_L_IN1_Pin */
+  GPIO_InitStruct.Pin = MOTOR_R_IN2_Pin|MOTOR_R_IN1_Pin|MOTOR_L_IN2_Pin|MOTOR_L_IN1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI3_IRQn, 0, 0);
