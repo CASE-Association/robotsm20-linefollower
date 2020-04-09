@@ -1,0 +1,101 @@
+{
+    "configurations": [
+        {
+            "name": "!!! WARNING !!! AUTO-GENERATED FILE, PLEASE DO NOT MODIFY IT AND USE https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags"
+        },
+        {
+            "name": "Mac",
+            "macFrameworkPath": [],
+            "includePath": [
+                "/Users/isakaslund/Documents/code/robotsm20-linefollower/software/Inc",
+                "/Users/isakaslund/Documents/code/robotsm20-linefollower/software/Src",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/CMSIS/Include",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/STM32F4xx_HAL_Driver/Inc",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/Common",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/lsm303dlhc",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/l3gd20",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/mfxstm32l152",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/lis302dl",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/n25q512a",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ts3510",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/exc7200",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/cs43l22",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ov2640",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/st7789h2",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/s25fl512s",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ft6x06",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ampire480272",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/n25q128a",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/st7735",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/otm8009a",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/stmpe811",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/wm8994",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/lis3dsh",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/n25q256a",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/s5k5cag",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/stmpe1600",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ili9341",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ampire640480",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ili9325",
+                "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ls016b8uy",
+                "/Users/isakaslund/.platformio/packages/tool-unity",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/Users/isakaslund/Documents/code/robotsm20-linefollower/software/Inc",
+                    "/Users/isakaslund/Documents/code/robotsm20-linefollower/software/Src",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/CMSIS/Include",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/STM32F4xx_HAL_Driver/Inc",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/Common",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/lsm303dlhc",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/l3gd20",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/mfxstm32l152",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/lis302dl",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/n25q512a",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ts3510",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/exc7200",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/cs43l22",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ov2640",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/st7789h2",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/s25fl512s",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ft6x06",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ampire480272",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/n25q128a",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/st7735",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/otm8009a",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/stmpe811",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/wm8994",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/lis3dsh",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/n25q256a",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/s5k5cag",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/stmpe1600",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ili9341",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ampire640480",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ili9325",
+                    "/Users/isakaslund/.platformio/packages/framework-stm32cube/f4/Drivers/BSP/Components/ls016b8uy",
+                    "/Users/isakaslund/.platformio/packages/tool-unity",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=40201",
+                "STM32F405xx",
+                "USE_HAL_DRIVER",
+                "F_CPU=168000000L",
+                ""
+            ],
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/Users/isakaslund/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mthumb",
+                "-mcpu=cortex-m4",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}

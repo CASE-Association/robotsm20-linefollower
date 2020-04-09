@@ -152,10 +152,14 @@ int main(void)
 	*/
 
 
-  //Test for right fan motor. // something is weird, check with oscillioscope, freq and that 1500 => 1.5ms
+  //Test for right fan motor. Working
+ /*
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2); // Right FAN
-  TIM3->CCR2 = 1400;
-  HAL_Delay(8000);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); // Left FAN
+  TIM3->CCR2 = 1500;
+  TIM3->CCR1 = 1500;
+  HAL_Delay(3000);
+
 
   HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
 	HAL_Delay(80);
@@ -167,7 +171,9 @@ int main(void)
 	HAL_Delay(80);
 
 	HAL_Delay(500);
-  TIM3->CCR2 = 1430;
+  TIM3->CCR2 = 1550;
+  TIM3->CCR1 = 1550;
+  */
 
 
   /* USER CODE END 2 */
@@ -183,6 +189,7 @@ int main(void)
   	//test_buzzer();
 		//test_motors();
   	//play_song();
+//  	play_song();
   	HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
   	HAL_Delay(500);
 
@@ -284,7 +291,7 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 4;
+  htim1.Init.Prescaler = 4-1;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim1.Init.Period = 1000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -347,7 +354,7 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 16;
+  htim3.Init.Prescaler = 16-1;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 20000;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
