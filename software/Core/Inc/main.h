@@ -63,6 +63,12 @@ void Error_Handler(void);
 #define BUTTON_SELECT_Pin GPIO_PIN_3
 #define BUTTON_SELECT_GPIO_Port GPIOC
 #define BUTTON_SELECT_EXTI_IRQn EXTI3_IRQn
+#define ENC_R_B_Pin GPIO_PIN_0
+#define ENC_R_B_GPIO_Port GPIOA
+#define ENC_R_A_Pin GPIO_PIN_1
+#define ENC_R_A_GPIO_Port GPIOA
+#define ENC_L_A_Pin GPIO_PIN_5
+#define ENC_L_A_GPIO_Port GPIOA
 #define BOOT1_Pin GPIO_PIN_2
 #define BOOT1_GPIO_Port GPIOB
 #define FAN_L_PWM_Pin GPIO_PIN_6
@@ -89,6 +95,8 @@ void Error_Handler(void);
 #define LED_G_GPIO_Port GPIOC
 #define LED_R_Pin GPIO_PIN_11
 #define LED_R_GPIO_Port GPIOC
+#define ENC_L_B_Pin GPIO_PIN_3
+#define ENC_L_B_GPIO_Port GPIOB
 #define MOTOR_R_IN2_Pin GPIO_PIN_4
 #define MOTOR_R_IN2_GPIO_Port GPIOB
 #define MOTOR_R_IN1_Pin GPIO_PIN_5
