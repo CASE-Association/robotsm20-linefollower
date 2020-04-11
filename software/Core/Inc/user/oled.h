@@ -9,7 +9,7 @@ void go_back_main(void);
 uint8_t nr_items(void);
 
 
-void oled_init(void);
+void init_oled(void);
 void oled_update(void);
 void oled_error(char *pMessage);
 void oled_clear_error(void);

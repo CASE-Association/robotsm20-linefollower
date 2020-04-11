@@ -1,10 +1,10 @@
-oled.c:73:6:oled_init	8	static
+oled.c:73:6:init_oled	16	static
 oled.c:142:6:oled_update	8	static
 oled.c:163:6:oled_info_screen	8	static
 oled.c:181:6:oled_error	16	static
 oled.c:202:6:oled_clear_error	8	static
 oled.c:212:9:oled_nr_items	24	static
-oled.c:239:6:oled_menu	4	static
+oled.c:239:6:oled_menu	32	static
 oled.c:294:6:go_back_main	4	static
 oled.c:306:6:oled_button_press	24	static
 oled.c:341:6:oled_show_case	4	static

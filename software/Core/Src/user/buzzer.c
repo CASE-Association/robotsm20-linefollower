@@ -52,6 +52,8 @@ int melody[] = {
 
 void init_buzzer(void){
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
+
+
 }
 
 void beep(int duration){
@@ -84,13 +86,6 @@ void tone(int frequency, int duration){
 
 	//Play tone
 	TIM1->CCR4 = 200;
-	int k = prescalar % 6;
-	if(k <= 1)
-		HAL_GPIO_TogglePin(LED_R_GPIO_Port, LED_R_Pin);
-	if(k > 1 && k <= 3)
-		HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-	if(k >= 4)
-		HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
 	HAL_Delay(duration);
 	TIM1->CCR4 = 0;
 

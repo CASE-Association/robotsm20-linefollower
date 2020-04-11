@@ -23,6 +23,7 @@
 #include "stm32f4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "user/oled.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -52,11 +53,12 @@
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+int checking = 0;
 
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern TIM_HandleTypeDef htim14;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -208,7 +210,33 @@ void EXTI3_IRQHandler(void)
   HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_3);
   /* USER CODE BEGIN EXTI3_IRQn 1 */
 
+  // Button might have been pressed when this interrupt is called
+  // Software debounce
+  if(!checking){
+		HAL_TIM_Base_Start_IT(&htim14);
+		checking = 1;
+	}
+
   /* USER CODE END EXTI3_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM8 trigger and commutation interrupts and TIM14 global interrupt.
+  */
+void TIM8_TRG_COM_TIM14_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 0 */
+
+  /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim14);
+  /* USER CODE BEGIN TIM8_TRG_COM_TIM14_IRQn 1 */
+  if(HAL_GPIO_ReadPin(BUTTON_SELECT_GPIO_Port, BUTTON_SELECT_Pin) == GPIO_PIN_RESET){
+		checking = 0;
+		HAL_TIM_Base_Stop_IT(&htim14);
+		oled_button_press();
+	}
+
+  /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

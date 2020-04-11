@@ -70,12 +70,12 @@ menu_item_t menu_item_32;
 /**
 	* @brief Initialize the oled screen and a welcome screen. 
 */
-void oled_init(void){
+void init_oled(void){
 	ssd1306_Init();
 	
 	ssd1306_DrawBitmap(case_head_bmp);
 	ssd1306_UpdateScreen();
-	/*
+
 	HAL_Delay(1000);
 	
 	// Show main menu
@@ -130,7 +130,7 @@ void oled_init(void){
 	
 	strcpy(menu_item_32.name, "Item 32");
 	menu_item_32.pNext = &menu_item_back_main;
-	*/
+
 }
 
 
@@ -140,7 +140,7 @@ void oled_init(void){
 	* Will check if errors have occurd and only print an error screen.
 */
 void oled_update(){
-	// Don't print anything if an error has occurd
+	// Don't print anything if an error has occured
 	if(error_occurd){
 		return;
 	}
@@ -174,7 +174,7 @@ void oled_info_screen(){
 /**
 	* @brief Update the screen with a submitted error message.
 	*
-	* Keep the error messages short and consice, e.g "Low voltage", max 64 characters.
+	* Keep the error messages short and concise, e.g "Low voltage", max 64 characters.
 	*
 	* @param (char *pMessage) String pointer with the error message. 
 */
@@ -237,10 +237,10 @@ uint8_t oled_nr_items(void){
 	*
 */
 void oled_menu(void){
-	/*
+
 	// Calculate cursor index based on encoder
-	revolutions = (-TIM2->CNT / (float)(2048 * 60/16)) * 6;
-	cursor = (int) revolutions % oled_nr_items(); // Should be calculated based on acctual number of items in the current sub_menu
+	revolutions = TIM5->CNT / (float)4096 * 6;
+	cursor = (int) revolutions % oled_nr_items(); // Should be calculated based on actual number of items in the current sub_menu
 	
 	// Background
 	ssd1306_Fill(Black);
@@ -281,7 +281,7 @@ void oled_menu(void){
 		}		
 	}
 	ssd1306_UpdateScreen();
-	*/
+
 }
 
 

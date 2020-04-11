@@ -28,6 +28,7 @@
 #include "user/buzzer.h"
 #include "user/oled.h"
 #include "user/motor.h"
+#include "user/fan.h"
 
 /* USER CODE END Includes */
 
@@ -53,6 +54,7 @@ TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
 TIM_HandleTypeDef htim5;
+TIM_HandleTypeDef htim14;
 
 UART_HandleTypeDef huart1;
 
@@ -70,6 +72,7 @@ static void MX_TIM4_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_TIM5_Init(void);
+static void MX_TIM14_Init(void);
 /* USER CODE BEGIN PFP */
 #ifdef __GNUC__
 	#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
@@ -79,6 +82,19 @@ static void MX_TIM5_Init(void);
 PUTCHAR_PROTOTYPE{
 	HAL_UART_Transmit(&huart1, (uint8_t *) &ch, 1, 0xFFFF);
 	return ch;
+}
+
+void tests_run(){
+	printf("\r\n========== RUN TESTS ==========\r\n");
+	printf("\t- Buzzer\r\n");
+	test_buzzer();
+	HAL_Delay(2000);
+	printf("\t- Motors\r\n");
+	test_motors();
+	HAL_Delay(2000);
+	printf("\t- Fans\r\n");
+	test_fan();
+	HAL_Delay(2000);
 }
 
 /* USER CODE END PFP */
@@ -101,7 +117,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+	HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -123,72 +139,54 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM2_Init();
   MX_TIM5_Init();
+  MX_TIM14_Init();
   /* USER CODE BEGIN 2 */
-  printf("========== Starting Blitz V2 ==========\r\n");
-
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
-  init_buzzer();
-  oled_init(); // Draws CASE LOGO for now
-  init_motors();
+  printf("========== Blitz V2 ==========\r\n");
+  printf("Created by Oskar & Isak\r\n");
 
 
-
-  printf("\t- Initialization complete\r\n");
-  printf("\t- Hot glue secured\r\n");
-  printf("\t- Bodge kablar anchored\r\n");
-  printf("========== Startup COMPLETE ==========\r\n");
-  printf("\r\n\r\n========== RUN TESTS ==========\r\n");
+  printf("\r\n========== Initializing peripherals ==========\r\n");
   printf("\t- Buzzer\r\n");
-  printf("\t- OLED\r\n");
-
-  printf("\r\n\r\n Enabling motors\r\n");
-/*
-  HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3); // Right
-	HAL_GPIO_WritePin(MOTOR_R_IN1_GPIO_Port, MOTOR_R_IN1_Pin, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(MOTOR_R_IN2_GPIO_Port, MOTOR_R_IN2_Pin, GPIO_PIN_SET);
-	*/
-
-  /*
-	HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4); // Left
-	HAL_GPIO_WritePin(MOTOR_L_IN1_GPIO_Port, MOTOR_L_IN1_Pin, GPIO_PIN_SET);
-	HAL_GPIO_WritePin(MOTOR_L_IN2_GPIO_Port, MOTOR_L_IN2_Pin, GPIO_PIN_RESET);
+  init_buzzer();
+  //Startup beep
+  HAL_GPIO_TogglePin(LED_R_GPIO_Port, LED_R_Pin);
+	tone(523,200);
+	HAL_GPIO_TogglePin(LED_R_GPIO_Port, LED_R_Pin);
 
 	HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-	HAL_Delay(2000);
-	*/
-
-
-  //Test for right fan motor. Working
- /*
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2); // Right FAN
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); // Left FAN
-  TIM3->CCR2 = 1500;
-  TIM3->CCR1 = 1500;
-  HAL_Delay(3000);
-
-
-  HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-	HAL_Delay(80);
+	tone(659,200);
 	HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-	HAL_Delay(80);
-	HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-	HAL_Delay(80);
-	HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-	HAL_Delay(80);
 
+	HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
+	tone(784,200);
+	HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
 	HAL_Delay(500);
-  TIM3->CCR2 = 1550;
-  TIM3->CCR1 = 1550;
-  */
 
-  //Working motor
-  /*motor_l_set_speed(300);
-  motor_r_set_speed(300);
-  */
+  printf("\t- OLED\r\n");
+  init_oled(); // Draws CASE LOGO for now
+  HAL_Delay(500);
+  printf("\t- Motors\r\n");
+  init_motors();
+  HAL_Delay(500);
+  printf("\t- Fans\r\n");
+  init_fans();
+  HAL_Delay(3000); //Wait for fans to beep
 
-  //Encoder - needs to be tested.
-  HAL_TIM_Encoder_Start(&htim5, TIM_CHANNEL_ALL); // Right
-  HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL); // Left
+
+  // Run all tests
+  tests_run();
+
+  printf("\r\n========== Starting Blitz ==========\r\n");
+  /*
+  printf("Starting in:\r\n");
+  HAL_Delay(1000);
+	printf("3\r\n");
+  HAL_Delay(1000);
+  printf("2\r\n");
+  HAL_Delay(1000);
+  printf("1\r\n");
+  HAL_Delay(1000);
+  */
 
   /* USER CODE END 2 */
 
@@ -199,17 +197,11 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  	//HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-  	//test_buzzer();
-		//test_motors();
-  	//play_song();
-//  	play_song();
-  	printf("Left Enc: %d\t\t Right Enc: %d\r\n", (int)TIM2->CNT, (int)TIM5->CNT);
-  	HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
+
+  	//printf("Left Enc: %d\t\t Right Enc: %d\r\n", (int)TIM2->CNT, (int)TIM5->CNT);
+
+  	oled_update();
   	HAL_Delay(10);
-
-
-
   }
   /* USER CODE END 3 */
 }
@@ -551,6 +543,37 @@ static void MX_TIM5_Init(void)
   /* USER CODE BEGIN TIM5_Init 2 */
 
   /* USER CODE END TIM5_Init 2 */
+
+}
+
+/**
+  * @brief TIM14 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM14_Init(void)
+{
+
+  /* USER CODE BEGIN TIM14_Init 0 */
+
+  /* USER CODE END TIM14_Init 0 */
+
+  /* USER CODE BEGIN TIM14_Init 1 */
+
+  /* USER CODE END TIM14_Init 1 */
+  htim14.Instance = TIM14;
+  htim14.Init.Prescaler = 16000;
+  htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim14.Init.Period = 50;
+  htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim14.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim14) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM14_Init 2 */
+
+  /* USER CODE END TIM14_Init 2 */
 
 }
 

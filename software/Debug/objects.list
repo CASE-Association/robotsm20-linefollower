@@ -6,6 +6,7 @@
 "Core/Src/system_stm32f4xx.o"
 "Core/Src/user/bitmaps.o"
 "Core/Src/user/buzzer.o"
+"Core/Src/user/fan.o"
 "Core/Src/user/motor.o"
 "Core/Src/user/oled.o"
 "Core/Src/user/ssd1306.o"
