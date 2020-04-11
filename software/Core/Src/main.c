@@ -174,7 +174,7 @@ int main(void)
 
 
   // Run all tests
-  tests_run();
+  //tests_run();
 
   printf("\r\n========== Starting Blitz ==========\r\n");
   /*

@@ -21,30 +21,41 @@
 typedef struct menu_item{
 	char name[20];
 	void (*function)();
+	int *pvar;
+	void (*edit_var_function)(char *var_name, int *var);
 	struct menu_item * pNext;
 }menu_item_t;
 
 
 typedef struct menu{
     char name[20];
-    struct menu_item * head_item; 				// Menu item start (Only for menu with items)
+    struct menu_item * head_item; 	// Menu item start (Only for menu with items)
     struct menu * pNext; 						// Next menu item (Only for main menu)
 }menu_t;
 
 // Enumeration for what to render
 typedef enum {
-    MENU = 0x00, 
-    INFO = 0x01,
-	IMAGE = 0x02
+	MENU = 0,
+	INFO = 1,
+	IMAGE = 2,
+	EDIT_VAR = 3
 } OLED_SCREEN;
 
 
 
 OLED_SCREEN active_screen;
 const unsigned char * curr_image;
-uint8_t error_occurd = 0;
+uint8_t error_occured = 0;
 uint8_t cursor = 0;
 float revolutions = 0;
+
+// Private variables for editing variables values
+char *pedit_var_name;
+int *pedit_var;
+int edit_var_new_value;
+int kp_test = 15;
+int ki_test = 5;
+
 struct menu * curr_submenu = NULL;
 struct menu * prev_submenu = NULL;
 menu_t main_menu;
@@ -109,15 +120,19 @@ void init_oled(void){
 	menu_item_13.function = oled_show_cats;
 	
 	// Sub menu 2 + items
-	strcpy(sub_menu_2.name, "Submenu 2");
+	strcpy(sub_menu_2.name, "Edit variables");
 	sub_menu_2.pNext = &sub_menu_3;
 	sub_menu_2.head_item = &menu_item_21;
 	
-	strcpy(menu_item_21.name, "Item 21");
+	strcpy(menu_item_21.name, "Kp");
 	menu_item_21.pNext = &menu_item_22;
+	menu_item_21.pvar = &kp_test;
+	menu_item_21.edit_var_function = oled_edit_var;
 	
-	strcpy(menu_item_22.name, "Item 22");
+	strcpy(menu_item_22.name, "Ki");
 	menu_item_22.pNext = &menu_item_back_main;
+	menu_item_22.pvar = &ki_test;
+	menu_item_22.edit_var_function = oled_edit_var;
 
 
 	// Sub menu 3 + items
@@ -137,11 +152,11 @@ void init_oled(void){
 /**
 	* @brief Update the screen with new data
 	*	
-	* Will check if errors have occurd and only print an error screen.
+	* Will check if errors have occurred and only print an error screen.
 */
 void oled_update(){
-	// Don't print anything if an error has occured
-	if(error_occurd){
+	// Don't print anything if an error has occurred
+	if(error_occured){
 		return;
 	}
 	
@@ -151,6 +166,12 @@ void oled_update(){
 		oled_info_screen();
 	}else if(active_screen == IMAGE){
 		ssd1306_DrawBitmap(curr_image);
+	}else if(active_screen == EDIT_VAR){
+		oled_edit_var_screen();
+	}else{
+		ssd1306_Fill(Black);
+		ssd1306_SetCursor((128-15*7)/2, 40);
+		ssd1306_WriteString("NOT IMPLEMENTED", Font_7x10, White);
 	}
 	
 	ssd1306_UpdateScreen();
@@ -161,13 +182,48 @@ void oled_update(){
 	* @brief Show an screen with general info about the mouse peripherals.
 */
 void oled_info_screen(){
+	char buff[60];
 	
+
 	ssd1306_Fill(Black);
-	ssd1306_SetCursor((128-15*7)/2, 0);
-	ssd1306_WriteString("NOT IMPLEMENTED", Font_7x10, White);
+	ssd1306_SetCursor(0,0);
+	ssd1306_WriteString("Info", Font_11x18, White);
+
+	snprintf(buff, sizeof(buff), "Encoder R: %d", (int)TIM5->CNT);
+	ssd1306_SetCursor(0,40);
+	ssd1306_WriteString(buff, Font_7x10, White);
+
+	snprintf(buff, sizeof(buff), "Encoder L: %d", (int)TIM2->CNT);
+	ssd1306_SetCursor(0,50);
+	ssd1306_WriteString(buff, Font_7x10, White);
 
 	ssd1306_UpdateScreen();
 }
+
+
+/**
+ * @brief Show edit variable screen
+ */
+void oled_edit_var_screen(void){
+	edit_var_new_value = *pedit_var + (int)TIM5->CNT / (float)4096 * 15;
+
+	char buff[10];
+
+	ssd1306_Fill(Black);
+	ssd1306_SetCursor(0,0);
+	ssd1306_WriteString("Edit", Font_11x18, White);
+
+	ssd1306_SetCursor(0, 40);
+	ssd1306_WriteString(pedit_var_name, Font_7x10, White);
+
+	ssd1306_SetCursor(80, 40);
+	snprintf(buff, sizeof(buff), "%d", edit_var_new_value);
+	ssd1306_WriteString(buff, Font_7x10, White);
+}
+
+
+
+
 
 
 
@@ -200,7 +256,7 @@ void oled_error(char *pMessage){
 	* @brief Clear the error and update the screen with normal information.
 */
 void oled_clear_error(void){
-	error_occurd = 0;
+	error_occured = 0;
 	HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, GPIO_PIN_RESET);
 	
 	oled_update();
@@ -276,6 +332,12 @@ void oled_menu(void){
 			}
 			ssd1306_SetCursor(14, 18 + line*10);
 			ssd1306_WriteString(item->name, Font_7x10, White);
+			if(item->pvar != NULL){
+				char buff[10];
+				ssd1306_SetCursor(80, 18 + line*10);
+				snprintf(buff, sizeof(buff), "%d", *item->pvar);
+				ssd1306_WriteString(buff, Font_7x10, White);
+			}
 			line++;
 			item = item->pNext;
 		}		
@@ -304,36 +366,45 @@ void go_back_main(void){
 	* The menu will change based on where the cursor is
 */
 void oled_button_press(void){
-	if(active_screen != MENU){
+	TIM5->CNT = 0; // Reset counter to reset cursor location
+
+	if(active_screen == EDIT_VAR){
+		*pedit_var = edit_var_new_value;
+		active_screen = MENU;
+		return;
+	}else if(active_screen != MENU){
 		active_screen = MENU;
 		return; // Don't continue checking if we are on another screen.
 	}
 	
 	if(curr_submenu == NULL){
-        struct menu * sub_menu = main_menu.pNext;
-        int line = 0;
-        while(sub_menu != NULL){
-            if (line == cursor){
+		struct menu * sub_menu = main_menu.pNext;
+		int line = 0;
+		while(sub_menu != NULL){
+			if (line == cursor){
 				curr_submenu = sub_menu;
 				break;
 			}
-            line++;
-            sub_menu = sub_menu->pNext;
+			line++;
+			sub_menu = sub_menu->pNext;
 		}
-    }else{
-        struct menu_item * item = curr_submenu->head_item;
-        int line = 0;
-        while(item != NULL){
-            if (line == cursor){
+	}else{
+		// Find which menu item the cursor is on and run it's function
+		struct menu_item * item = curr_submenu->head_item;
+		int line = 0;
+		while(item != NULL){
+			if (line == cursor){
 				if(item->function != NULL){
 					item->function();
+				}else if(item->edit_var_function != NULL){
+					item->edit_var_function(item->name, item->pvar);
 				}
 				break;
 			}
-            line++;
-            item = item->pNext;
+			line++;
+			item = item->pNext;
 		}
-    }	
+	}
 }
 
 
@@ -349,6 +420,13 @@ void oled_show_cats(void){
 void oled_show_info(void){
 	active_screen = INFO;
 }
+void oled_edit_var(char *pvar_name, int *pvar){
+	active_screen = EDIT_VAR;
+
+	pedit_var_name = pvar_name;
+	pedit_var = pvar;
+}
+
 
 
 
