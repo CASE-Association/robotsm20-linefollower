@@ -1,0 +1,8 @@
+xline.c:15:6:init_xline	16	static
+xline.c:27:6:xline_calibrate	208	static
+xline.c:63:6:xline_calibration_sequence	16	static
+xline.c:83:6:xline_reset_calibration	16	static
+xline.c:96:6:xline_read	24	static
+xline.c:124:6:xline_read_calibrated	32	static
+xline.c:163:5:xline_read_line	32	static
+xline.c:215:6:xline_mux_select	16	static

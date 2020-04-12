@@ -56,6 +56,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
+void tests_run(void);
 
 /* USER CODE END EFP */
 
@@ -73,6 +74,16 @@ void Error_Handler(void);
 #define VOLTM_BATT_GPIO_Port GPIOA
 #define ENC_L_A_Pin GPIO_PIN_5
 #define ENC_L_A_GPIO_Port GPIOA
+#define MUX3_Pin GPIO_PIN_7
+#define MUX3_GPIO_Port GPIOA
+#define MUX2_Pin GPIO_PIN_4
+#define MUX2_GPIO_Port GPIOC
+#define MUX1_Pin GPIO_PIN_5
+#define MUX1_GPIO_Port GPIOC
+#define MUX0_Pin GPIO_PIN_0
+#define MUX0_GPIO_Port GPIOB
+#define XLINE_Pin GPIO_PIN_1
+#define XLINE_GPIO_Port GPIOB
 #define BOOT1_Pin GPIO_PIN_2
 #define BOOT1_GPIO_Port GPIOB
 #define FAN_L_PWM_Pin GPIO_PIN_6

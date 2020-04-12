@@ -54,6 +54,8 @@
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 int checking = 0;
+int counter = 0;
+
 
 /* USER CODE END 0 */
 
@@ -235,6 +237,7 @@ void TIM8_TRG_COM_TIM14_IRQHandler(void)
 		checking = 0;
 		HAL_TIM_Base_Stop_IT(&htim14);
 		oled_button_press();
+		counter++;
 	}
 
   /* USER CODE END TIM8_TRG_COM_TIM14_IRQn 1 */

@@ -30,6 +30,7 @@
 #include "user/oled.h"
 #include "user/motor.h"
 #include "user/fan.h"
+#include "user/xline.h"
 
 /* USER CODE END Includes */
 
@@ -49,6 +50,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
+ADC_HandleTypeDef hadc2;
 DMA_HandleTypeDef hdma_adc1;
 
 I2C_HandleTypeDef hi2c3;
@@ -79,6 +81,7 @@ static void MX_ADC1_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_TIM5_Init(void);
 static void MX_TIM14_Init(void);
+static void MX_ADC2_Init(void);
 /* USER CODE BEGIN PFP */
 #ifdef __GNUC__
 	#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
@@ -107,14 +110,10 @@ void tests_run(){
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-//uint8_t SAMPLES = 64;
-//uint8_t NR = 2;
-float voltm_boost;
-float voltm_batt;
-battery_status_t battery_status;
-//uint8_t adc_averaged[NR*SAMPLES];
-//uint32_t nr_indices = (sizeof(adc_averaged) / sizeof(adc_averaged[0]));
-//uint8_t average;
+
+// Test variables during development
+
+
 
 /* USER CODE END 0 */
 
@@ -156,6 +155,7 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM5_Init();
   MX_TIM14_Init();
+  MX_ADC2_Init();
   /* USER CODE BEGIN 2 */
   printf("========== Blitz V2 ==========\r\n");
   printf("Created by Oskar & Isak\r\n");
@@ -189,12 +189,17 @@ int main(void)
  // HAL_Delay(3000); //Wait for fans to beep
   printf("\t- Voltage meter\r\n");
   init_voltmeter();
+  printf("\t- XLINE\r\n");
+	init_xline();
+
 
 
   // Run all tests
   //tests_run();
 
+
   printf("\r\n========== Starting Blitz ==========\r\n");
+  int once = 1;
 
   /* USER CODE END 2 */
 
@@ -206,25 +211,32 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-  	//printf("Left Enc: %d\t\t Right Enc: %d\r\n", (int)TIM2->CNT, (int)TIM5->CNT);
 
-
-  	voltm_boost = GET_voltage_boost();
-  	voltm_batt = GET_voltage_battery();
-  	battery_status = GET_battery_status();
-
-
-  	oled_update();
-  	HAL_Delay(10);
   	/*
+  	int line = xline_read_line(xline);
+  	printf("Line = %d\t", line);
+		for(uint8_t i = 0; i < 16; i++){
+				printf("%d: %lu,   ", i, xline[i]);
+		}
+		printf("\r\n");
+		*/
+  	oled_update();
+  	HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
+
+
+
+  	//oled_update();
+  	//HAL_Delay(10);
+
+		/*
   	if(HAL_GetTick() > 8000 && once){
   		once = 0;
-  		HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
+  		HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
   		HAL_Delay(500);
-  		HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
-  		oled_error("Katten gillar mat");
+  		HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
+  		tests_run();
   	}
-  	*/
+*/
   }
   /* USER CODE END 3 */
 }
@@ -287,7 +299,7 @@ static void MX_ADC1_Init(void)
   /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion) 
   */
   hadc1.Instance = ADC1;
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV8;
   hadc1.Init.Resolution = ADC_RESOLUTION_8B;
   hadc1.Init.ScanConvMode = ENABLE;
   hadc1.Init.ContinuousConvMode = ENABLE;
@@ -322,6 +334,56 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 2 */
 
   /* USER CODE END ADC1_Init 2 */
+
+}
+
+/**
+  * @brief ADC2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_ADC2_Init(void)
+{
+
+  /* USER CODE BEGIN ADC2_Init 0 */
+
+  /* USER CODE END ADC2_Init 0 */
+
+  ADC_ChannelConfTypeDef sConfig = {0};
+
+  /* USER CODE BEGIN ADC2_Init 1 */
+
+  /* USER CODE END ADC2_Init 1 */
+  /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion) 
+  */
+  hadc2.Instance = ADC2;
+  hadc2.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV8;
+  hadc2.Init.Resolution = ADC_RESOLUTION_10B;
+  hadc2.Init.ScanConvMode = DISABLE;
+  hadc2.Init.ContinuousConvMode = DISABLE;
+  hadc2.Init.DiscontinuousConvMode = DISABLE;
+  hadc2.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc2.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+  hadc2.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  hadc2.Init.NbrOfConversion = 1;
+  hadc2.Init.DMAContinuousRequests = DISABLE;
+  hadc2.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  if (HAL_ADC_Init(&hadc2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time. 
+  */
+  sConfig.Channel = ADC_CHANNEL_9;
+  sConfig.Rank = 1;
+  sConfig.SamplingTime = ADC_SAMPLETIME_480CYCLES;
+  if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN ADC2_Init 2 */
+
+  /* USER CODE END ADC2_Init 2 */
 
 }
 
@@ -722,13 +784,14 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, MUX3_Pin|LED_B_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, LED_G_Pin|LED_R_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, MUX2_Pin|MUX1_Pin|LED_G_Pin|LED_R_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, MOTOR_R_IN2_Pin|MOTOR_R_IN1_Pin|MOTOR_L_IN2_Pin|MOTOR_L_IN1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, MUX0_Pin|MOTOR_R_IN2_Pin|MOTOR_R_IN1_Pin|MOTOR_L_IN2_Pin 
+                          |MOTOR_L_IN1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : BUTTON_SELECT_Pin */
   GPIO_InitStruct.Pin = BUTTON_SELECT_Pin;
@@ -736,32 +799,34 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(BUTTON_SELECT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : BOOT1_Pin */
-  GPIO_InitStruct.Pin = BOOT1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(BOOT1_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : LED_B_Pin */
-  GPIO_InitStruct.Pin = LED_B_Pin;
+  /*Configure GPIO pins : MUX3_Pin LED_B_Pin */
+  GPIO_InitStruct.Pin = MUX3_Pin|LED_B_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LED_B_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_G_Pin LED_R_Pin */
-  GPIO_InitStruct.Pin = LED_G_Pin|LED_R_Pin;
+  /*Configure GPIO pins : MUX2_Pin MUX1_Pin LED_G_Pin LED_R_Pin */
+  GPIO_InitStruct.Pin = MUX2_Pin|MUX1_Pin|LED_G_Pin|LED_R_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : MOTOR_R_IN2_Pin MOTOR_R_IN1_Pin MOTOR_L_IN2_Pin MOTOR_L_IN1_Pin */
-  GPIO_InitStruct.Pin = MOTOR_R_IN2_Pin|MOTOR_R_IN1_Pin|MOTOR_L_IN2_Pin|MOTOR_L_IN1_Pin;
+  /*Configure GPIO pins : MUX0_Pin MOTOR_R_IN2_Pin MOTOR_R_IN1_Pin MOTOR_L_IN2_Pin 
+                           MOTOR_L_IN1_Pin */
+  GPIO_InitStruct.Pin = MUX0_Pin|MOTOR_R_IN2_Pin|MOTOR_R_IN1_Pin|MOTOR_L_IN2_Pin 
+                          |MOTOR_L_IN1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : BOOT1_Pin */
+  GPIO_InitStruct.Pin = BOOT1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(BOOT1_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI3_IRQn, 0, 0);

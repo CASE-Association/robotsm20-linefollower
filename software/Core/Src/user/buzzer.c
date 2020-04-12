@@ -52,8 +52,6 @@ int melody[] = {
 
 void init_buzzer(void){
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
-
-
 }
 
 void beep(int duration){
@@ -126,9 +124,9 @@ void play_song(void){
 }
 
 void test_buzzer(void){
-    beep(50);
-    HAL_Delay(50);
+		tone(659,50);
+		HAL_Delay(50);
 
-    beep(50);
-    HAL_Delay(50);
+		tone(659,50);
+		HAL_Delay(50);
 }

@@ -11,6 +11,10 @@
 #include "user/bitmaps.h"
 #include "user/buzzer.h"
 #include "user/voltmeter.h"
+#include "user/xline.h"
+#include "user/motor.h"
+
+#include "main.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -35,15 +39,24 @@ typedef enum {
 	INFO = 2,
 	IMAGE = 3,
 	EDIT_VAR = 4,
+	MESSAGE = 5,
 	NOT_IMPLEMENTED = 404
 } OLED_SCREEN;
+
+typedef enum {
+	TESTS = 0,
+	CALIBRATION = 1
+}global_function_t;
 
 
 /***************************** STATE VARIABLES **********************************/
 OLED_SCREEN active_screen;					// Current screen
-const unsigned char * curr_image;		// Current image to be shown
+global_function_t global_func;			// Global function to run
+int button_pressed_flag = 0;				// Flag for when button is pressed
 int go_back_main_flag = 0;					// Flag for going back to main menu
+const unsigned char * curr_image;		// Current image to be shown
 char *error_message;								// Current error message
+char *disp_message;								  // Current display message
 uint8_t cursor = 0;									// Cursor index
 menu_item_t *edit_var;							// Pointer to current editable variable
 
@@ -130,7 +143,7 @@ void init_oled(void){
 	ssd1306_DrawBitmap(case_head_bmp);
 	ssd1306_UpdateScreen();
 
-	HAL_Delay(1000);
+	HAL_Delay(500);
 	
 	// Show main menu
 	active_screen = MENU;
@@ -154,9 +167,9 @@ void init_oled(void){
 	menu_item_11.pNext = &menu_item_12;
 	menu_item_11.callback = oled_show_info;
 	
-	strcpy(menu_item_12.name, "CASE Logo");
+	strcpy(menu_item_12.name, "Run tests");
 	menu_item_12.pNext = &menu_item_13;
-	menu_item_12.callback = oled_show_case;
+	menu_item_12.callback = oled_run_tests;
 	
 	strcpy(menu_item_13.name, "Nyx & Iris");
 	menu_item_13.pNext = &menu_item_back_main;
@@ -182,16 +195,16 @@ void init_oled(void){
 
 
 	// Sub menu 3 + items
-	strcpy(sub_menu_3.name, "Submenu 3");
+	strcpy(sub_menu_3.name, "Calibration");
 	sub_menu_3.pNext = NULL;
 	sub_menu_3.head_item = &menu_item_31;
 	
-	strcpy(menu_item_31.name, "Item 31");
+	strcpy(menu_item_31.name, "Calibrate XLINE");
 	menu_item_31.pNext = &menu_item_32;
+	menu_item_31.callback = oled_calibrate_xline;
 	
 	strcpy(menu_item_32.name, "Item 32");
 	menu_item_32.pNext = &menu_item_back_main;
-
 }
 
 
@@ -202,6 +215,9 @@ void init_oled(void){
 	*	Errors always have priority.
 */
 void oled_update(void){
+
+
+
 	//Check flag for going back to main menu and reset flag.
 	if(go_back_main_flag){
 		curr_submenu = NULL;
@@ -219,11 +235,28 @@ void oled_update(void){
 		ssd1306_DrawBitmap(curr_image);
 	}else if(active_screen == EDIT_VAR){
 		oled_edit_var_screen();
+	}else if(active_screen == MESSAGE){
+		oled_message_screen();
 	}else if(active_screen == NOT_IMPLEMENTED){
 		oled_not_implemented_screen();
 	}
 	
 	ssd1306_UpdateScreen();
+
+	// Check if button has been pressed
+	oled_button_check();
+
+	/*
+	if(!global_func_flag && !oled_enable_flag){
+		if(global_func == TESTS){
+			tests_run();
+		}else if(global_func == CALIBRATION){
+			xline_calibration_sequence();
+		}
+		global_func_flag = 1;
+		oled_enable_flag = 1;
+	}
+	*/
 }
 
 
@@ -251,13 +284,21 @@ void oled_clear_error(void){
 }
 
 
+void oled_button_press(void){
+	button_pressed_flag = 1;
+}
+
 /**
 	* @brief Button press callback
 	*
 	* Decides what happens after a button click depending on state and cursor
 */
-void oled_button_press(void){
+void oled_button_check(void){
+	if(!button_pressed_flag){
+		return;
+	}
 
+	button_pressed_flag = 0;
 	if(active_screen == ERROR_){
 		oled_clear_error();
 		return;
@@ -357,7 +398,6 @@ void oled_menu_screen(void){
 			item = item->pNext;
 		}		
 	}
-	ssd1306_UpdateScreen();
 }
 
 
@@ -389,7 +429,7 @@ void oled_info_screen(){
 	ssd1306_SetCursor(0,40);
 	ssd1306_WriteString(buff, Font_7x10, White);
 
-	snprintf(buff, sizeof(buff), "XLINE:      NaN");
+	snprintf(buff, sizeof(buff), "XLINE:    %5d", xline_read_line(xline) - 1000*(16-1)/2);
 	ssd1306_SetCursor(0,50);
 	ssd1306_WriteString(buff, Font_7x10, White);
 }
@@ -419,6 +459,13 @@ void oled_error_screen(void){
 	ssd1306_SetCursor(0, 50);
 	ssd1306_WriteString("Press button", Font_7x10, Black);
 	//HAL_Delay(1000); // Only for beeping every 1s
+}
+
+void oled_message_screen(void){
+	//oled_disable();
+	ssd1306_Fill(Black);
+	ssd1306_SetCursor(0, 32);
+	ssd1306_WriteString(disp_message, Font_7x10, White);
 }
 
 
@@ -512,6 +559,23 @@ void oled_show_info(menu_item_t *self){
 void oled_edit_var(menu_item_t *self){
 	active_screen = EDIT_VAR;
 	edit_var = self;
+}
+
+
+void oled_run_tests(menu_item_t *self){
+  active_screen = MESSAGE;
+	disp_message = "Running tests";
+	oled_update();
+	tests_run();
+	active_screen = MENU;
+}
+
+void oled_calibrate_xline(menu_item_t *self){
+	active_screen = MESSAGE;
+	disp_message = "XLINE calibration";
+	oled_update();
+	xline_calibration_sequence();
+	active_screen = MENU;
 }
 
 
