@@ -164,13 +164,13 @@ int main(void)
 
   printf("\t- OLED\r\n");
   init_oled(); // Draws CASE LOGO for now
-  HAL_Delay(500);
+  //HAL_Delay(500);
   printf("\t- Motors\r\n");
   init_motors();
-  HAL_Delay(500);
+  //HAL_Delay(500);
   printf("\t- Fans\r\n");
   init_fans();
-  HAL_Delay(3000); //Wait for fans to beep
+ // HAL_Delay(3000); //Wait for fans to beep
 
 
   // Run all tests
@@ -189,7 +189,7 @@ int main(void)
   */
 
   /* USER CODE END 2 */
-
+  int once = 1;
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -202,6 +202,14 @@ int main(void)
 
   	oled_update();
   	HAL_Delay(10);
+
+  	if(HAL_GetTick() > 8000 && once){
+  		once = 0;
+  		HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
+  		HAL_Delay(500);
+  		HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
+  		oled_error("Katten gillar mat");
+  	}
   }
   /* USER CODE END 3 */
 }

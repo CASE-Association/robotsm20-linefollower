@@ -30,7 +30,7 @@ Core/Src/user/oled.o: ../Core/Src/user/oled.c ../Core/Inc/user/oled.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Core/Inc/user/ssd1306.h ../Core/Inc/user/ssd1306_fonts.h \
- ../Core/Inc/user/bitmaps.h
+ ../Core/Inc/user/bitmaps.h ../Core/Inc/user/buzzer.h
 
 ../Core/Inc/user/oled.h:
 
@@ -101,3 +101,5 @@ Core/Src/user/oled.o: ../Core/Src/user/oled.c ../Core/Inc/user/oled.h \
 ../Core/Inc/user/ssd1306_fonts.h:
 
 ../Core/Inc/user/bitmaps.h:
+
+../Core/Inc/user/buzzer.h:

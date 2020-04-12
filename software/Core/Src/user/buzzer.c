@@ -90,7 +90,7 @@ void tone(int frequency, int duration){
 	TIM1->CCR4 = 0;
 
 	//Base prescalar
-	TIM1->PSC = 4;
+	TIM1->PSC = 3;
 }
 
 void play_song(void){
