@@ -67,6 +67,10 @@ void Error_Handler(void);
 #define ENC_R_B_GPIO_Port GPIOA
 #define ENC_R_A_Pin GPIO_PIN_1
 #define ENC_R_A_GPIO_Port GPIOA
+#define VOLTM_BOOST_Pin GPIO_PIN_2
+#define VOLTM_BOOST_GPIO_Port GPIOA
+#define VOLTM_BATT_Pin GPIO_PIN_3
+#define VOLTM_BATT_GPIO_Port GPIOA
 #define ENC_L_A_Pin GPIO_PIN_5
 #define ENC_L_A_GPIO_Port GPIOA
 #define BOOT1_Pin GPIO_PIN_2

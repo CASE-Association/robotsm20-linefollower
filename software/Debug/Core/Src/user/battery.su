@@ -1,0 +1,6 @@
+battery.c:16:6:init_voltmeter	8	static
+battery.c:20:9:adc_average	32	static
+battery.c:34:7:adc_to_voltage	24	static
+battery.c:42:7:GET_voltage_battery	8	static
+battery.c:47:7:GET_voltage_boost	8	static
+battery.c:53:18:GET_battery_status	16	static

@@ -1,0 +1,7 @@
+voltmeter.c:16:6:init_voltmeter	8	static
+voltmeter.c:20:5:cmpfunc	16	static
+voltmeter.c:24:9:adc_average	32	static
+voltmeter.c:39:7:adc_to_voltage	24	static
+voltmeter.c:47:7:GET_voltage_battery	8	static
+voltmeter.c:52:7:GET_voltage_boost	8	static
+voltmeter.c:58:18:GET_battery_status	16	static

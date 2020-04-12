@@ -10,6 +10,7 @@
 #include "user/ssd1306.h"
 #include "user/bitmaps.h"
 #include "user/buzzer.h"
+#include "user/voltmeter.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -367,14 +368,28 @@ void oled_info_screen(){
 	char buff[60];
 
 	ssd1306_Fill(Black);
-	ssd1306_SetCursor(0,0);
-	ssd1306_WriteString("Info", Font_11x18, White);
+	ssd1306_SetCursor((128-4*10)/2,0);
+	ssd1306_WriteString("INFO", Font_7x10, White);
 
-	snprintf(buff, sizeof(buff), "Encoder R: %d", (int)TIM5->CNT);
+
+	snprintf(buff, sizeof(buff), "Battery:  %5.2f V", GET_voltage_battery());
+	ssd1306_SetCursor(0,10);
+	ssd1306_WriteString(buff, Font_7x10, White);
+
+	snprintf(buff, sizeof(buff), "Boost:    %5.2f V", GET_voltage_boost());
+	ssd1306_SetCursor(0,20);
+	ssd1306_WriteString(buff, Font_7x10, White);
+
+
+	snprintf(buff, sizeof(buff), "Enc. R:   %5d", (int)TIM5->CNT);
+	ssd1306_SetCursor(0,30);
+	ssd1306_WriteString(buff, Font_7x10, White);
+
+	snprintf(buff, sizeof(buff), "Enc. L:   %5d", (int)TIM2->CNT);
 	ssd1306_SetCursor(0,40);
 	ssd1306_WriteString(buff, Font_7x10, White);
 
-	snprintf(buff, sizeof(buff), "Encoder L: %d", (int)TIM2->CNT);
+	snprintf(buff, sizeof(buff), "XLINE:      NaN");
 	ssd1306_SetCursor(0,50);
 	ssd1306_WriteString(buff, Font_7x10, White);
 }

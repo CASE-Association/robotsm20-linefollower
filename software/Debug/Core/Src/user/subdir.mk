@@ -10,7 +10,8 @@ C_SRCS += \
 ../Core/Src/user/motor.c \
 ../Core/Src/user/oled.c \
 ../Core/Src/user/ssd1306.c \
-../Core/Src/user/ssd1306_fonts.c 
+../Core/Src/user/ssd1306_fonts.c \
+../Core/Src/user/voltmeter.c 
 
 OBJS += \
 ./Core/Src/user/bitmaps.o \
@@ -19,7 +20,8 @@ OBJS += \
 ./Core/Src/user/motor.o \
 ./Core/Src/user/oled.o \
 ./Core/Src/user/ssd1306.o \
-./Core/Src/user/ssd1306_fonts.o 
+./Core/Src/user/ssd1306_fonts.o \
+./Core/Src/user/voltmeter.o 
 
 C_DEPS += \
 ./Core/Src/user/bitmaps.d \
@@ -28,7 +30,8 @@ C_DEPS += \
 ./Core/Src/user/motor.d \
 ./Core/Src/user/oled.d \
 ./Core/Src/user/ssd1306.d \
-./Core/Src/user/ssd1306_fonts.d 
+./Core/Src/user/ssd1306_fonts.d \
+./Core/Src/user/voltmeter.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -46,4 +49,6 @@ Core/Src/user/ssd1306.o: ../Core/Src/user/ssd1306.c
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/user/ssd1306.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Core/Src/user/ssd1306_fonts.o: ../Core/Src/user/ssd1306_fonts.c
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/user/ssd1306_fonts.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+Core/Src/user/voltmeter.o: ../Core/Src/user/voltmeter.c
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/user/voltmeter.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
