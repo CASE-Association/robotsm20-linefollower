@@ -2,7 +2,7 @@ fan.c:13:6:init_fans	8	static
 fan.c:35:6:fans_enable	4	static
 fan.c:43:6:fans_disable	8	static
 fan.c:59:6:test_fan	8	static
-fan.c:112:5:fan_limit_speed	16	static
-fan.c:128:5:fan_convert_speed	16	static
-fan.c:139:6:fan_r_set_speed	24	static
-fan.c:157:6:fan_l_set_speed	24	static
+fan.c:114:5:fan_limit_speed	16	static
+fan.c:130:5:fan_convert_speed	16	static
+fan.c:141:6:fan_r_set_speed	24	static
+fan.c:159:6:fan_l_set_speed	24	static

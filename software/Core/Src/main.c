@@ -31,6 +31,7 @@
 #include "user/motor.h"
 #include "user/fan.h"
 #include "user/xline.h"
+#include "user/control.h"
 
 /* USER CODE END Includes */
 
@@ -94,6 +95,9 @@ PUTCHAR_PROTOTYPE{
 }
 
 void tests_run(){
+	HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(LED_B_GPIO_Port, LED_B_Pin, GPIO_PIN_RESET);
 	printf("\r\n========== RUN TESTS ==========\r\n");
 	printf("\t- Buzzer\r\n");
 	test_buzzer();
@@ -211,6 +215,9 @@ int main(void)
     /* USER CODE BEGIN 3 */
   	oled_update();
   	HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
+  	HAL_Delay(10);
+
+  	control_loop();
   }
   /* USER CODE END 3 */
 }

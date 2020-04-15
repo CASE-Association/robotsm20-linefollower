@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "user/oled.h"
 #include "user/fan.h"
+#include "user/control.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -218,6 +219,8 @@ void EXTI2_IRQHandler(void)
   HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_RESET);
   fans_disable();
+  control_loop_disable();
+
 
   /* USER CODE END EXTI2_IRQn 1 */
 }
@@ -255,8 +258,11 @@ void EXTI15_10_IRQHandler(void)
   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
 
   //REMOTE START ACTIVATED
-  HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_SET);
-  fans_enable();
+  if(HAL_GetTick() > 5000){
+		HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_SET);
+		fans_enable();
+		control_loop_enable();
+  }
 
   /* USER CODE END EXTI15_10_IRQn 1 */
 }

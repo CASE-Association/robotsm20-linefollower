@@ -12,7 +12,7 @@ uint32_t xline[16];
  * @brief Initialize xline sensors.
  * 
  */
-void init_xline(uint32_t *arr){
+void init_xline(){
 	xline_reset_calibration();
 }
 
@@ -22,25 +22,25 @@ void init_xline(uint32_t *arr){
  * Reads the sensors 10 times and uses the results for calibration. The sensor values are not returned; instead, the maximum and minimum values 
  * found over time are stored internally and used for the xline_read_calibrated() method.
  * 
- * In order to calibrate, call this function repeatadly under a couple seconds (~5s) when moving the sensor over a line. 
+ * In order to calibrate, call this function repeatedly under a couple seconds (~5s) when moving the sensor over a line.
  */
-void xline_calibrate(){
-	uint32_t sensor_values[_num_sensors] = {0};
+void xline_calibrate(void){
+	//uint32_t sensor_values[_num_sensors] = {0};
 	uint32_t max_sensor_values[_num_sensors] = {0};
 	uint32_t min_sensor_values[_num_sensors] = {0};
 
     
 	for(uint8_t j = 0; j < 10; j++){
-		xline_read(sensor_values);
+		xline_read();
 
 		for(uint8_t i = 0; i < _num_sensors; i++){
 			// set the min we found THIS time
-			if(j == 0 || min_sensor_values[i] > sensor_values[i])
-				min_sensor_values[i] = sensor_values[i];
+			if(j == 0 || min_sensor_values[i] > xline[i])
+				min_sensor_values[i] = xline[i];
 
 			// set the max we found THIS time
-			if(j == 0 || max_sensor_values[i] < sensor_values[i])
-				max_sensor_values[i] = sensor_values[i];
+			if(j == 0 || max_sensor_values[i] < xline[i])
+				max_sensor_values[i] = xline[i];
 		}
 	}
 
@@ -60,7 +60,7 @@ void xline_calibrate(){
  * Calibrates be successively calling xline_calibrate over a 5s period
  * Then prints all min/max recorded values for the user.
  */
-void xline_calibration_sequence(){
+void xline_calibration_sequence(void){
 	printf("============ CALIBRATING XLINE ==============\r\n");
 	printf("\t - Calibrating over 5S\r\n");
 	printf("\t - Move the sensor over the line back and forth with a reasonable speed.\r\n");
@@ -80,7 +80,7 @@ void xline_calibration_sequence(){
  * @brief Reset calibration values.
  * 
  */
-void xline_reset_calibration(){
+void xline_reset_calibration(void){
     for(uint8_t i = 0 ; i < _num_sensors; i++){
         calibrated_min[i] = 1023;
         calibrated_max[i] = 0;
@@ -93,10 +93,10 @@ void xline_reset_calibration(){
  * 
  * @param sensor_values Array to store values. The size needs to be equal or bigger than number of sensors.
  */
-void xline_read(uint32_t *sensor_values){
+void xline_read(void){
     // Reset old values
     for(uint8_t i = 0 ; i < _num_sensors; i++){
-        sensor_values[i] = 0;
+        xline[i] = 0;
     }
 
 
@@ -106,7 +106,7 @@ void xline_read(uint32_t *sensor_values){
 		HAL_ADC_Start(&hadc2);
 		HAL_ADC_PollForConversion(&hadc2, 5);
 		uint32_t raw = HAL_ADC_GetValue(&hadc2);
-		sensor_values[i] = raw;
+		xline[i] = raw;
 		HAL_ADC_Stop(&hadc2);
 	}
 }
@@ -121,8 +121,8 @@ void xline_read(uint32_t *sensor_values){
  * sensors are accounted for automatically.
  * @param sensor_values Array to store values.
  */
-void xline_read_calibrated(uint32_t *sensor_values){
-	xline_read(sensor_values);
+void xline_read_calibrated(void){
+	xline_read();
 
 	for(uint8_t i = 0 ; i < _num_sensors; i++){
 
@@ -131,13 +131,13 @@ void xline_read_calibrated(uint32_t *sensor_values){
 		int x = 0;
 		if(denominator != 0)
 			// Check the real reason for need to cast all to int
-			x = ((int)( ((int)sensor_values[i]) - ((int)calibrated_min[i]))) * 1000 / (int)denominator;
+			x = ((int)( ((int)xline[i]) - ((int)calibrated_min[i]))) * 1000 / (int)denominator;
 		if(x < 0)
 			x = 0;
 		else if(x > 1000)
 			x = 1000;
 		// Add additional check when sensor is blocked
-		sensor_values[i] = x;
+		xline[i] = x;
 	}
 }
 
@@ -160,17 +160,18 @@ void xline_read_calibrated(uint32_t *sensor_values){
  * @param sensor_values 
  * @return int Estimated position
  */
-int xline_read_line(uint32_t *sensor_values){
+int xline_read_line(void){
 	uint8_t i, on_line = 0;
 	unsigned long avg = 0; // weighted total
 	unsigned int sum = 0; // this is for the denominator which is <= 64000
 	static int last_value = 0; // assume initially that the line is left.
+	int return_val = 0;
 
 
-	xline_read_calibrated(sensor_values);
+	xline_read_calibrated();
 
 	for( i = 0; i < _num_sensors; i++) {
-		int value = sensor_values[i];
+		int value = xline[i];
 		//if(white_line)
 		//	value = 1000 - value;
 
@@ -190,19 +191,20 @@ int xline_read_line(uint32_t *sensor_values){
 	{
 		// If it last read to the left of center, return 0.
 		if(last_value < (_num_sensors - 1) *1000 /2)
-			return 0;
+			return_val = 0;
 		
 		// If it last read to the right of center, return the max.
 		else
-			return (_num_sensors - 1)*1000;
+			return_val = (_num_sensors - 1)*1000;
 
+	}else{
+		last_value = avg/sum;
+		return_val = last_value;
 	}
 
-	last_value = avg/sum;
 
-	return last_value;
-	
 
+	return return_val - (16-1)/2.0f * 1000;
 };
 
 

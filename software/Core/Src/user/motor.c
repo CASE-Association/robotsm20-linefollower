@@ -14,7 +14,7 @@ void init_motors(void){
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3); // Right
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4); // Left
 
-    // Put both motors in Hi-Z (high impedance output => rotate freely)
+
     motors_stop();
 }
 
@@ -60,6 +60,8 @@ void motor_r_set_speed(int speed){
 }
 
 void motors_stop(void){
+		// Put both motors in Hi-Z (high impedance output => rotate freely)
+
     TIM4->CCR3 = 0;
     HAL_GPIO_WritePin(MOTOR_R_IN1_GPIO_Port, MOTOR_R_IN1_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(MOTOR_R_IN2_GPIO_Port, MOTOR_R_IN2_Pin, GPIO_PIN_RESET);

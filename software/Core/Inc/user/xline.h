@@ -12,13 +12,13 @@ extern uint32_t xline[16];
 extern uint32_t calibrated_max[_num_sensors];
 extern uint32_t calibrated_min[_num_sensors];
 
-void init_xline();
-void xline_calibrate();
-void xline_calibration_sequence();
-void xline_reset_calibration();
-void xline_read(uint32_t *sensor_values);
-void xline_read_calibrated(uint32_t *sensor_values);
-int xline_read_line(uint32_t *sensor_values);
+void init_xline(void);
+void xline_calibrate(void);
+void xline_calibration_sequence(void);
+void xline_reset_calibration(void);
+void xline_read(void);
+void xline_read_calibrated(void);
+int xline_read_line(void);
 void xline_mux_select(uint8_t sensor);
 
 #endif

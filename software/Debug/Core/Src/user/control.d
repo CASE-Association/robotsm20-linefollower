@@ -1,5 +1,7 @@
-Core/Src/user/oled.o: ../Core/Src/user/oled.c ../Core/Inc/user/oled.h \
- ../Core/Inc/main.h ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
+Core/Src/user/control.o: ../Core/Src/user/control.c \
+ ../Core/Inc/user/control.h ../Core/Inc/user/motor.h \
+ ../Core/Inc/user/xline.h ../Core/Inc/main.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h \
@@ -30,13 +32,13 @@ Core/Src/user/oled.o: ../Core/Src/user/oled.c ../Core/Inc/user/oled.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Core/Inc/user/ssd1306.h ../Core/Inc/user/ssd1306_fonts.h \
- ../Core/Inc/user/bitmaps.h ../Core/Inc/user/buzzer.h \
- ../Core/Inc/user/voltmeter.h ../Core/Inc/user/xline.h \
- ../Core/Inc/user/motor.h ../Core/Inc/user/control.h
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 
-../Core/Inc/user/oled.h:
+../Core/Inc/user/control.h:
+
+../Core/Inc/user/motor.h:
+
+../Core/Inc/user/xline.h:
 
 ../Core/Inc/main.h:
 
@@ -103,19 +105,3 @@ Core/Src/user/oled.o: ../Core/Src/user/oled.c ../Core/Inc/user/oled.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-
-../Core/Inc/user/ssd1306.h:
-
-../Core/Inc/user/ssd1306_fonts.h:
-
-../Core/Inc/user/bitmaps.h:
-
-../Core/Inc/user/buzzer.h:
-
-../Core/Inc/user/voltmeter.h:
-
-../Core/Inc/user/xline.h:
-
-../Core/Inc/user/motor.h:
-
-../Core/Inc/user/control.h:

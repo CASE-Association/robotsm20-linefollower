@@ -57,6 +57,7 @@ void fans_disable(void){
  * 	2. Right forward, wait 1s, right backwards, wait 1s.
  */
 void test_fan(void){
+	fans_enable();
 	//Left forward
 	fan_l_set_speed(10);
 	HAL_GPIO_WritePin(LED_G_GPIO_Port, LED_G_Pin, GPIO_PIN_SET);
@@ -99,6 +100,7 @@ void test_fan(void){
 	fan_r_set_speed(0);
 	HAL_GPIO_WritePin(LED_R_GPIO_Port, LED_R_Pin, GPIO_PIN_RESET);
 	HAL_Delay(1000);
+	fans_disable();
 }
 
 

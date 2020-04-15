@@ -23,6 +23,7 @@ void oled_info_screen(void);
 void oled_error_screen(void);
 void oled_message_screen(void);
 void oled_edit_var_screen(void);
+void oled_run_line_follower_screen(void);
 void oled_not_implemented_screen(void);
 
 // Callbacks
@@ -34,5 +35,6 @@ void oled_show_edit_var(menu_item_t *self);
 void oled_edit_var(menu_item_t *self);
 void oled_run_tests(menu_item_t *self);
 void oled_calibrate_xline(menu_item_t *self);
+void oled_run_line_follow(menu_item_t *self);
 
 #endif //OLED_H

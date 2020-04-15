@@ -13,6 +13,7 @@
 #include "user/voltmeter.h"
 #include "user/xline.h"
 #include "user/motor.h"
+#include "user/control.h"
 
 #include "main.h"
 
@@ -40,6 +41,7 @@ typedef enum {
 	IMAGE = 3,
 	EDIT_VAR = 4,
 	MESSAGE = 5,
+	RUN = 6,
 	NOT_IMPLEMENTED = 404
 } OLED_SCREEN;
 
@@ -195,7 +197,7 @@ void init_oled(void){
 
 
 	// Sub menu 3 + items
-	strcpy(sub_menu_3.name, "Calibration");
+	strcpy(sub_menu_3.name, "Run");
 	sub_menu_3.pNext = NULL;
 	sub_menu_3.head_item = &menu_item_31;
 	
@@ -203,8 +205,9 @@ void init_oled(void){
 	menu_item_31.pNext = &menu_item_32;
 	menu_item_31.callback = oled_calibrate_xline;
 	
-	strcpy(menu_item_32.name, "Item 32");
+	strcpy(menu_item_32.name, "Follow line");
 	menu_item_32.pNext = &menu_item_back_main;
+	menu_item_32.callback = oled_run_line_follow;
 }
 
 
@@ -215,8 +218,6 @@ void init_oled(void){
 	*	Errors always have priority.
 */
 void oled_update(void){
-
-
 
 	//Check flag for going back to main menu and reset flag.
 	if(go_back_main_flag){
@@ -237,6 +238,8 @@ void oled_update(void){
 		oled_edit_var_screen();
 	}else if(active_screen == MESSAGE){
 		oled_message_screen();
+	}else if(active_screen == RUN){
+		oled_run_line_follower_screen();
 	}else if(active_screen == NOT_IMPLEMENTED){
 		oled_not_implemented_screen();
 	}
@@ -245,18 +248,6 @@ void oled_update(void){
 
 	// Check if button has been pressed
 	oled_button_check();
-
-	/*
-	if(!global_func_flag && !oled_enable_flag){
-		if(global_func == TESTS){
-			tests_run();
-		}else if(global_func == CALIBRATION){
-			xline_calibration_sequence();
-		}
-		global_func_flag = 1;
-		oled_enable_flag = 1;
-	}
-	*/
 }
 
 
@@ -429,7 +420,7 @@ void oled_info_screen(){
 	ssd1306_SetCursor(0,40);
 	ssd1306_WriteString(buff, Font_7x10, White);
 
-	snprintf(buff, sizeof(buff), "XLINE:    %5d", xline_read_line(xline) - 1000*(16-1)/2);
+	snprintf(buff, sizeof(buff), "XLINE:    %5d", xline_read_line());
 	ssd1306_SetCursor(0,50);
 	ssd1306_WriteString(buff, Font_7x10, White);
 }
@@ -487,6 +478,31 @@ void oled_edit_var_screen(void){
 	ssd1306_SetCursor(80, 40);
 	snprintf(buff, sizeof(buff), "%d", new_val);
 	ssd1306_WriteString(buff, Font_7x10, White);
+}
+
+void oled_run_line_follower_screen(void){
+	ssd1306_Fill(Black);
+	ssd1306_SetCursor(0, 0);
+	ssd1306_WriteString("Follow line", Font_7x10, White);
+
+	if(control_loop_enabled){
+		char buff[20];
+
+		ssd1306_SetCursor(0, 20);
+		ssd1306_WriteString("Running control", Font_7x10, White);
+		ssd1306_SetCursor(0, 30);
+		ssd1306_WriteString("loop", Font_7x10, White);
+
+		ssd1306_SetCursor(0, 50);
+		snprintf(buff, sizeof(buff), "XLINE:    %5d", xline_read_line());
+		ssd1306_WriteString(buff, Font_7x10, White);
+
+	}else{
+		ssd1306_SetCursor(0, 30);
+		ssd1306_WriteString("Waiting for remote", Font_7x10, White);
+		ssd1306_SetCursor(0, 40);
+		ssd1306_WriteString("start signal.", Font_7x10, White);
+	}
 }
 
 
@@ -576,6 +592,10 @@ void oled_calibrate_xline(menu_item_t *self){
 	oled_update();
 	xline_calibration_sequence();
 	active_screen = MENU;
+}
+
+void oled_run_line_follow(menu_item_t *self){
+	active_screen = RUN;
 }
 
 
