@@ -199,7 +199,6 @@ int main(void)
 
 
   printf("\r\n========== Starting Blitz ==========\r\n");
-  int once = 1;
 
   /* USER CODE END 2 */
 
@@ -210,33 +209,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-
-  	/*
-  	int line = xline_read_line(xline);
-  	printf("Line = %d\t", line);
-		for(uint8_t i = 0; i < 16; i++){
-				printf("%d: %lu,   ", i, xline[i]);
-		}
-		printf("\r\n");
-		*/
   	oled_update();
   	HAL_GPIO_TogglePin(LED_B_GPIO_Port, LED_B_Pin);
-
-
-
-  	//oled_update();
-  	//HAL_Delay(10);
-
-		/*
-  	if(HAL_GetTick() > 8000 && once){
-  		once = 0;
-  		HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-  		HAL_Delay(500);
-  		HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
-  		tests_run();
-  	}
-*/
   }
   /* USER CODE END 3 */
 }
@@ -782,6 +756,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, MUX3_Pin|LED_B_Pin, GPIO_PIN_RESET);
@@ -828,9 +803,27 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(BOOT1_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : REMOTE_START_Pin */
+  GPIO_InitStruct.Pin = REMOTE_START_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(REMOTE_START_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : REMOTE_KILL_Pin */
+  GPIO_InitStruct.Pin = REMOTE_KILL_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(REMOTE_KILL_GPIO_Port, &GPIO_InitStruct);
+
   /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI2_IRQn);
+
   HAL_NVIC_SetPriority(EXTI3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI3_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 }
 

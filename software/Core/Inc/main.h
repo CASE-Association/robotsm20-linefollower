@@ -110,6 +110,12 @@ void tests_run(void);
 #define LED_G_GPIO_Port GPIOC
 #define LED_R_Pin GPIO_PIN_11
 #define LED_R_GPIO_Port GPIOC
+#define REMOTE_START_Pin GPIO_PIN_12
+#define REMOTE_START_GPIO_Port GPIOC
+#define REMOTE_START_EXTI_IRQn EXTI15_10_IRQn
+#define REMOTE_KILL_Pin GPIO_PIN_2
+#define REMOTE_KILL_GPIO_Port GPIOD
+#define REMOTE_KILL_EXTI_IRQn EXTI2_IRQn
 #define ENC_L_B_Pin GPIO_PIN_3
 #define ENC_L_B_GPIO_Port GPIOB
 #define MOTOR_R_IN2_Pin GPIO_PIN_4
