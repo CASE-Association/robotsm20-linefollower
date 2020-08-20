@@ -3,3 +3,5 @@ slprj/
 *.slxc
 *.b#*
 *.s#*
+*.o
+*.su
