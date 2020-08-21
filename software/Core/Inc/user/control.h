@@ -1,5 +1,6 @@
 #ifndef CONTROL_H
 #define CONTROL_H
+#include "oled.h"
 
 extern int control_loop_enabled;
 

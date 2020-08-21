@@ -3,8 +3,10 @@
 #include <stdio.h>
 
 extern ADC_HandleTypeDef hadc2;
-uint32_t calibrated_max[_num_sensors];
-uint32_t calibrated_min[_num_sensors];
+
+// Measured 2020-08-20
+uint32_t calibrated_max[_num_sensors] = {919,922,886,893,895,905,919,911,913,899,913,926,902,899,913,887};
+uint32_t calibrated_min[_num_sensors] = {55,57,55,56,55,56,57,55,55,57,56,57,57,56,57,55};
 uint32_t xline[16];
 
 
@@ -13,7 +15,7 @@ uint32_t xline[16];
  * 
  */
 void init_xline(){
-	xline_reset_calibration();
+	//xline_reset_calibration();
 }
 
 
@@ -63,7 +65,8 @@ void xline_calibrate(void){
 void xline_calibration_sequence(void){
 	printf("============ CALIBRATING XLINE ==============\r\n");
 	printf("\t - Calibrating over 5S\r\n");
-	printf("\t - Move the sensor over the line back and forth with a reasonable speed.\r\n");
+	printf("\t - Move the sensor over the line back and "
+			"forth with a reasonable speed.\r\n");
 	for(uint8_t i = 0; i < 100; i++){
 		xline_calibrate();
 		HAL_Delay(50);

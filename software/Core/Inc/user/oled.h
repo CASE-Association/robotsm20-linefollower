@@ -4,7 +4,7 @@
 #include "main.h"
 
 typedef struct menu_item menu_item_t;
-
+extern int oled_enabled;
 // Private helpers
 uint8_t nr_items(void);
 int get_edited_val(int val);

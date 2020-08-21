@@ -61,7 +61,7 @@ char *error_message;								// Current error message
 char *disp_message;								  // Current display message
 uint8_t cursor = 0;									// Cursor index
 menu_item_t *edit_var;							// Pointer to current editable variable
-
+int oled_enabled = 0;
 // Test variables for showing edit_var functionality
 // Remove later
 int kp_test = 15;
@@ -208,6 +208,8 @@ void init_oled(void){
 	strcpy(menu_item_32.name, "Follow line");
 	menu_item_32.pNext = &menu_item_back_main;
 	menu_item_32.callback = oled_run_line_follow;
+
+	oled_enabled = 1;
 }
 
 
@@ -218,7 +220,9 @@ void init_oled(void){
 	*	Errors always have priority.
 */
 void oled_update(void){
-
+	// Check if oled is enabled
+	if(!oled_enabled)
+		return;
 	//Check flag for going back to main menu and reset flag.
 	if(go_back_main_flag){
 		curr_submenu = NULL;
@@ -484,7 +488,7 @@ void oled_run_line_follower_screen(void){
 	ssd1306_Fill(Black);
 	ssd1306_SetCursor(0, 0);
 	ssd1306_WriteString("Follow line", Font_7x10, White);
-
+	control_loop_enable();
 	if(control_loop_enabled){
 		char buff[20];
 

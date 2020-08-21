@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include <string.h>
+//#include "eeprom.h"
 #include <user/voltmeter.h>
 #include "user/buzzer.h"
 #include "user/oled.h"
@@ -65,6 +66,16 @@ TIM_HandleTypeDef htim14;
 
 UART_HandleTypeDef huart1;
 
+// EEPROM memory
+// The addresses that are assigned to a specific variable. It is predefined and cannot be changed.
+/*uint16_t VirtAddVarTab[NB_OF_VAR] = {0X1110, 0x1111, 0x1112, 0x1113, 0x1114, 0x1115, 0x1116, 0x1117, 0x1118, 0x1119, 0x111A, 0x111B, 0x111C, 0x111D, 0x111E, 0x111F,
+									 0x1120, 0x1121, 0x1122, 0x1123, 0x1124, 0x1125, 0x1126, 0x1127, 0x1128, 0x1129, 0x112A, 0x112B, 0x112C, 0x112D, 0x112E, 0x112F,
+									 0X1130, 0x1131, 0x1132, 0x1133, 0x1134, 0x1135, 0x1136, 0x1137, 0x1138, 0x1139, 0x113A, 0x113B, 0x113C, 0x113D, 0x113E, 0x113F,
+									 0x1140, 0x1141, 0x1142, 0x1143, 0x1144, 0x1145, 0x1146, 0x1147, 0x1148, 0x1149, 0x114A, 0x114B, 0x114C, 0x114D, 0x114E, 0x114F};
+uint16_t VarDataTab[NB_OF_VAR] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+								  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+uint16_t VarValue = 0;
+*/
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
