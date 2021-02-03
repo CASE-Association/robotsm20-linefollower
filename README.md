@@ -1,6 +1,8 @@
 # Blitz V2
 Project repository for the line follower **Blitz V2** to compete in Robot SM 2020. Last years robot was [Blitz V1](https://github.com/caselabbet/robotsm19-linefollower).
 
+Below is a rendered version of **Blitz V2**.
+<img src="img/non-render.png" style="height:150px">
 ## Goals 
 - Utilize more advanced control algorithm.
     - Acceleration control
